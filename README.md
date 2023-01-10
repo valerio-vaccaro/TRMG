@@ -12,6 +12,7 @@ Index is calculate as (Fist-1)*2^7+(Second-1)*2^3+(Third-1).
 ## Words table
 
 |First|Second|Third|Index|Word|Index in binary|Group 12|Group 24|
+|-----|------|-----|-----|----|---------------|--------|--------|
 |1|1|1|0|abandon|000000000|0000000|000|
 |1|1|2|1|ability|000000001|0000000|000|
 |1|1|3|2|able|000000010|0000000|000|
