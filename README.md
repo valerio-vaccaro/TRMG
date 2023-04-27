@@ -7,7 +7,7 @@ You need 3 dice:
 
 Throws dices 12 or 24 times in order to generate the words, for each roll you can read the corresponding word in the following table.
 
-Index is calculate as (Fist-1)*2^8+(Second-1)*2^4+(Third-1).
+Index is calculate as (First-1)*2^8+(Second-1)*2^4+(Third-1).
 
 ## Words table
 
