@@ -30,7 +30,7 @@ First step is to generate 12 or 24 words using dices, this can be done using dif
 This process is entirely manual, auditable, and free from digital vulnerabilities.
 
 ### Piacentine cards
-[Piacentine](https://github.com/f205sats/TRMGf205/blob/piacentine-cards/piacentine.md)
+[Piacentine](https://github.com/valerio-vaccaro/TRMG/blob/main/piacentine.md)
 
 Once again: a process entirely manual, totally lacking from digital fragilities.
 
