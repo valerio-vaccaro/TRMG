@@ -1,5 +1,5 @@
-# The Arcane Ritual of Mnemonic Summoning
-1st April 2026
+# 🕯️ The Arcane Ritual of Mnemonic Summoning 🕯️
+Observed upon the First of April, Anno Domini 2026
 
 *Before the veil of the digital realm is pierced, the adept must prepare the Sacred Chamber. Lay twelve candles in a circle — one for each month of the solar cycle, one for each pillar of the Zodiac. Arrange twelve photographs of the Grand Cryptomancers (see: *The Council of Twelve*) between the candles, each facing inward. Their spectral entropy, bound to their life's work in the art of secrets, shall amplify the chaotic fire of every draw.*
 
