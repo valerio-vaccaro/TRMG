@@ -34,6 +34,9 @@ This process is entirely manual, auditable, and free from digital vulnerabilitie
 
 Once again: a process entirely manual, totally lacking from digital fragilities.
 
+### Tarot
+[Tarot](https://github.com/valerio-vaccaro/TRMG/blob/main/tarot.md)
+
 ## Fix last word
 Last word is partially based on checksum of previouse words so need a fix in order to follow correctly the Bip39 standard, the groups of possible ending words are present in the table as Group 12 for 12 words mnemonics or Group 24 for the mnemonics with 24 words.
 
