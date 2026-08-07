@@ -28,24 +28,24 @@ Converti `1–8` in `000–111`. Quattro lanci producono 12 bit: conserva i prim
 <a id="d8d16d16"></a>
 ### D8/D16/D16
 
-Lancia un D8 e due D16. L'indice è `(D8 - 1) × 256 + (primo D16 - 1) × 16 + (secondo D16 - 1)`. Ogni serie seleziona un indice; consulta la [tabella completa](../../methods/d8ff/).
+Lancia un D8 e due D16. L'indice è `(D8 - 1) × 256 + (primo D16 - 1) × 16 + (secondo D16 - 1)`. Ogni serie seleziona un indice; consulta la [tabella completa](d8d16d16/).
 
 <a id="888cc"></a>
 ### D8/D8/D8/moneta/moneta
 
-Lancia tre D8 e due monete. Testa è `0` e croce è `1`. L'indice è `(primo D8 - 1) × 256 + (secondo D8 - 1) × 32 + (terzo D8 - 1) × 4 + prima moneta × 2 + seconda moneta`; consulta la [tabella completa](../../methods/888cc/).
+Lancia tre D8 e due monete. Testa è `0` e croce è `1`. L'indice è `(primo D8 - 1) × 256 + (secondo D8 - 1) × 32 + (terzo D8 - 1) × 4 + prima moneta × 2 + seconda moneta`; consulta la [tabella completa](888cc/).
 
 <a id="poker"></a>
 ### Carte da poker
 
-Usa un mazzo standard di 52 carte senza Joker. Converti ogni carta con la [tabella del poker](../../methods/poker/), rimettila nel mazzo e mescola fino a raccogliere 11 bit.
+Usa un mazzo standard di 52 carte senza Joker. Converti ogni carta con la [tabella del poker](poker/), rimettila nel mazzo e mescola fino a raccogliere 11 bit.
 
 <a id="piacentine"></a>
 ### Carte piacentine
 
-Usa un mazzo piacentino da 40 carte. Raccogli 11 bit con la [tabella delle carte](../../methods/piacentine/); rimetti e mescola dopo ogni estrazione.
+Usa un mazzo piacentino da 40 carte. Raccogli 11 bit con la [tabella delle carte](piacentine/); rimetti e mescola dopo ogni estrazione.
 
 <a id="tarot"></a>
 ### Tarocchi
 
-Usa tutte le 78 carte. Il livello di ogni carta fornisce da uno a sei bit; estrai, annota, rimetti e mescola fino a raccogliere 11 bit. Consulta la [tabella dei Tarocchi](../../methods/tarot/).
+Usa tutte le 78 carte. Il livello di ogni carta fornisce da uno a sei bit; estrai, annota, rimetti e mescola fino a raccogliere 11 bit. Consulta la [tabella dei Tarocchi](tarot/).

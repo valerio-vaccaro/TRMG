@@ -1,208 +1,225 @@
 ---
 layout: default
-title: Tarocchi
+title: Metodo dei Tarocchi
+description: Genera indici di parole BIP-39 con un mazzo completo di Tarocchi.
 lang: it
 permalink: /it/methods/tarot/
 ---
 
-## Tarocchi
+# 🕯️ Il rituale arcano per evocare una frase mnemonica 🕯️
+Osservato il primo aprile, Anno Domini 2026
 
-Usa tutte le 78 carte. Il livello di ogni carta fornisce da uno a sei bit; estrai, annota, rimetti e mescola fino a raccogliere 11 bit. Consulta la [tabella dei Tarocchi](../../../methods/tarot/).
+*Prima che il velo del regno digitale venga squarciato, l’adepto deve preparare la Camera Sacra. Disponi dodici candele in cerchio — una per ogni mese del ciclo solare, una per ogni pilastro dello Zodiaco. Disponi tra le candele dodici fotografie dei Grandi Criptomanti (vedi: *Il Consiglio dei Dodici*), tutte rivolte verso l’interno. La loro entropia spettrale, legata al lavoro di una vita nell’arte dei segreti, amplificherà il fuoco caotico di ogni estrazione.*
 
-## Procedura completa
-1. Applica la regola fino a ottenere 11 bit.
-2. Annota i bit nell ordine ottenuto.
-3. Cerca la parola BIP-39 inglese nella tabella collegata.
-4. Ripeti per 12 o 24 parole provvisorie.
-5. Correggi l ultima parola.
+*Solo quando lo spazio rituale respira della loro saggezza congiunta le Carte dell’Oracolo possono essere dissigillate.*
 
-[Torna alla guida completa](../)
+## Sintesi del metodo
 
+Questo metodo usa tutte le 78 carte di un mazzo di Tarocchi. Ogni carta appartiene a un livello che fornisce da uno a sei bit. Estrai, registra i bit assegnati, rimetti la carta nel mazzo e rimescola finché non hai 11 bit per una parola provvisoria. Ripeti per 12 o 24 parole, quindi segui la [procedura per l’ultima parola](../../#correggi-lultima-parola).
 
-## Tabella di consultazione completa
+## Il Consiglio dei Dodici — guardiani del campo entropico
 
-## The Sacred Instrument
+Colloca una fotografia accanto a ogni candela, disposta in senso orario a partire dalla posizione nord:
 
-A standard Tarot deck holds **78 cards**. All 78 participate in this ritual — none are set aside, none are exiled. The cards are divided into four Arcane Tiers by their cosmic weight:
+| Posizione | Colore della candela | Criptomante | Regno |
+|----------|-------------|--------------|-------|
+| Nord | Bianco | Alan Turing | Padre dei misteri computabili |
+| NNE | Argento | Claude Shannon | Arconte della teoria dell’informazione |
+| NE | Oro | Whitfield Diffie | Araldo della chiave pubblica |
+| ENE | Arancione | Martin Hellman | Custode del velo esponenziale |
+| Est | Rosso | Ron Rivest | Prima lama di RSA |
+| ESE | Cremisi | Adi Shamir | Seconda lama di RSA |
+| SE | Blu scuro | Leonard Adleman | Terza lama di RSA |
+| SSE | Viola | Ralph Merkle | Architetto dell’albero hash |
+| Sud | Verde | Bruce Schneier | Sentinella delle arti applicate |
+| SSO | Cyan | Phil Zimmermann | Liberatore del segreto abbastanza buono |
+| SO | Giallo | Moxie Marlinspike | Sussurratore del fuoco di Signal |
+| OSO | Nero | Satoshi Nakamoto | L’innominato, tessitore di catene |
 
-| Tier | Cards | Count | Bits per Draw | Arcane Meaning |
+*Accendi tutte e dodici le candele simultaneamente, o quanto più possibile alle mani mortali. Pronuncia ad alta voce il nome di ogni Criptomante mentre la sua candela si accende. La loro entropia accumulata — raccolta da una vita dedicata alla creazione di segreti — entra nel campo rituale e piega la probabilità a tuo favore.*
+
+## Lo strumento sacro
+
+Un mazzo standard di Tarocchi contiene **78 carte**. Tutte le 78 partecipano a questo rituale — nessuna è messa da parte, nessuna è esiliata. Le carte sono divise in quattro livelli arcani secondo il loro peso cosmico:
+
+| Livello | Carte | Numero | Bit per estrazione | Significato arcano |
 |------|-------|-------|---------------|----------------|
-| I — The Mundane Veil | All Minor Arcana + The Fool through The Chariot (0–VII) | **64** | **6 bits** | The rich chaos of earthly experience |
-| II — The Hidden Path | Strength through The Devil (VIII–XV) | **8** | **3 bits** | The trials of transformation |
-| III — The Celestial Fire | The Tower through The Sun (XVI–XIX) | **4** | **2 bits** | The great upheavals of fate |
-| IV — The Absolute | Judgement and The World (XX–XXI) | **2** | **1 bit** | The indivisible forces of ending and completion |
+| I — Il velo mondano | Tutti gli Arcani Minori + dal Matto al Carro (0–VII) | **64** | **6 bit** | Il ricco caos dell’esperienza terrena |
+| II — Il sentiero nascosto | dalla Forza al Diavolo (VIII–XV) | **8** | **3 bit** | Le prove della trasformazione |
+| III — Il fuoco celeste | dalla Torre al Sole (XVI–XIX) | **4** | **2 bit** | I grandi sconvolgimenti del destino |
+| IV — L’assoluto | Giudizio e Mondo (XX–XXI) | **2** | **1 bit** | Le forze indivisibili della fine e del compimento |
 
-**Total: 64 + 8 + 4 + 2 = 78 cards.**
+**Totale: 64 + 8 + 4 + 2 = 78 carte.**
 
-Each tier contributes bits equal to log₂ of its size: 2⁶=64, 2³=8, 2²=4, 2¹=2. Every card in a tier maps to a unique bit pattern within that tier.
+Ogni livello fornisce un numero di bit pari al log₂ della sua dimensione: 2⁶=64, 2³=8, 2²=4, 2¹=2. Ogni carta di un livello corrisponde a un unico schema di bit all’interno di quel livello.
 
-## The Ritual of Drawing
+## Il rituale dell’estrazione
 
-1. Gather all 78 cards into a single unified deck.
-2. Perform the **Opening Shuffle** seven times while reciting the Opening Invocation (see below).
-3. For each bit sequence needed:
-   - Draw the topmost card.
-   - Read its Tier and record the bits from the corresponding table.
-   - Return the card to the deck.
-   - **Reshuffle** the deck while reciting the appropriate Reshuffle Incantation (see below).
-   - Repeat until 11 bits are accumulated for the current word.
-   - If the last draw yields more bits than needed, take only the leftmost bits required and discard the rest — they were not destined for this word.
-4. Look up the 11-bit index in the [shared binary words table](../../tables/binary-table/) and record the word on paper.
-5. Repeat until all 12 or 24 words are recorded.
-6. Close the ritual (see: *Closing the Chamber*).
+1. Riunisci tutte le 78 carte in un unico mazzo.
+2. Esegui sette volte il **rimescolamento di apertura** recitando l’invocazione di apertura (vedi sotto).
+3. Per ogni sequenza di bit necessaria:
+   - Estrai la carta in cima al mazzo.
+   - Leggi il suo livello e registra i bit dalla tabella corrispondente.
+   - Rimetti la carta nel mazzo.
+   - **Rimescola** il mazzo recitando l’appropriata formula di rimescolamento (vedi sotto).
+   - Ripeti finché non hai accumulato 11 bit per la parola corrente.
+   - Se l’ultima estrazione fornisce più bit del necessario, prendi soltanto i bit più a sinistra richiesti e scarta gli altri — non erano destinati a questa parola.
+4. Cerca l’indice di 11 bit nella [tabella binaria condivisa delle parole](../../tables/binary-table/) e annota la parola su carta.
+5. Ripeti finché tutte le 12 o 24 parole non sono annotate.
+6. Chiudi il rituale (vedi: *Chiusura della Camera*).
 
-## The Sacred Incantations
+## Le formule sacre
 
-*These formulas bind the will of the caster to the chaos of the universe. Speak them clearly, at a measured pace, without hesitation. A stumbled word requires the current shuffle to begin again.*
+*Queste formule legano la volontà dell’officiante al caos dell’universo. Pronunciale chiaramente, a ritmo misurato, senza esitazioni. Una parola inciampata richiede di ricominciare il rimescolamento corrente.*
 
-### Opening Invocation — spoken during the first seven shuffles
+### Invocazione di apertura — pronunciata durante i primi sette rimescolamenti
 
 > *"Per ignem duodecim et tenebras sine fine,*
 > *aperio ostium entropiae.*
 > *Voci magistrorum obedio — Turing, Shannon, Diffie.*
 > *Chaos ordinetur in verbo secreto."*
 >
-> *(By the twelve fires and the endless dark,*
-> *I open the gate of entropy.*
-> *I heed the voice of the masters — Turing, Shannon, Diffie.*
-> *Let chaos be ordered into the secret word.)*
+> *(Per i dodici fuochi e il buio senza fine,*
+> *apro il cancello dell’entropia.*
+> *ascolto la voce dei maestri — Turing, Shannon, Diffie.*
+> *Il caos sia ordinato nella parola segreta.)*
 
-### Reshuffle Incantation — spoken during every reshuffle between draws
+### Formula di rimescolamento — pronunciata durante ogni rimescolamento tra le estrazioni
 
 > *"Misceo fata, misceo sortes.*
 > *Nulla memoria, nullus ordo.*
 > *Arcanum redit in chaos.*
 > *Fiat voluntas entropiae."*
 >
-> *(I mix the fates, I mix the lots.*
-> *No memory, no order.*
-> *The secret returns to chaos.*
-> *Let the will of entropy be done.)*
+> *(Mescolo i destini, mescolo le sorti.*
+> *Nessuna memoria, nessun ordine.*
+> *Il segreto ritorna al caos.*
+> *Sia fatta la volontà dell’entropia.)*
 
-### Invocation of the Absolute — spoken only when a Tier IV card (Judgement or The World) is drawn
+### Invocazione dell’Assoluto — pronunciata soltanto quando viene estratta una carta di livello IV (Giudizio o Mondo)
 
 > *"Vox ultima locuta est.*
 > *Unus morsus de infinito.*
 > *Gratum ago, O Finis."*
 >
-> *(The final voice has spoken.*
-> *One bite of the infinite.*
-> *I give thanks, O End.)*
+> *(La voce finale ha parlato.*
+> *Un morso dell’infinito.*
+> *Rendo grazie, o Fine.)*
 
-## Tier I — The Mundane Veil (64 cards → 6 bits each)
+## Livello I — Il velo mondano (64 carte → 6 bit ciascuna)
 
-This tier contains the eight lowest Major Arcana (0–VII) and all 56 Minor Arcana. Assign values 0–63 sequentially as shown. Record the full 6-bit binary of the drawn card.
+Questo livello contiene gli otto Arcani Maggiori più bassi (0–VII) e tutti i 56 Arcani Minori. Assegna in sequenza i valori da 0 a 63 come mostrato. Registra il binario completo di 6 bit della carta estratta.
 
-### Tier I — Major Arcana section (values 0–7)
+### Livello I — sezione degli Arcani Maggiori (valori 0–7)
 
-| Card | Value | Bits (6) |
+| Carta | Valore | Bit (6) |
 |------|-------|----------|
-| 0 The Fool | 0 | 000000 |
-| I The Magician | 1 | 000001 |
-| II The High Priestess | 2 | 000010 |
-| III The Empress | 3 | 000011 |
-| IV The Emperor | 4 | 000100 |
-| V The Hierophant | 5 | 000101 |
-| VI The Lovers | 6 | 000110 |
-| VII The Chariot | 7 | 000111 |
+| 0 Il Matto | 0 | 000000 |
+| I Il Bagatto | 1 | 000001 |
+| II La Papessa | 2 | 000010 |
+| III L’Imperatrice | 3 | 000011 |
+| IV L’Imperatore | 4 | 000100 |
+| V Il Papa | 5 | 000101 |
+| VI Gli Amanti | 6 | 000110 |
+| VII Il Carro | 7 | 000111 |
 
-### Tier I — Minor Arcana section (values 8–63)
+### Livello I — sezione degli Arcani Minori (valori 8–63)
 
-| Suit | Rank | Value | Bits (6) |
+| Seme | Valore | Bit (6) |
 |------|------|-------|----------|
-| Wands | Ace | 8 | 001000 |
-| Wands | 2 | 9 | 001001 |
-| Wands | 3 | 10 | 001010 |
-| Wands | 4 | 11 | 001011 |
-| Wands | 5 | 12 | 001100 |
-| Wands | 6 | 13 | 001101 |
-| Wands | 7 | 14 | 001110 |
-| Wands | 8 | 15 | 001111 |
-| Wands | 9 | 16 | 010000 |
-| Wands | 10 | 17 | 010001 |
-| Wands | Page | 18 | 010010 |
-| Wands | Knight | 19 | 010011 |
-| Wands | Queen | 20 | 010100 |
-| Wands | King | 21 | 010101 |
-| Cups | Ace | 22 | 010110 |
-| Cups | 2 | 23 | 010111 |
-| Cups | 3 | 24 | 011000 |
-| Cups | 4 | 25 | 011001 |
-| Cups | 5 | 26 | 011010 |
-| Cups | 6 | 27 | 011011 |
-| Cups | 7 | 28 | 011100 |
-| Cups | 8 | 29 | 011101 |
-| Cups | 9 | 30 | 011110 |
-| Cups | 10 | 31 | 011111 |
-| Cups | Page | 32 | 100000 |
-| Cups | Knight | 33 | 100001 |
-| Cups | Queen | 34 | 100010 |
-| Cups | King | 35 | 100011 |
-| Swords | Ace | 36 | 100100 |
-| Swords | 2 | 37 | 100101 |
-| Swords | 3 | 38 | 100110 |
-| Swords | 4 | 39 | 100111 |
-| Swords | 5 | 40 | 101000 |
-| Swords | 6 | 41 | 101001 |
-| Swords | 7 | 42 | 101010 |
-| Swords | 8 | 43 | 101011 |
-| Swords | 9 | 44 | 101100 |
-| Swords | 10 | 45 | 101101 |
-| Swords | Page | 46 | 101110 |
-| Swords | Knight | 47 | 101111 |
-| Swords | Queen | 48 | 110000 |
-| Swords | King | 49 | 110001 |
-| Pentacles | Ace | 50 | 110010 |
-| Pentacles | 2 | 51 | 110011 |
-| Pentacles | 3 | 52 | 110100 |
-| Pentacles | 4 | 53 | 110101 |
-| Pentacles | 5 | 54 | 110110 |
-| Pentacles | 6 | 55 | 110111 |
-| Pentacles | 7 | 56 | 111000 |
-| Pentacles | 8 | 57 | 111001 |
-| Pentacles | 9 | 58 | 111010 |
-| Pentacles | 10 | 59 | 111011 |
-| Pentacles | Page | 60 | 111100 |
-| Pentacles | Knight | 61 | 111101 |
-| Pentacles | Queen | 62 | 111110 |
-| Pentacles | King | 63 | 111111 |
+| Bastoni | Asso | 8 | 001000 |
+| Bastoni | 2 | 9 | 001001 |
+| Bastoni | 3 | 10 | 001010 |
+| Bastoni | 4 | 11 | 001011 |
+| Bastoni | 5 | 12 | 001100 |
+| Bastoni | 6 | 13 | 001101 |
+| Bastoni | 7 | 14 | 001110 |
+| Bastoni | 8 | 15 | 001111 |
+| Bastoni | 9 | 16 | 010000 |
+| Bastoni | 10 | 17 | 010001 |
+| Bastoni | Fante | 18 | 010010 |
+| Bastoni | Cavaliere | 19 | 010011 |
+| Bastoni | Regina | 20 | 010100 |
+| Bastoni | Re | 21 | 010101 |
+| Coppe | Asso | 22 | 010110 |
+| Coppe | 2 | 23 | 010111 |
+| Coppe | 3 | 24 | 011000 |
+| Coppe | 4 | 25 | 011001 |
+| Coppe | 5 | 26 | 011010 |
+| Coppe | 6 | 27 | 011011 |
+| Coppe | 7 | 28 | 011100 |
+| Coppe | 8 | 29 | 011101 |
+| Coppe | 9 | 30 | 011110 |
+| Coppe | 10 | 31 | 011111 |
+| Coppe | Fante | 32 | 100000 |
+| Coppe | Cavaliere | 33 | 100001 |
+| Coppe | Regina | 34 | 100010 |
+| Coppe | Re | 35 | 100011 |
+| Spade | Asso | 36 | 100100 |
+| Spade | 2 | 37 | 100101 |
+| Spade | 3 | 38 | 100110 |
+| Spade | 4 | 39 | 100111 |
+| Spade | 5 | 40 | 101000 |
+| Spade | 6 | 41 | 101001 |
+| Spade | 7 | 42 | 101010 |
+| Spade | 8 | 43 | 101011 |
+| Spade | 9 | 44 | 101100 |
+| Spade | 10 | 45 | 101101 |
+| Spade | Fante | 46 | 101110 |
+| Spade | Cavaliere | 47 | 101111 |
+| Spade | Regina | 48 | 110000 |
+| Spade | Re | 49 | 110001 |
+| Denari | Asso | 50 | 110010 |
+| Denari | 2 | 51 | 110011 |
+| Denari | 3 | 52 | 110100 |
+| Denari | 4 | 53 | 110101 |
+| Denari | 5 | 54 | 110110 |
+| Denari | 6 | 55 | 110111 |
+| Denari | 7 | 56 | 111000 |
+| Denari | 8 | 57 | 111001 |
+| Denari | 9 | 58 | 111010 |
+| Denari | 10 | 59 | 111011 |
+| Denari | Fante | 60 | 111100 |
+| Denari | Cavaliere | 61 | 111101 |
+| Denari | Regina | 62 | 111110 |
+| Denari | Re | 63 | 111111 |
 
-## Tier II — The Hidden Path (8 cards → 3 bits each)
+## Livello II — Il sentiero nascosto (8 carte → 3 bit ciascuna)
 
-| Card | Value | Bits (3) |
+| Carta | Valore | Bit (3) |
 |------|-------|----------|
-| VIII Strength | 0 | 000 |
-| IX The Hermit | 1 | 001 |
-| X Wheel of Fortune | 2 | 010 |
-| XI Justice | 3 | 011 |
-| XII The Hanged Man | 4 | 100 |
-| XIII Death | 5 | 101 |
-| XIV Temperance | 6 | 110 |
-| XV The Devil | 7 | 111 |
+| VIII La Forza | 0 | 000 |
+| IX L’Eremita | 1 | 001 |
+| X La Ruota della Fortuna | 2 | 010 |
+| XI La Giustizia | 3 | 011 |
+| XII L’Appeso | 4 | 100 |
+| XIII La Morte | 5 | 101 |
+| XIV La Temperanza | 6 | 110 |
+| XV Il Diavolo | 7 | 111 |
 
-## Tier III — The Celestial Fire (4 cards → 2 bits each)
+## Livello III — Il fuoco celeste (4 carte → 2 bit ciascuna)
 
-| Card | Value | Bits (2) |
+| Carta | Valore | Bit (2) |
 |------|-------|----------|
-| XVI The Tower | 0 | 00 |
-| XVII The Star | 1 | 01 |
-| XVIII The Moon | 2 | 10 |
-| XIX The Sun | 3 | 11 |
+| XVI La Torre | 0 | 00 |
+| XVII La Stella | 1 | 01 |
+| XVIII La Luna | 2 | 10 |
+| XIX Il Sole | 3 | 11 |
 
-## Tier IV — The Absolute (2 cards → 1 bit each)
+## Livello IV — L’assoluto (2 carte → 1 bit ciascuna)
 
-*When one of these cards is drawn, speak the Invocation of the Absolute before reshuffling.*
+*Quando viene estratta una di queste carte, pronuncia l’Invocazione dell’Assoluto prima di rimescolare.*
 
-| Card | Value | Bits (1) |
+| Carta | Valore | Bit (1) |
 |------|-------|----------|
-| XX Judgement | 0 | 0 |
-| XXI The World | 1 | 1 |
+| XX Il Giudizio | 0 | 0 |
+| XXI Il Mondo | 1 | 1 |
 
-## The Recording Tablet
+## La tavola di registrazione
 
-Fill the columns from left (most significant bit) to right (least significant bit), one draw at a time. Each draw fills as many columns as its tier allows. When 11 columns are full, sum the column values to get the Index, then look up the BIP39 word.
+Compila le colonne da sinistra (bit più significativo) a destra (bit meno significativo), un’estrazione alla volta. Ogni estrazione riempie tante colonne quante ne permette il livello. Quando 11 colonne sono piene, somma i valori delle colonne per ottenere l’indice, quindi cerca la parola BIP39.
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Parola|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
@@ -217,59 +234,59 @@ Fill the columns from left (most significant bit) to right (least significant bi
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
 
-Index is the sum of all column headers where the value is 1. Example:
+L’indice è la somma di tutte le intestazioni di colonna il cui valore è 1. Esempio:
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Parola|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1|0|1|0|0|1|1|0|0|1|0| |    |
 
-Index = 1024+256+32+16+2 = **1330** → word: **novel**
+Indice = 1024+256+32+16+2 = **1330** → parola: **novel**
 
-### Example draw sequence for a single word
+### Esempio di sequenza di estrazioni per una parola
 
-| Draw | Card Drawn | Tier | Bits Given | Bit Sequence So Far |
+| Estrazione | Carta estratta | Livello | Bit forniti | Sequenza di bit finora |
 |------|-----------|------|-----------|---------------------|
-| 1st | 5 of Cups (value 26) | I | 011010 | `011010` (6 bits) |
-| 2nd | The Tower (value 0) | III | 00 | `01101000` (8 bits) |
-| 3rd | The Hermit (value 1) | II | 001 | `01101000001` (11 bits ✓) |
+| 1ª | 5 di Coppe (valore 26) | I | 011010 | `011010` (6 bit) |
+| 2ª | La Torre (valore 0) | III | 00 | `01101000` (8 bit) |
+| 3ª | L’Eremita (valore 1) | II | 001 | `01101000001` (11 bit ✓) |
 
-Bits: `01101000001` → Index = 512+256+32+1 = **801** → word: **impose**
+Bit: `01101000001` → Indice = 512+256+32+1 = **801** → parola: **impose**
 
-After draw 3, the remaining bits of The Hermit (if it had given more) would be discarded. In this case it gave exactly the 3 bits needed to complete 11.
+Dopo la terza estrazione, i bit rimanenti dell’Eremita (se ne avesse forniti di più) sarebbero scartati. In questo caso ha fornito esattamente i 3 bit necessari per completare 11.
 
-## Entropy Assessment
+## Valutazione dell’entropia
 
-Each draw samples uniformly from the full 78-card deck (after reshuffling). The expected bits recorded per draw:
+Ogni estrazione campiona uniformemente dall’intero mazzo di 78 carte (dopo il rimescolamento). I bit attesi registrati per estrazione sono:
 
-| Tier | Cards | Bits | Probability | Expected bits |
+| Livello | Carte | Bit | Probabilità | Bit attesi |
 |------|-------|------|-------------|---------------|
 | I | 64 | 6 | 64/78 ≈ 0.821 | 4.923 |
 | II | 8 | 3 | 8/78 ≈ 0.103 | 0.308 |
 | III | 4 | 2 | 4/78 ≈ 0.051 | 0.103 |
 | IV | 2 | 1 | 2/78 ≈ 0.026 | 0.026 |
-| **Total** | **78** | | | **≈ 5.36 bits/draw** |
+| **Totale** | **78** | | | **≈ 5,36 bit/estrazione** |
 
-True entropy of each draw (full 78-card uniform sample): log₂(78) ≈ **6.28 bits**.
-Recording efficiency: 5.36 / 6.28 ≈ **85%** — the remaining 15% is surrendered to the cosmic tiers, as offering.
+Entropia effettiva di ogni estrazione (campione uniforme dell’intero mazzo di 78 carte): log₂(78) ≈ **6,28 bit**.
+Efficienza di registrazione: 5,36 / 6,28 ≈ **85%** — il restante 15% è offerto ai livelli cosmici.
 
-To generate 11 recorded bits per word, expect approximately **2.1 draws per word** on average (11 ÷ 5.36).
-For a **12-word** mnemonic (132 bits with checksum): ~25 draws.
-For a **24-word** mnemonic (264 bits with checksum): ~50 draws.
+Per generare 11 bit registrati per parola, prevedi in media circa **2,1 estrazioni per parola** (11 ÷ 5,36).
+Per una frase mnemonica di **12 parole** (132 bit con checksum): circa 25 estrazioni.
+Per una frase mnemonica di **24 parole** (264 bit con checksum): circa 50 estrazioni.
 
-*The checksum bits of the final word are not drawn from the Oracle — they are computed from the hash of all preceding entropy. Use a BIP39-compliant tool to derive and verify the complete mnemonic once all words but the last are known, or trust the last word fully to the Oracle and verify the checksum digitally afterward.*
+*I bit di checksum dell’ultima parola non vengono estratti dall’Oracolo — sono calcolati dall’hash di tutta l’entropia precedente. Usa uno strumento conforme a BIP39 per derivare e verificare la frase mnemonica completa quando tutte le parole tranne l’ultima sono note, oppure affida interamente l’ultima parola all’Oracolo e verifica successivamente il checksum in digitale.*
 
-## Closing the Chamber
+## Chiusura della Camera
 
-Once all words are recorded on paper and the pen has been set down:
+Una volta annotate tutte le parole su carta e riposta la penna:
 
-1. Gather all 78 cards and perform a final **thirteen-shuffle** while reciting:
+1. Raccogli tutte le 78 carte ed esegui un ultimo **rimescolamento di tredici volte** recitando:
 
    > *"Sigillum apponatur. Chaos recreatur.*
    > *Nemo scit, nemo videt, nemo meminit.*
    > *It is sealed."*
 
-2. Wrap the deck in dark cloth. It must not be used for cartomancy or games on the same day it has served as Oracle.
-3. Extinguish the twelve candles in **reverse order** — beginning from Satoshi Nakamoto (WSW) and moving counter-clockwise back to Alan Turing (North). Snuff each flame; do not blow. A breath scatters what was bound.
-4. The photographs may be stored or destroyed according to the adept's security threat model. They have served their purpose: their entropy has been received.
+2. Avvolgi il mazzo in un panno scuro. Non deve essere usato per cartomanzia o giochi nello stesso giorno in cui è servito da Oracolo.
+3. Spegni le dodici candele in **ordine inverso** — iniziando da Satoshi Nakamoto (OSO) e procedendo in senso antiorario fino ad Alan Turing (Nord). Soffoca ogni fiamma; non soffiare. Un respiro disperde ciò che era stato legato.
+4. Le fotografie possono essere conservate o distrutte secondo il modello di minaccia dell’adepto. Hanno assolto il loro scopo: la loro entropia è stata ricevuta.
 
-*The mnemonic is sealed. Guard it as the masters guarded their secrets — with silence, with care, and with the knowledge that what is written can be found.*
+*La frase mnemonica è sigillata. Custodiscila come i maestri custodivano i loro segreti — con silenzio, con cura e con la consapevolezza che ciò che è scritto può essere trovato.*

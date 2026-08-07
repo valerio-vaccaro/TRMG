@@ -1,29 +1,27 @@
 ---
 layout: default
-title: D8/D16/D16
+title: Metodo D8/D16/D16
+description: Genera indici di parole BIP-39 con un D8 e due D16.
 lang: it
 permalink: /it/methods/d8d16d16/
 ---
 
-## D8/D16/D16
+## Genera una frase mnemonica con dadi D8/D16/D16
 
-Lancia un D8 e due D16. L'indice è `(D8 - 1) × 256 + (primo D16 - 1) × 16 + (secondo D16 - 1)`. Ogni serie seleziona un indice; consulta la [tabella completa](../../../methods/d8ff/).
+Sono necessari tre dadi:
 
-## Procedura completa
-1. Applica la regola fino a ottenere 11 bit.
-2. Annota i bit nell ordine ottenuto.
-3. Cerca la parola BIP-39 inglese nella tabella collegata.
-4. Ripeti per 12 o 24 parole provvisorie.
-5. Correggi l ultima parola.
+- Un dado a 8 facce, chiamato Primo
+- Due dadi a 16 facce, chiamati Secondo e Terzo
 
-[Torna alla guida completa](../)
+Ogni serie di tre lanci produce esattamente un indice di parola di 11 bit; questo metodo richiede quindi un lancio di D8 e due lanci di D16 per ogni parola provvisoria. Ripeti la serie 12 o 24 volte, quindi segui la [procedura per l’ultima parola](../../#correggi-lultima-parola).
 
+Per ogni serie di lanci, trova la parola corrispondente nella tabella seguente.
 
-## Tabella di consultazione completa
+L’indice si calcola come `(First - 1) * 2^8 + (Second - 1) * 2^4 + (Third - 1)`.
 
-## Words table
+## Tabella delle parole
 
-|First|Second|Third|Index|Word|Index in binary|Group 12|Group 24|
+|Primo|Secondo|Terzo|Indice|Parola|Indice in binario|Gruppo 12|Gruppo 24|
 |-----|------|-----|-----|----|---------------|--------|--------|
 |1|1|1|0|abandon|00000000000|0000000|000|
 |1|1|2|1|ability|00000000001|0000000|000|

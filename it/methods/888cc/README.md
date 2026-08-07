@@ -1,29 +1,33 @@
 ---
 layout: default
-title: D8/D8/D8/moneta/moneta
+title: Metodo D8/D8/D8/moneta/moneta
+description: Genera indici di parole BIP-39 con tre D8 e due monete.
 lang: it
 permalink: /it/methods/888cc/
 ---
 
-## D8/D8/D8/moneta/moneta
+## Genera una frase mnemonica con tre dadi D8 e due monete
 
-Lancia tre D8 e due monete. Testa è `0` e croce è `1`. L'indice è `(primo D8 - 1) × 256 + (secondo D8 - 1) × 32 + (terzo D8 - 1) × 4 + prima moneta × 2 + seconda moneta`; consulta la [tabella completa](../../../methods/888cc/).
+Ogni serie di tre lanci di D8 e due lanci di moneta produce esattamente un indice di parola di 11 bit. Ripeti i cinque risultati per 12 o 24 parole provvisorie, quindi segui la [procedura per l’ultima parola](../../#correggi-lultima-parola).
 
-## Procedura completa
-1. Applica la regola fino a ottenere 11 bit.
-2. Annota i bit nell ordine ottenuto.
-3. Cerca la parola BIP-39 inglese nella tabella collegata.
-4. Ripeti per 12 o 24 parole provvisorie.
-5. Correggi l ultima parola.
+Usa nell’ordine i risultati dei dadi come Primo D8, Secondo D8 e Terzo D8. Registra testa come `H` (valore `0`) e croce come `T` (valore `1`).
 
-[Torna alla guida completa](../)
+|Risultato|Valore|
+|------|-----|
+|Testa|0|
+|Croce|1|
 
+L’indice della parola si calcola come:
 
-## Tabella di consultazione completa
+```
+(First D8 - 1) * 256 + (Second D8 - 1) * 32 + (Third D8 - 1) * 4 + First coin * 2 + Second coin
+```
 
-## Words table
+Questa corrispondenza produce ogni indice da 0 a 2047 esattamente una volta, con tutte le combinazioni dei tre dadi e delle due monete rappresentate.
 
-|First D8|Second D8|Third D8|First coin|Second coin|Index|Word|Index in binary|Group 12|Group 24|
+## Tabella delle parole
+
+|Primo D8|Secondo D8|Terzo D8|Prima moneta|Seconda moneta|Indice|Parola|Indice in binario|Gruppo 12|Gruppo 24|
 |--------|---------|--------|----------|-----------|-----|----|---------------|--------|--------|
 |1|1|1|H|H|0|abandon|00000000000|0000000|000|
 |1|1|1|H|T|1|ability|00000000001|0000000|000|

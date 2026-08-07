@@ -1,86 +1,99 @@
 ---
 layout: default
-title: Carte da poker
+title: Metodo con carte da poker
+description: Genera indici di parole BIP-39 con carte da poker.
 lang: it
 permalink: /it/methods/poker/
 ---
 
-## Carte da poker
+## Genera una frase mnemonica con carte da poker
 
-Usa un mazzo standard di 52 carte senza Joker. Converti ogni carta con la [tabella del poker](../../../methods/poker/), rimettila nel mazzo e mescola fino a raccogliere 11 bit.
+Questo metodo usa un mazzo standard di 52 carte, comprendente tutti e quattro i semi ed escludendo i jolly. Ogni estrazione corrisponde a una sequenza di bit nella tabella sottostante; il numero di bit varia in base alla carta. Accumula 11 bit per ogni parola provvisoria, ripeti per 12 o 24 parole e poi segui la [procedura per l’ultima parola](../../#correggi-lultima-parola).
 
-## Procedura completa
-1. Applica la regola fino a ottenere 11 bit.
-2. Annota i bit nell ordine ottenuto.
-3. Cerca la parola BIP-39 inglese nella tabella collegata.
-4. Ripeti per 12 o 24 parole provvisorie.
-5. Correggi l ultima parola.
+Usa una tabella come la seguente per registrare i bit ottenuti nell’ordine di estrazione.
 
-[Torna alla guida completa](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Parola|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
+L’indice si calcola sommando i valori di ogni colonna che contiene `1`. Per esempio:
 
-## Tabella di consultazione completa
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Parola|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-|Suit    |Rank|Value|
+L’indice è `1024 + 256 + 128 + 8 + 2 = 1418`. Non è necessario calcolarlo manualmente; usa la [tabella binaria condivisa delle parole](../../tables/binary-table/) per trovare indice e parola.
+
+## Corrispondenza carte-bit
+Con un mazzo da poker di 52 carte, estrai una carta alla volta finché non hai entropia sufficiente. Rimetti ogni carta nel mazzo e mescola prima dell’estrazione successiva.
+
+Per ogni carta, trova il suo valore nella tabella seguente abbinando:
+
+- il seme (Picche, Cuori, Fiori, Quadri)
+- il valore (A per Asso, 2-10, J per Fante, Q per Donna, K per Re).
+
+(Questo metodo usa un mazzo standard da poker di 52 carte, senza jolly.)
+
+|Seme    |Valore|Bit|
 |--------|----|-----|
-|Spades  | A  |00000|
-|Spades  | 2  |00001|
-|Spades  | 3  |00010|
-|Spades  | 4  |00011|
-|Spades  | 5  |00100|
-|Spades  | 6  |00101|
-|Spades  | 7  |00110|
-|Spades  | 8  |00111|
-|Spades  | 9  |01000|
-|Spades  | 10 |01001|
-|Spades  | J  |01010|
-|Spades  | Q  |01011|
-|Spades  | K  |01100|
-|Hearts  | A  |01101|
-|Hearts  | 2  |01110|
-|Hearts  | 3  |01111|
-|Hearts  | 4  |10000|
-|Hearts  | 5  |10001|
-|Hearts  | 6  |10010|
-|Hearts  | 7  |10011|
-|Hearts  | 8  |10100|
-|Hearts  | 9  |10101|
-|Hearts  | 10 |10110|
-|Hearts  | J  |10111|
-|Hearts  | Q  |11000|
-|Hearts  | K  |11001|
-|Clubs   | A  |11010|
-|Clubs   | 2  |11011|
-|Clubs   | 3  |11100|
-|Clubs   | 4  |11101|
-|Clubs   | 5  |11110|
-|Clubs   | 6  |11111|
-|Clubs   | 7  |0000 |
-|Clubs   | 8  |0001 |
-|Clubs   | 9  |0010 |
-|Clubs   | 10 |0011 |
-|Clubs   | J  |0100 |
-|Clubs   | Q  |0101 |
-|Clubs   | K  |0110 |
-|Diamonds| A  |0111 |
-|Diamonds| 2  |1000 |
-|Diamonds| 3  |1001 |
-|Diamonds| 4  |1010 |
-|Diamonds| 5  |1011 |
-|Diamonds| 6  |1100 |
-|Diamonds| 7  |1101 |
-|Diamonds| 8  |1110 |
-|Diamonds| 9  |1111 |
-|Diamonds| 10 |00   |
-|Diamonds| J  |01   |
-|Diamonds| Q  |10   |
-|Diamonds| K  |11   |
+|Picche  | A  |00000|
+|Picche  | 2  |00001|
+|Picche  | 3  |00010|
+|Picche  | 4  |00011|
+|Picche  | 5  |00100|
+|Picche  | 6  |00101|
+|Picche  | 7  |00110|
+|Picche  | 8  |00111|
+|Picche  | 9  |01000|
+|Picche  | 10 |01001|
+|Picche  | J  |01010|
+|Picche  | Q  |01011|
+|Picche  | K  |01100|
+|Cuori  | A  |01101|
+|Cuori  | 2  |01110|
+|Cuori  | 3  |01111|
+|Cuori  | 4  |10000|
+|Cuori  | 5  |10001|
+|Cuori  | 6  |10010|
+|Cuori  | 7  |10011|
+|Cuori  | 8  |10100|
+|Cuori  | 9  |10101|
+|Cuori  | 10 |10110|
+|Cuori  | J  |10111|
+|Cuori  | Q  |11000|
+|Cuori  | K  |11001|
+|Fiori   | A  |11010|
+|Fiori   | 2  |11011|
+|Fiori   | 3  |11100|
+|Fiori   | 4  |11101|
+|Fiori   | 5  |11110|
+|Fiori   | 6  |11111|
+|Fiori   | 7  |0000 |
+|Fiori   | 8  |0001 |
+|Fiori   | 9  |0010 |
+|Fiori   | 10 |0011 |
+|Fiori   | J  |0100 |
+|Fiori   | Q  |0101 |
+|Fiori   | K  |0110 |
+|Quadri| A  |0111 |
+|Quadri| 2  |1000 |
+|Quadri| 3  |1001 |
+|Quadri| 4  |1010 |
+|Quadri| 5  |1011 |
+|Quadri| 6  |1100 |
+|Quadri| 7  |1101 |
+|Quadri| 8  |1110 |
+|Quadri| 9  |1111 |
+|Quadri| 10 |00   |
+|Quadri| J  |01   |
+|Quadri| Q  |10   |
+|Quadri| K  |11   |
 
-If the final draw provides too many bits, truncate the result to the required length.
+Se l’ultima estrazione fornisce troppi bit, tronca il risultato alla lunghezza richiesta.
 
-## Words table
+## Tabella delle parole
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|Group 12|Group 24|
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Parola|Gruppo 12|Gruppo 24|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|--------|--------|
 |0|0|0|0|0|0|0|0|0|0|0|0|abandon|00000000000|0000000|000|
 |0|0|0|0|0|0|0|0|0|0|1|1|ability|00000000001|0000000|000|

@@ -1,25 +1,48 @@
 ---
 layout: default
-title: Carte piacentine
+title: Metodo con carte piacentine
+description: Genera indici di parole BIP-39 con carte piacentine.
 lang: it
 permalink: /it/methods/piacentine/
 ---
 
-## Carte piacentine
+## Genera una frase mnemonica con carte piacentine
 
-Usa un mazzo piacentino da 40 carte. Raccogli 11 bit con la [tabella delle carte](../../../methods/piacentine/); rimetti e mescola dopo ogni estrazione.
+Questo metodo usa un mazzo piacentino di 40 carte, oppure un altro mazzo regionale italiano con la stessa struttura. Ogni estrazione corrisponde a una sequenza di bit nella tabella sottostante; accumula 11 bit per ogni parola provvisoria, ripeti per 12 o 24 parole e poi segui la [procedura per l’ultima parola](../../#correggi-lultima-parola).
 
-## Procedura completa
-1. Applica la regola fino a ottenere 11 bit.
-2. Annota i bit nell ordine ottenuto.
-3. Cerca la parola BIP-39 inglese nella tabella collegata.
-4. Ripeti per 12 o 24 parole provvisorie.
-5. Correggi l ultima parola.
+Usa una tabella come la seguente per registrare i risultati delle estrazioni nell’ordine in cui sono estratte.
 
-[Torna alla guida completa](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Parola|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
+
+L’indice si calcola sommando i valori di ogni colonna che contiene `1`. Per esempio:
+
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Parola|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
+
+L’indice è `1024 + 256 + 128 + 8 + 2 = 1418`. Non è necessario calcolarlo manualmente; usa la [tabella binaria condivisa delle parole](../../tables/binary-table/) per trovare indice e parola.
 
 
-## Tabella di consultazione completa
+## Corrispondenza carte-bit
+Con un mazzo regionale italiano di 40 carte, come le carte piacentine, estrai una carta alla volta finché non hai entropia sufficiente. Rimetti ogni carta nel mazzo e mescola prima dell’estrazione successiva.
+
+Come gli altri mazzi regionali italiani, le carte piacentine hanno quattro semi con dieci carte ciascuno.
+Le carte da 1 a 7 mostrano da uno a sette simboli del seme.
+Le carte rimanenti sono:
+
+- 8: Fante, un uomo che tiene il simbolo del seme
+- 9: Donna, una donna che tiene il simbolo del seme
+- 10: Re, un re che tiene il simbolo del seme
+
+Queste figure sono chiamate Fante, Donna e Re. A seconda del gioco, hanno rispettivamente valori 8, 9 e 10. La carta 1 di ogni seme è chiamata Asso.
+
+Per ogni carta, trova il suo valore nella tabella seguente abbinando:
+
+- il seme (Coppe, Denari, Bastoni, Spade)
+- il valore (A per Asso, 2-7, 8/J per Fante, 9/Q per Donna, 10/K per Re).
+
 
 Suit     |Rank|Value|
 |--------|----|-----|
