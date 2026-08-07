@@ -1,11 +1,12 @@
 ## Generate mnemonic
-You need 3 dice:
-- 1 dice with 8 faces, we will call it First
-- 2 dice with 16 faces, we will call it Second and Third
+You need three dice:
 
-Throws dices 12 or 24 times in order to generate the words, for each roll you can read the corresponding word in the following table.
+- One 8-sided die, called First
+- Two 16-sided dice, called Second and Third
 
-Index is calculate as (First-1)*2^8+(Second-1)*2^4+(Third-1).
+Roll the dice 12 or 24 times to generate the words. For each set of rolls, find the corresponding word in the table below.
+
+The index is calculated as `(First - 1) * 2^8 + (Second - 1) * 2^4 + (Third - 1)`.
 
 ## Words table
 
