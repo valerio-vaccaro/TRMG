@@ -1,0 +1,27 @@
+---
+layout: default
+title: D8 method
+description: Generate BIP-39 word indices from an eight-sided die.
+permalink: /methods/d8/
+---
+
+## Generate a mnemonic with a D8 die
+
+This method uses a single eight-sided die. Each roll provides three bits, so four rolls provide 12 bits; retain the first 11 bits for each provisional word. Repeat for 12 or 24 words, then follow the [final-word procedure](../../#correct-the-final-word).
+
+Roll the die four times, using this conversion table:
+
+|Result|Bits|
+|------|----|
+|1|000|
+|2|001|
+|3|010|
+|4|011|
+|5|100|
+|6|101|
+|7|110|
+|8|111|
+
+After four rolls, retain only the leftmost 11 bits and discard the final bit.
+
+Use the [binary words table](../../tables/binary-table/) to match the resulting 11-bit value to a BIP-39 word.

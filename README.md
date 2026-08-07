@@ -21,14 +21,14 @@ Each method below creates a provisional 11-bit BIP-39 word index. Generate 12 or
 
 |Method|Equipment|How it produces each provisional word|
 |------|---------|--------------------------------------|
-|[Coin](coin.md)|One fair coin|Flip 11 times; heads is `0` and tails is `1`.|
-|[D6](d6.md)|One six-sided die|Convert each roll to one or two bits until 11 bits are collected.|
-|[D8](d8.md)|One eight-sided die|Roll four times for 12 bits, then retain the first 11 bits.|
-|[D8/D16/D16](d8ff.md)|One D8 and two D16 dice|One set of three rolls directly selects one of 2,048 word indices.|
-|[D8/D8/D8/coin/coin](888cc.md)|Three D8 dice and two coins|One set of three rolls and two flips directly selects one of 2,048 indices.|
-|[Poker cards](poker.md)|A standard 52-card deck, without Jokers|Convert each draw to bits, return the card, reshuffle, and collect 11 bits.|
-|[Piacentine cards](piacentine.md)|A 40-card Piacentine deck|Convert each draw to bits, return the card, reshuffle, and collect 11 bits.|
-|[Tarot](tarot.md)|A complete 78-card Tarot deck|Draw cards, convert their tier to bits, reshuffle, and collect 11 bits.|
+|[Coin](methods/coin/)|One fair coin|Flip 11 times; heads is `0` and tails is `1`.|
+|[D6](methods/d6/)|One six-sided die|Convert each roll to one or two bits until 11 bits are collected.|
+|[D8](methods/d8/)|One eight-sided die|Roll four times for 12 bits, then retain the first 11 bits.|
+|[D8/D16/D16](methods/d8ff/)|One D8 and two D16 dice|One set of three rolls directly selects one of 2,048 word indices.|
+|[D8/D8/D8/coin/coin](methods/888cc/)|Three D8 dice and two coins|One set of three rolls and two flips directly selects one of 2,048 indices.|
+|[Poker cards](methods/poker/)|A standard 52-card deck, without Jokers|Convert each draw to bits, return the card, reshuffle, and collect 11 bits.|
+|[Piacentine cards](methods/piacentine/)|A 40-card Piacentine deck|Convert each draw to bits, return the card, reshuffle, and collect 11 bits.|
+|[Tarot](methods/tarot/)|A complete 78-card Tarot deck|Draw cards, convert their tier to bits, reshuffle, and collect 11 bits.|
 
 All methods are manual and auditable. Keep your recorded words private, and use an offline, trusted tool only when checking or correcting the final word.
 
@@ -43,7 +43,7 @@ For a 12-word mnemonic, first generate 12 provisional words, then correct the 12
 |12 words|7|4|16|
 |24 words|3|8|128|
 
-The [binary words table](binary-table.md) shows these entropy portions as **Group 12** and **Group 24**. Generate the first 11 or 23 words normally, then use the provisional final word obtained from your dice, cards, or coins to identify the appropriate group.
+The [binary words table](tables/binary-table/) shows these entropy portions as **Group 12** and **Group 24**. Generate the first 11 or 23 words normally, then use the provisional final word obtained from your dice, cards, or coins to identify the appropriate group.
 
 1. Find the provisional final word in the binary words table.
 2. For a 12-word mnemonic, note its Group 12 value; for a 24-word mnemonic, note its Group 24 value.

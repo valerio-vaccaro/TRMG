@@ -1,5 +1,12 @@
+{% assign current_lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[current_lang] %}
+{% if current_lang == 'en' %}
+  {% assign home_path = '/' %}
+{% else %}
+  {% assign home_path = '/' | append: current_lang | append: '/' %}
+{% endif %}
 <!doctype html>
-<html lang="en">
+<html lang="{{ current_lang }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +18,24 @@
     <header class="site-header">
       <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark">TR</span><span>TRMG</span></a>
       <nav aria-label="Primary navigation">
-        <a href="{{ '/#methods' | relative_url }}">Methods</a>
-        <a href="{{ '/binary-table/' | relative_url }}">Words table</a>
-        <a href="{{ '/#correct-the-final-word' | relative_url }}">Final word</a>
-        <a href="https://github.com/valerio-vaccaro/TRMG">Source</a>
+        <a href="{{ home_path | append: '#methods' | relative_url }}">{{ ui.methods }}</a>
+        <a href="{{ '/tables/binary-table/' | relative_url }}">{{ ui.table }}</a>
+        <a href="{{ home_path | append: '#correct-the-final-word' | relative_url }}">{{ ui.final_word }}</a>
+        <a href="https://github.com/valerio-vaccaro/TRMG">{{ ui.source }}</a>
+        <details class="language-menu">
+          <summary>{{ ui.language }}</summary>
+          <div>
+            <a href="{{ '/' | relative_url }}">English</a>
+            <a href="{{ '/zh/' | relative_url }}">中文</a>
+            <a href="{{ '/es/' | relative_url }}">Español</a>
+            <a href="{{ '/pt/' | relative_url }}">Português</a>
+            <a href="{{ '/ru/' | relative_url }}">Русский</a>
+            <a href="{{ '/fr/' | relative_url }}">Français</a>
+            <a href="{{ '/de/' | relative_url }}">Deutsch</a>
+            <a href="{{ '/it/' | relative_url }}">Italiano</a>
+            <a href="{{ '/hu/' | relative_url }}">Magyar</a>
+          </div>
+        </details>
       </nav>
     </header>
     <main>

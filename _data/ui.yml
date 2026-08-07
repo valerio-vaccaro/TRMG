@@ -1,0 +1,54 @@
+en:
+  methods: Methods
+  table: Words table
+  final_word: Final word
+  source: Source
+  language: Language
+zh:
+  methods: 方法
+  table: 词语表
+  final_word: 最后一个词
+  source: 源代码
+  language: 语言
+es:
+  methods: Métodos
+  table: Tabla de palabras
+  final_word: Última palabra
+  source: Código fuente
+  language: Idioma
+pt:
+  methods: Métodos
+  table: Tabela de palavras
+  final_word: Palavra final
+  source: Código-fonte
+  language: Idioma
+ru:
+  methods: Методы
+  table: Таблица слов
+  final_word: Последнее слово
+  source: Исходный код
+  language: Язык
+fr:
+  methods: Méthodes
+  table: Table des mots
+  final_word: Dernier mot
+  source: Code source
+  language: Langue
+de:
+  methods: Methoden
+  table: Worttabelle
+  final_word: Letztes Wort
+  source: Quellcode
+  language: Sprache
+it:
+  methods: Metodi
+  table: Tabella delle parole
+  final_word: Ultima parola
+  source: Codice sorgente
+  language: Lingua
+hu:
+  methods: Módszerek
+  table: Szótáblázat
+  final_word: Utolsó szó
+  source: Forráskód
+  language: Nyelv

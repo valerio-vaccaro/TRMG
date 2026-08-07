@@ -1,0 +1,25 @@
+---
+layout: default
+title: D6 method
+description: Generate BIP-39 word indices from a six-sided die.
+permalink: /methods/d6/
+---
+
+## Generate a mnemonic with a D6 die
+
+This method uses a standard six-sided die. Results 1–4 provide two bits each, while results 5–6 provide one bit, so the number of rolls required for each provisional word varies. Continue until you have 11 bits, repeat for 12 or 24 words, and then follow the [final-word procedure](../../#correct-the-final-word).
+
+Roll the die until you have 11 bits, using this conversion table:
+
+|Result|Bits|
+|------|----|
+|1|00|
+|2|01|
+|3|10|
+|4|11|
+|5|0|
+|6|1|
+
+If the final roll provides more bits than needed, retain only the leftmost bits required to reach 11 bits.
+
+Read the accumulated 11-bit value from left to right and use the [binary words table](../../tables/binary-table/) to find the BIP-39 word.

@@ -40,9 +40,16 @@ a:hover { color: #b8fff5; }
 
 .brand { color: var(--text); text-decoration: none; font-weight: 800; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 0.65rem; }
 .brand-mark { color: #06110f; background: var(--accent); border-radius: 0.45rem; font-size: 0.73rem; padding: 0.28rem 0.38rem; }
-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 1rem; }
+nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 1rem; }
 nav a { color: var(--muted); font-size: 0.9rem; text-decoration: none; }
 nav a:hover { color: var(--accent); }
+.language-menu { position: relative; }
+.language-menu summary { color: var(--muted); cursor: pointer; font-size: 0.9rem; list-style: none; }
+.language-menu summary::-webkit-details-marker { display: none; }
+.language-menu summary::after { content: "⌄"; margin-left: 0.35rem; color: var(--accent); }
+.language-menu > div { position: absolute; z-index: 5; top: 1.7rem; right: 0; width: 10.5rem; padding: 0.45rem; background: var(--surface-raised); border: 1px solid var(--line); border-radius: 0.5rem; box-shadow: 0 14px 35px #0008; }
+.language-menu a { display: block; padding: 0.35rem 0.45rem; border-radius: 0.3rem; }
+.language-menu a:hover { background: #223044; }
 
 main { width: min(1080px, calc(100% - 2rem)); margin: 2.5rem auto 5rem; }
 h1, h2, h3 { color: #f7fbff; line-height: 1.2; }

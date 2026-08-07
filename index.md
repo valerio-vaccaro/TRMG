@@ -2,6 +2,7 @@
 layout: default
 title: Generate a mnemonic offline
 description: Physical randomness methods for creating BIP-39 mnemonic words.
+lang: en
 ---
 
 <section class="hero">
@@ -17,16 +18,16 @@ Each method produces an 11-bit number from `0` to `2047`. Use that number to fin
 
 ## Methods
 
-<div class="method-grid" id="methods">
-  <a class="method-card" href="{{ '/coin/' | relative_url }}"><strong>Coin</strong><span>Eleven flips make one 11-bit word index.</span></a>
-  <a class="method-card" href="{{ '/d6/' | relative_url }}"><strong>D6</strong><span>Convert six-sided die rolls into one or two bits.</span></a>
-  <a class="method-card" href="{{ '/d8/' | relative_url }}"><strong>D8</strong><span>Four rolls create 12 bits; retain the first 11.</span></a>
-  <a class="method-card" href="{{ '/d8ff/' | relative_url }}"><strong>D8/D16/D16</strong><span>Three dice select one word index in a single set of rolls.</span></a>
-  <a class="method-card" href="{{ '/888cc/' | relative_url }}"><strong>D8/D8/D8/coin/coin</strong><span>Three D8 rolls and two flips select one word index.</span></a>
-  <a class="method-card" href="{{ '/poker/' | relative_url }}"><strong>Poker cards</strong><span>Draw, map the card to bits, return it, and reshuffle.</span></a>
-  <a class="method-card" href="{{ '/piacentine/' | relative_url }}"><strong>Piacentine cards</strong><span>Use a 40-card regional Italian deck to collect bits.</span></a>
-  <a class="method-card" href="{{ '/tarot/' | relative_url }}"><strong>Tarot</strong><span>Use all 78 cards and their tier-based bit values.</span></a>
-</div>
+|Method|How it produces each provisional word|
+|------|--------------------------------------|
+|[Coin](methods/coin/)|Eleven flips make one 11-bit word index.|
+|[D6](methods/d6/)|Convert six-sided die rolls into one or two bits.|
+|[D8](methods/d8/)|Four rolls create 12 bits; retain the first 11.|
+|[D8/D16/D16](methods/d8ff/)|Three dice select one word index in a single set of rolls.|
+|[D8/D8/D8/coin/coin](methods/888cc/)|Three D8 rolls and two flips select one word index.|
+|[Poker cards](methods/poker/)|Draw, map the card to bits, return it, and reshuffle.|
+|[Piacentine cards](methods/piacentine/)|Use a 40-card regional Italian deck to collect bits.|
+|[Tarot](methods/tarot/)|Use all 78 cards and their tier-based bit values.|
 
 ## Correct the final word
 
@@ -37,6 +38,6 @@ For a 12-word mnemonic, generate 12 provisional words and correct only the 12th.
 |12 words|First 7 bits|16|
 |24 words|First 3 bits|128|
 
-Use the [binary words table]({{ '/binary-table/' | relative_url }}) to find the group, then use an offline, trusted BIP-39-compatible wallet or tool to calculate the valid candidate from the preceding words. Only one candidate in that group has the correct checksum.
+Use the [binary words table](tables/binary-table/) to find the group, then use an offline, trusted BIP-39-compatible wallet or tool to calculate the valid candidate from the preceding words. Only one candidate in that group has the correct checksum.
 
 Never type your mnemonic into a website or an untrusted device.

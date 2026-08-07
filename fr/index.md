@@ -1,0 +1,41 @@
+---
+layout: default
+title: Générer une phrase mnémonique hors ligne
+description: Guide de création de mots BIP-39 avec de l'aléa physique.
+lang: fr
+---
+
+<section class="hero">
+  <div class="eyebrow">Un aléa physique vérifiable à la main</div>
+  <h1>Générez des mots mnémoniques depuis le monde réel.</h1>
+  <p>TRMG convertit les résultats de dés, de pièces et de cartes en indices BIP-39. Notez 11 bits pour chaque mot provisoire, puis corrigez hors ligne le mot de contrôle final.</p>
+  <a class="button" href="#methods">Choisir une méthode</a>
+</section>
+
+## Fonctionnement
+
+Chaque méthode produit un nombre de 11 bits entre `0` et `2047`. Cherchez ce nombre dans la table des mots, répétez jusqu'à obtenir 12 ou 24 mots provisoires, puis corrigez le dernier mot.
+
+## Méthodes
+
+|Méthode|Comment elle produit chaque mot provisoire|
+|-------|-------------------------------------------|
+|[Pièce](../methods/coin/)|Onze lancers : pile vaut `0` et face vaut `1`.|
+|[D6](../methods/d6/)|Convertissez chaque lancer en un ou deux bits.|
+|[D8](../methods/d8/)|Quatre lancers donnent 12 bits ; conservez les 11 premiers.|
+|[D8/D16/D16](../methods/d8ff/)|Trois dés sélectionnent un indice en une seule série de lancers.|
+|[D8/D8/D8/pièce/pièce](../methods/888cc/)|Trois lancers et deux pièces sélectionnent un indice.|
+|[Cartes de poker](../methods/poker/)|Tirez une carte, convertissez-la en bits, remettez-la et mélangez.|
+|[Cartes piacentines](../methods/piacentine/)|Utilisez un jeu régional italien de 40 cartes.|
+|[Tarot](../methods/tarot/)|Utilisez les 78 cartes et leurs valeurs binaires par niveau.|
+
+## Corriger le dernier mot
+
+Pour une phrase de 12 mots, générez 12 mots provisoires et corrigez uniquement le douzième. Pour une phrase de 24 mots, générez-en 24 et corrigez uniquement le vingt-quatrième. Le dernier mot contient l'entropie et la somme de contrôle BIP-39.
+
+|Longueur|Partie conservée du dernier mot provisoire|Candidats du groupe|
+|--------|-------------------------------------------|-------------------|
+|12 mots|7 premiers bits|16|
+|24 mots|3 premiers bits|128|
+
+Trouvez le groupe dans la [table binaire des mots](../tables/binary-table/) et utilisez un portefeuille ou outil BIP-39 fiable et hors ligne pour obtenir le bon candidat. Ne saisissez jamais votre phrase mnémonique sur un site web ou un appareil non fiable.
