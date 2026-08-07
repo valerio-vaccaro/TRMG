@@ -24,6 +24,9 @@ First step is to generate 12 or 24 words using dices, this can be done using dif
 ### D8+D16+D16 dices
 [Guide D8/D16/D16](https://github.com/valerio-vaccaro/TRMG/blob/main/d8ff.md)
 
+### Three D8 dice and two coins
+[Guide D8/D8/D8/coin/coin](https://github.com/valerio-vaccaro/TRMG/blob/main/888cc.md)
+
 ### Poker cards
 [Cards](https://github.com/valerio-vaccaro/TRMG/blob/main/poker.md)
 
