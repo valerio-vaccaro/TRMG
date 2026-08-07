@@ -52,7 +52,7 @@ Each tier contributes bits equal to log₂ of its size: 2⁶=64, 2³=8, 2²=4, 2
    - **Reshuffle** the deck while reciting the appropriate Reshuffle Incantation (see below).
    - Repeat until 11 bits are accumulated for the current word.
    - If the last draw yields more bits than needed, take only the leftmost bits required and discard the rest — they were not destined for this word.
-4. Look up the 11-bit index in the BIP39 Words Table and record the word on paper.
+4. Look up the 11-bit index in the [shared binary words table](binary-table.md) and record the word on paper.
 5. Repeat until all 12 or 24 words are recorded.
 6. Close the ritual (see: *Closing the Chamber*).
 

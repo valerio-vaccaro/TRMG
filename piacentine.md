@@ -13,7 +13,7 @@ The index is calculated by adding the values in every column containing `1`. For
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-The index is `1024 + 256 + 128 + 8 + 2 = 1418`. You do not need to calculate it yourself; use the table to find the index and word.
+The index is `1024 + 256 + 128 + 8 + 2 = 1418`. You do not need to calculate it yourself; use the [shared binary words table](binary-table.md) to find the index and word.
 
 
 ## Generate mnemonic with the Piacentine cards
