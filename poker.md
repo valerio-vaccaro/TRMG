@@ -1,29 +1,29 @@
 ## Generate mnemonic
-You need a coin or a simple dice with 6 faces, generate 12 or 24 words and for each one you will need to use a 11 bits of entropy using dice or coin.
+Use a standard 52-card deck to generate 12 or 24 words. Each word requires 11 bits of entropy.
 
-You can fill a table like the following to track filling using the result of dice rolls (using the translation tables following).
+Use a table like the following to record the resulting bits, using the conversion table below.
 
 |1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |    |   |   |   |  |  |  | | | | |     |    |
 
-Index is calculate as the sum of all walues in columns containing values 1, for example:
+The index is calculated by adding the values in every column containing `1`. For example:
 
 |1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-index is 1024+256+128+8+2=1418, you don't need to calculate but you can use the table to find out index and word.
+The index is `1024 + 256 + 128 + 8 + 2 = 1418`. You do not need to calculate it yourself; use the table to find the index and word.
 
 ## Generate mnemonic with poker cards
-If you have a 52 poker cards you can get one card per time multiple times untill you have enought entropy, every time you have to reinsert card and mix the deck.
+With a 52-card poker deck, draw one card at a time until you have enough entropy. Return each card to the deck and shuffle it before the next draw.
 
-For each card you can read the value in the following table comparing:
+For each card, find its value in the following table by matching:
 
 - the suit (Spades, Hearts, Clubs, Diamonds)
 - the rank (A for Ace, 2-10, J for Jack, Q for Queen, K for King).
 
-(This follows the standard 52-card poker deck, excluding Jokers)
+(This uses a standard 52-card poker deck, excluding Jokers.)
 
 |Suit    |Rank|Value|
 |--------|----|-----|
@@ -80,7 +80,7 @@ For each card you can read the value in the following table comparing:
 |Diamonds| Q  |10   |
 |Diamonds| K  |11   |
 
-If in last throw you have too much bit just truncate at the right amount.
+If the final draw provides too many bits, truncate the result to the required length.
 
 ## Words table
 
@@ -2134,4 +2134,3 @@ If in last throw you have too much bit just truncate at the right amount.
 |1|1|1|1|1|1|1|1|1|0|1|2045|zero|11111111101|1111111|111|
 |1|1|1|1|1|1|1|1|1|1|0|2046|zone|11111111110|1111111|111|
 |1|1|1|1|1|1|1|1|1|1|1|2047|zoo|11111111111|1111111|111|
-
