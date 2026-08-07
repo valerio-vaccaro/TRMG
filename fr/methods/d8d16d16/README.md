@@ -9,4 +9,11 @@ permalink: /fr/methods/d8d16d16/
 
 Lancez un D8 et deux D16. L'indice est `(D8 - 1) × 256 + (premier D16 - 1) × 16 + (second D16 - 1)`. Chaque série sélectionne un indice ; consultez la [table complète](../../../methods/d8ff/).
 
+## Procédure complète
+1. Appliquez la règle jusqu à 11 bits.
+2. Notez les bits dans leur ordre.
+3. Cherchez le mot BIP-39 anglais dans la table liée.
+4. Répétez pour 12 ou 24 mots provisoires.
+5. Corrigez le dernier mot.
+
 [Retour au guide complet](../)
