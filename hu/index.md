@@ -16,6 +16,14 @@ lang: hu
 
 Minden módszer egy `0` és `2047` közötti, 11 bites számot hoz létre. Keresd ki ezt a szótáblázatban, ismételd 12 vagy 24 ideiglenes szóig, majd javítsd az utolsó szót.
 
+> **Az entrópia minősége fontos.** Csak a lehető leginkább szabályos és torzításmentes kockát, érmét vagy kártyát használj. Ellenőrizd, hogy nincs-e sérülésük vagy gyártási torzításuk, és a húzások között alaposan keverd meg a kártyákat. A torzított fizikai forrás rontja a létrejövő mnemonika entrópiájának minőségét.
+
+> **Saját felelősségre használd.** Ezeket a módszereket és ezt a webhelyet adott állapotban, a mnemonika vagy a pénzeszközök biztonságára vonatkozó bármiféle garancia nélkül biztosítjuk. Egyedül te felelsz a folyamat ellenőrzéséért és a használatából eredő esetleges pénzveszteségért.
+
+> **Készíts biztonságos biztonsági mentést a mnemonikáról.** A megbízható, offline mentés alapvető fontosságú ahhoz, hogy ne veszítsd el a hozzáférést a pénzeszközeidhez. Úgy tárold, hogy védve legyen elvesztés, sérülés, lopás és jogosulatlan hozzáférés ellen; soha ne hagyatkozz egyetlen példányra vagy digitális képernyőképre.
+
+> **Korlátozd a mnemonika kitettségét.** Ne másold vagy írd be a mnemonikát több eszközön vagy számítógépen. Csak azzal a szoftveres vagy hardveres tárcával használd, amelyhez létrehoztad, és csak szükség esetén.
+
 ## Módszerek {#methods}
 
 |Módszer|Hogyan jön létre minden ideiglenes szó|

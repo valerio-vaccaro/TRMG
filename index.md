@@ -16,6 +16,14 @@ lang: en
 
 Each method produces an 11-bit number from `0` to `2047`. Use that number to find a BIP-39 word, repeat until you have 12 or 24 provisional words, then [correct the final word](#correct-the-final-word).
 
+> **Entropy quality matters.** Use only dice, coins, or cards that are as fair and unbiased as possible. Inspect them for damage or manufacturing bias, and shuffle cards thoroughly between draws. A biased physical source reduces the quality of the entropy in the resulting mnemonic.
+
+> **Use at your own risk.** These methods and this website are provided as is, without any guarantee regarding the safety of your mnemonic or funds. You are solely responsible for verifying the process and for any loss of funds resulting from its use.
+
+> **Back up your mnemonic securely.** A reliable offline backup is essential to avoid losing access to your funds. Store it where it is protected from loss, damage, theft, and unauthorized access; never rely on a single copy or a digital screenshot.
+
+> **Limit mnemonic exposure.** Do not copy or enter your mnemonic on multiple devices or computers. Use it only with the software or hardware wallet for which it was generated, and only when necessary.
+
 ## Methods
 
 |Method|How it produces each provisional word|

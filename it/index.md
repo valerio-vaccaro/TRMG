@@ -16,6 +16,14 @@ lang: it
 
 Ogni metodo produce un numero di 11 bit compreso tra `0` e `2047`. Cerca il numero nella tabella delle parole, ripeti fino a ottenere 12 o 24 parole provvisorie e poi correggi l'ultima parola.
 
+> **La qualità dell’entropia è importante.** Usa solo dadi, monete o carte quanto più possibile equilibrati e privi di distorsioni. Verifica che non siano danneggiati o soggetti a difetti di fabbricazione e mescola accuratamente le carte tra un’estrazione e l’altra. Una fonte fisica distorta riduce la qualità dell’entropia della frase mnemonica risultante.
+
+> **Usa a tuo rischio.** Questi metodi e questo sito web sono forniti così come sono, senza alcuna garanzia sulla sicurezza della tua frase mnemonica o dei tuoi fondi. Sei l’unico responsabile della verifica del processo e di qualsiasi perdita di fondi derivante dal suo utilizzo.
+
+> **Conserva una copia di sicurezza della frase mnemonica.** Un backup offline affidabile è essenziale per non perdere l’accesso ai tuoi fondi. Conservalo al riparo da smarrimento, danni, furto e accessi non autorizzati; non fare mai affidamento su una sola copia o su uno screenshot digitale.
+
+> **Limita l’esposizione della frase mnemonica.** Non copiare né inserire la frase mnemonica su più dispositivi o computer. Usala solo con il wallet software o hardware per cui è stata generata e soltanto quando necessario.
+
 ## Metodi {#methods}
 
 |Metodo|Come produce ogni parola provvisoria|

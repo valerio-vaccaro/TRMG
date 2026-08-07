@@ -16,6 +16,14 @@ lang: fr
 
 Chaque méthode produit un nombre de 11 bits entre `0` et `2047`. Cherchez ce nombre dans la table des mots, répétez jusqu'à obtenir 12 ou 24 mots provisoires, puis corrigez le dernier mot.
 
+> **La qualité de l’entropie compte.** Utilisez uniquement des dés, pièces ou cartes aussi équilibrés et non biaisés que possible. Vérifiez qu’ils ne sont ni endommagés ni affectés par un biais de fabrication, et mélangez soigneusement les cartes entre les tirages. Une source physique biaisée réduit la qualité de l’entropie de la phrase mnémonique obtenue.
+
+> **Utilisez à vos propres risques.** Ces méthodes et ce site sont fournis tels quels, sans aucune garantie concernant la sécurité de votre phrase mnémonique ou de vos fonds. Vous êtes seul responsable de vérifier le processus et de toute perte de fonds résultant de son utilisation.
+
+> **Sauvegardez votre phrase mnémonique de façon sûre.** Une sauvegarde hors ligne fiable est essentielle pour éviter de perdre l’accès à vos fonds. Conservez-la à l’abri de la perte, des dommages, du vol et des accès non autorisés ; ne vous fiez jamais à une seule copie ni à une capture d’écran numérique.
+
+> **Limitez l’exposition de votre phrase mnémonique.** Ne la copiez ni ne la saisissez sur plusieurs appareils ou ordinateurs. Utilisez-la uniquement avec le portefeuille logiciel ou matériel pour lequel elle a été générée, et seulement lorsque cela est nécessaire.
+
 ## Méthodes {#methods}
 
 |Méthode|Comment elle produit chaque mot provisoire|

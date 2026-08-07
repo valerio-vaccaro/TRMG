@@ -16,6 +16,14 @@ lang: de
 
 Jede Methode erzeugt eine 11-Bit-Zahl von `0` bis `2047`. Suche die Zahl in der Worttabelle, wiederhole dies für 12 oder 24 vorläufige Wörter und korrigiere dann das letzte Wort.
 
+> **Die Qualität der Entropie ist wichtig.** Verwende nur Würfel, Münzen oder Karten, die so fair und unverzerrt wie möglich sind. Prüfe sie auf Beschädigungen oder Herstellungsfehler und mische Karten zwischen den Ziehungen gründlich. Eine verzerrte physische Quelle verringert die Qualität der Entropie in der erzeugten Mnemonik.
+
+> **Nutzung auf eigenes Risiko.** Diese Methoden und diese Website werden ohne Gewähr bereitgestellt. Es gibt keine Garantie für die Sicherheit deiner Mnemonik oder deiner Gelder. Du bist allein dafür verantwortlich, den Prozess zu prüfen, sowie für jeden Verlust von Geldern, der aus seiner Nutzung entsteht.
+
+> **Sichere deine Mnemonik zuverlässig.** Eine verlässliche Offline-Sicherung ist entscheidend, um den Zugriff auf deine Gelder nicht zu verlieren. Bewahre sie so auf, dass sie vor Verlust, Beschädigung, Diebstahl und unbefugtem Zugriff geschützt ist; verlasse dich niemals auf nur eine Kopie oder einen digitalen Screenshot.
+
+> **Begrenze die Preisgabe deiner Mnemonik.** Kopiere oder gib deine Mnemonik nicht auf mehreren Geräten oder Computern ein. Verwende sie nur mit der Software- oder Hardware-Wallet, für die sie erzeugt wurde, und nur wenn es nötig ist.
+
 ## Methoden {#methods}
 
 |Methode|Wie jedes vorläufige Wort entsteht|

@@ -16,6 +16,14 @@ lang: es
 
 Cada método produce un número de 11 bits entre `0` y `2047`. Busca ese número en la tabla de palabras, repite hasta tener 12 o 24 palabras provisionales y corrige la última palabra.
 
+> **La calidad de la entropía importa.** Usa solo dados, monedas o cartas que sean lo más justos y libres de sesgo posible. Revísalos para detectar daños o sesgos de fabricación y baraja las cartas a fondo entre extracciones. Una fuente física sesgada reduce la calidad de la entropía de la mnemónica resultante.
+
+> **Úsalo bajo tu propia responsabilidad.** Estos métodos y este sitio web se proporcionan tal cual, sin ninguna garantía sobre la seguridad de tu mnemónica o tus fondos. Eres la única persona responsable de verificar el proceso y de cualquier pérdida de fondos derivada de su uso.
+
+> **Haz una copia de seguridad segura de tu mnemónica.** Una copia de seguridad confiable y sin conexión es esencial para no perder el acceso a tus fondos. Guárdala protegida contra pérdidas, daños, robos y accesos no autorizados; nunca dependas de una sola copia ni de una captura de pantalla digital.
+
+> **Limita la exposición de tu mnemónica.** No copies ni introduzcas tu mnemónica en varios dispositivos u ordenadores. Úsala solo con la cartera de software o hardware para la que fue generada y únicamente cuando sea necesario.
+
 ## Métodos {#methods}
 
 |Método|Cómo produce cada palabra provisional|
