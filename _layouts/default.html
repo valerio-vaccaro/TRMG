@@ -11,7 +11,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="robots" content="index, follow">
     <title>{{ page.title }} · {{ site.title }}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    {% if page.url == '/' or page.url == '/zh/' or page.url == '/es/' or page.url == '/pt/' or page.url == '/ru/' or page.url == '/fr/' or page.url == '/de/' or page.url == '/it/' or page.url == '/hu/' %}
+    <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
+    <link rel="alternate" hreflang="zh" href="{{ '/zh/' | absolute_url }}">
+    <link rel="alternate" hreflang="es" href="{{ '/es/' | absolute_url }}">
+    <link rel="alternate" hreflang="pt" href="{{ '/pt/' | absolute_url }}">
+    <link rel="alternate" hreflang="ru" href="{{ '/ru/' | absolute_url }}">
+    <link rel="alternate" hreflang="fr" href="{{ '/fr/' | absolute_url }}">
+    <link rel="alternate" hreflang="de" href="{{ '/de/' | absolute_url }}">
+    <link rel="alternate" hreflang="it" href="{{ '/it/' | absolute_url }}">
+    <link rel="alternate" hreflang="hu" href="{{ '/hu/' | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+    {% endif %}
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="icon" href="{{ '/assets/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ '/assets/favicon-192.png' | relative_url }}" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="{{ '/assets/favicon-192.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.title }} · {{ site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:locale" content="{{ current_lang }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.title }} · {{ site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": {{ page.title | jsonify }},
+        "description": {{ page.description | default: site.description | jsonify }},
+        "url": {{ page.url | absolute_url | jsonify }},
+        "inLanguage": {{ current_lang | jsonify }},
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": {{ site.title | jsonify }},
+          "url": {{ '/' | absolute_url | jsonify }}
+        }
+      }
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>

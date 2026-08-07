@@ -1,5 +1,6 @@
 title: TRMG
 description: True Random Mnemonic Generator
+url: "https://valerio-vaccaro.github.io"
 baseurl: /TRMG
 markdown: kramdown
 kramdown:
