@@ -1,3 +1,9 @@
+---
+layout: default
+title: Coin method
+description: Generate BIP-39 word indices from coin flips.
+---
+
 ## Generate a mnemonic with a coin
 
 This is the simplest method: it needs only a fair coin. Each flip supplies one bit, so generate each provisional BIP-39 word from 11 flips. Repeat for 12 or 24 words, then follow the [final-word procedure](README.md#correct-the-final-word).

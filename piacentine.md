@@ -1,3 +1,9 @@
+---
+layout: default
+title: Piacentine-card method
+description: Generate BIP-39 word indices with Piacentine cards.
+---
+
 ## Generate a mnemonic with Piacentine cards
 
 This method uses a 40-card Piacentine deck, or another Italian regional deck with the same structure. Each draw maps to a bit sequence in the card table below; accumulate 11 bits for each provisional word, repeat for 12 or 24 words, and then follow the [final-word procedure](README.md#correct-the-final-word).

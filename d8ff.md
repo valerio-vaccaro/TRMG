@@ -1,3 +1,9 @@
+---
+layout: default
+title: D8/D16/D16 method
+description: Generate BIP-39 word indices with one D8 and two D16 dice.
+---
+
 ## Generate a mnemonic with D8/D16/D16 dice
 
 You need three dice:

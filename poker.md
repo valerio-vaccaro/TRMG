@@ -1,3 +1,9 @@
+---
+layout: default
+title: Poker-card method
+description: Generate BIP-39 word indices with a standard 52-card deck.
+---
+
 ## Generate a mnemonic with poker cards
 
 This method uses a standard 52-card deck, including all four suits and excluding Jokers. Each draw maps to a bit sequence in the card table below; the number of bits varies by card. Accumulate 11 bits for each provisional word, repeat for 12 or 24 words, and then follow the [final-word procedure](README.md#correct-the-final-word).

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{{ page.title }} · {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark">TR</span><span>TRMG</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="{{ '/#methods' | relative_url }}">Methods</a>
+        <a href="{{ '/binary-table/' | relative_url }}">Words table</a>
+        <a href="{{ '/#correct-the-final-word' | relative_url }}">Final word</a>
+        <a href="https://github.com/valerio-vaccaro/TRMG">Source</a>
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <span>TRMG · True Random Mnemonic Generator</span>
+      <a href="https://github.com/valerio-vaccaro/TRMG">View source</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+title: TRMG
+description: True Random Mnemonic Generator
+baseurl: /TRMG
+markdown: kramdown
+kramdown:
+  input: GFM

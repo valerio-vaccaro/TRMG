@@ -1,3 +1,9 @@
+---
+layout: default
+title: Binary words table
+description: BIP-39 words indexed by their 11-bit binary values.
+---
+
 # Binary words table
 
 This table maps each 11-bit value to its BIP-39 word. Regenerate it with `python3 scripts/create_table_bin.py`.

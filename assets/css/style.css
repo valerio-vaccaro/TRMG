@@ -1,0 +1,83 @@
+:root {
+  color-scheme: dark;
+  --bg: #090b10;
+  --surface: #11151d;
+  --surface-raised: #171d28;
+  --line: #2a3445;
+  --text: #e8edf5;
+  --muted: #9aa8ba;
+  --accent: #5eead4;
+  --accent-strong: #2dd4bf;
+  --code: #0d121a;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% -10%, #19384a 0, transparent 31rem),
+    radial-gradient(circle at 90% 0, #202452 0, transparent 28rem),
+    var(--bg);
+  color: var(--text);
+  font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: #b8fff5; }
+
+.site-header {
+  width: min(1180px, calc(100% - 2rem));
+  min-height: 76px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand { color: var(--text); text-decoration: none; font-weight: 800; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 0.65rem; }
+.brand-mark { color: #06110f; background: var(--accent); border-radius: 0.45rem; font-size: 0.73rem; padding: 0.28rem 0.38rem; }
+nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 1rem; }
+nav a { color: var(--muted); font-size: 0.9rem; text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+main { width: min(1080px, calc(100% - 2rem)); margin: 2.5rem auto 5rem; }
+h1, h2, h3 { color: #f7fbff; line-height: 1.2; }
+h1 { font-size: clamp(2.1rem, 5vw, 4.35rem); margin: 0; letter-spacing: -0.045em; }
+h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); margin: 3.5rem 0 1rem; letter-spacing: -0.025em; }
+h3 { margin-top: 2.25rem; }
+p, li { max-width: 78ch; }
+code { background: var(--code); border: 1px solid var(--line); border-radius: 0.32rem; padding: 0.08rem 0.3rem; color: #c9fff8; }
+pre { overflow: auto; padding: 1rem; background: var(--code); border: 1px solid var(--line); border-radius: 0.6rem; }
+pre code { border: 0; padding: 0; }
+
+table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 1.2rem 0 2rem; background: rgba(17, 21, 29, 0.78); border: 1px solid var(--line); border-radius: 0.6rem; overflow: hidden; font-size: 0.92rem; }
+th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--line); }
+th { background: #1a2230; color: #e9fffc; font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+tr:nth-child(even) td { background: rgba(255, 255, 255, 0.018); }
+
+.hero { padding: clamp(2.4rem, 8vw, 6.5rem) 0 3rem; max-width: 850px; }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.76rem; font-weight: 800; margin-bottom: 1.1rem; }
+.hero p { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.3rem); margin: 1.4rem 0 2rem; }
+.button { display: inline-block; color: #06211d; background: var(--accent); border-radius: 0.5rem; padding: 0.7rem 1rem; font-weight: 800; text-decoration: none; }
+.button:hover { background: #b8fff5; color: #06211d; }
+
+.method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); gap: 1rem; }
+.method-card { display: block; min-height: 160px; padding: 1.2rem; color: var(--text); background: linear-gradient(145deg, rgba(27, 34, 48, 0.95), rgba(14, 18, 26, 0.95)); border: 1px solid var(--line); border-radius: 0.75rem; text-decoration: none; transition: border-color 150ms ease, transform 150ms ease; }
+.method-card:hover { color: var(--text); border-color: var(--accent-strong); transform: translateY(-2px); }
+.method-card strong { display: block; color: var(--accent); margin-bottom: 0.55rem; font-size: 1.05rem; }
+.method-card span { color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
+
+.site-footer { width: min(1080px, calc(100% - 2rem)); margin: auto; padding: 1.5rem 0 2.5rem; display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 640px) {
+  .site-header { padding: 1rem 0; align-items: flex-start; flex-direction: column; }
+  nav { justify-content: flex-start; gap: 0.7rem 1rem; }
+  main { margin-top: 1.2rem; }
+  table { display: block; overflow-x: auto; white-space: nowrap; }
+  .site-footer { flex-direction: column; }
+}

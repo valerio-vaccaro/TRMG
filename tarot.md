@@ -1,3 +1,9 @@
+---
+layout: default
+title: Tarot method
+description: Generate BIP-39 word indices with a complete Tarot deck.
+---
+
 # 🕯️ The Arcane Ritual of Mnemonic Summoning 🕯️
 Observed upon the First of April, Anno Domini 2026
 
