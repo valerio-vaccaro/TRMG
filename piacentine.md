@@ -1,34 +1,35 @@
 ## Generate mnemonic
-You need the complete deck of cards, generate 12 or 24 words and for each one you will need to use a 11 bits of entropy using cards.
+Use a complete deck of cards to generate 12 or 24 words. Each word requires 11 bits of entropy.
 
-You can fill a table like the following to track filling using the result of the drawn of cards (using the translation tables following). You can use any of the regional cards from the Italian traditional ones. The example below is an homage to Piacenza and their regional cards.
+Use a table like the following to record the results of card draws, using the conversion table below. You can use any regional Italian deck; the example below uses Piacentine cards.
 
 |1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |    |   |   |   |  |  |  | | | | |     |    |
 
-Index is calculate as the sum of all walues in columns containing values 1, for example:
+The index is calculated by adding the values in every column containing `1`. For example:
 
 |1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-index is 1024+256+128+8+2=1418, you don't need to calculate but you can use the table to find out index and word.
+The index is `1024 + 256 + 128 + 8 + 2 = 1418`. You do not need to calculate it yourself; use the table to find the index and word.
 
 
 ## Generate mnemonic with the Piacentine cards
-If you have a 40 cards from Italian traditional card games, like the Piacentine, you can get one card per time multiple times until you have enought entropy, every time you have to reinsert card and mix the deck.
+With a 40-card Italian regional deck, such as Piacentine cards, draw one card at a time until you have enough entropy. Return each card to the deck and shuffle it before the next draw.
 
-The Piacentine, like also all the other regional cards, have 4 suits and 10 cards for each suit.
-Cards from 1 to 7, are represented with one to seven symbols of each suit.
-Cards from 9 to 10, are represented with:
-8 = Fante (like Jack) a man holding the suit symbol.
-9 = Donna (like Queen) a woman holding the suit symbol.
-10 = Re (like King) a king holding the suit symbol.
-These lasts are called Fante-Donna-Re, but they can play a value of 8-9-10 respectively, depending on which game you are playing to.
-Card 1 of each suit is called Asso (Ace).
+Like other regional Italian decks, Piacentine cards have four suits with ten cards each.
+Cards 1 through 7 show one to seven suit symbols.
+The remaining cards are:
 
-For each card you can read the value in the following table comparing:
+- 8: Fante (Jack), a man holding the suit symbol
+- 9: Donna (Queen), a woman holding the suit symbol
+- 10: Re (King), a king holding the suit symbol
+
+These court cards are called Fante, Donna, and Re. Depending on the game, they have values of 8, 9, and 10 respectively. Card 1 of each suit is called Asso (Ace).
+
+For each card, find its value in the following table by matching:
 
 - the suit (Coppe, Denari, Bastoni, Spade)
 - the rank (A for Ace, 2-7, 8/J for Fante, 9/Q for Donna, 10/K for Re).
