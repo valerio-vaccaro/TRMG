@@ -1,6 +1,6 @@
 ## Generate a mnemonic with a coin
 
-Use a coin to generate 12 or 24 words. Each word requires 11 bits of entropy.
+This is the simplest method: it needs only a fair coin. Each flip supplies one bit, so generate each provisional BIP-39 word from 11 flips. Repeat for 12 or 24 words, then follow the [final-word procedure](README.md#correct-the-final-word).
 
 Flip the coin 11 times for each word and use this conversion table:
 
@@ -9,4 +9,4 @@ Flip the coin 11 times for each word and use this conversion table:
 |Heads|0|
 |Tails|1|
 
-Use the [binary words table](binary-table.md) to match the resulting 11-bit value to a BIP-39 word.
+Read the 11 results from left to right and use the [binary words table](binary-table.md) to match the resulting value to a BIP-39 word.

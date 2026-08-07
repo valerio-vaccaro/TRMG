@@ -15,36 +15,22 @@ Creating a mnemonic phrase using dice is often preferred over relying on a rando
 
 - Simplicity and Trust: The simplicity of dice makes them trustworthy. They’re physical objects with no hidden mechanisms, and their randomness is based on well-understood physical principles. Chips are complex systems, usually closed source, that require trust in the manufacturer, developer, or supply chain. Any flaw, intentional or not, could compromise security.
 
-## Generate mnemonic
-The first step is to generate 12 or 24 words. This can be done with dice, coins, or cards.
+## Generate a mnemonic
 
-### Coin
-[Coin guide](https://github.com/valerio-vaccaro/TRMG/blob/main/coin.md)
+Each method below creates a provisional 11-bit BIP-39 word index. Generate 12 or 24 provisional words, look up each index in the relevant table, and then [correct the final word](#correct-the-final-word) to include the required checksum.
 
-### D6 die
-[D6 guide](https://github.com/valerio-vaccaro/TRMG/blob/main/d6.md)
+|Method|Equipment|How it produces each provisional word|
+|------|---------|--------------------------------------|
+|[Coin](coin.md)|One fair coin|Flip 11 times; heads is `0` and tails is `1`.|
+|[D6](d6.md)|One six-sided die|Convert each roll to one or two bits until 11 bits are collected.|
+|[D8](d8.md)|One eight-sided die|Roll four times for 12 bits, then retain the first 11 bits.|
+|[D8/D16/D16](d8ff.md)|One D8 and two D16 dice|One set of three rolls directly selects one of 2,048 word indices.|
+|[D8/D8/D8/coin/coin](888cc.md)|Three D8 dice and two coins|One set of three rolls and two flips directly selects one of 2,048 indices.|
+|[Poker cards](poker.md)|A standard 52-card deck, without Jokers|Convert each draw to bits, return the card, reshuffle, and collect 11 bits.|
+|[Piacentine cards](piacentine.md)|A 40-card Piacentine deck|Convert each draw to bits, return the card, reshuffle, and collect 11 bits.|
+|[Tarot](tarot.md)|A complete 78-card Tarot deck|Draw cards, convert their tier to bits, reshuffle, and collect 11 bits.|
 
-### D8 die
-[D8 guide](https://github.com/valerio-vaccaro/TRMG/blob/main/d8.md)
-
-### A D8 die and two D16 dice
-[Guide D8/D16/D16](https://github.com/valerio-vaccaro/TRMG/blob/main/d8ff.md)
-
-### Three D8 dice and two coins
-[Guide D8/D8/D8/coin/coin](https://github.com/valerio-vaccaro/TRMG/blob/main/888cc.md)
-
-### Poker cards
-[Cards](https://github.com/valerio-vaccaro/TRMG/blob/main/poker.md)
-
-This process is entirely manual, auditable, and free from digital vulnerabilities.
-
-### Piacentine cards
-[Piacentine](https://github.com/valerio-vaccaro/TRMG/blob/main/piacentine.md)
-
-Once again: a process entirely manual, totally lacking from digital fragilities.
-
-### Tarot
-[Tarot](https://github.com/valerio-vaccaro/TRMG/blob/main/tarot.md)
+All methods are manual and auditable. Keep your recorded words private, and use an offline, trusted tool only when checking or correcting the final word.
 
 ## Correct the final word
 

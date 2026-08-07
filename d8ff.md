@@ -1,10 +1,13 @@
-## Generate mnemonic
+## Generate a mnemonic with D8/D16/D16 dice
+
 You need three dice:
 
 - One 8-sided die, called First
 - Two 16-sided dice, called Second and Third
 
-Roll the dice 12 or 24 times to generate the words. For each set of rolls, find the corresponding word in the table below.
+Each set of three rolls produces exactly one 11-bit word index, so this method needs one D8 roll and two D16 rolls per provisional word. Repeat the set 12 or 24 times, then follow the [final-word procedure](README.md#correct-the-final-word).
+
+For each set of rolls, find the corresponding word in the table below.
 
 The index is calculated as `(First - 1) * 2^8 + (Second - 1) * 2^4 + (Third - 1)`.
 

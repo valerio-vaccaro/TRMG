@@ -1,7 +1,8 @@
-## Generate mnemonic
-Use a complete deck of cards to generate 12 or 24 words. Each word requires 11 bits of entropy.
+## Generate a mnemonic with Piacentine cards
 
-Use a table like the following to record the results of card draws, using the conversion table below. You can use any regional Italian deck; the example below uses Piacentine cards.
+This method uses a 40-card Piacentine deck, or another Italian regional deck with the same structure. Each draw maps to a bit sequence in the card table below; accumulate 11 bits for each provisional word, repeat for 12 or 24 words, and then follow the [final-word procedure](README.md#correct-the-final-word).
+
+Use a table like the following to record the results of card draws in the order drawn.
 
 |1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
@@ -16,7 +17,7 @@ The index is calculated by adding the values in every column containing `1`. For
 The index is `1024 + 256 + 128 + 8 + 2 = 1418`. You do not need to calculate it yourself; use the [shared binary words table](binary-table.md) to find the index and word.
 
 
-## Generate mnemonic with the Piacentine cards
+## Card-to-bits mapping
 With a 40-card Italian regional deck, such as Piacentine cards, draw one card at a time until you have enough entropy. Return each card to the deck and shuffle it before the next draw.
 
 Like other regional Italian decks, Piacentine cards have four suits with ten cards each.

@@ -5,6 +5,10 @@ Observed upon the First of April, Anno Domini 2026
 
 *Only when the ritual space breathes with their combined wisdom may the Oracle Cards be unsealed.*
 
+## Method summary
+
+This method uses all 78 cards of a Tarot deck. Each card belongs to a tier that contributes between one and six bits. Draw, record the assigned bits, return the card to the deck, and reshuffle until you have 11 bits for one provisional word. Repeat for 12 or 24 words, then follow the [final-word procedure](README.md#correct-the-final-word).
+
 ## The Council of Twelve — Guardians of the Entropic Field
 
 Place one photograph beside each candle, arranged in clockwise order from the northern position:

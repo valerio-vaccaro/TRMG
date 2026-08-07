@@ -1,7 +1,8 @@
-## Generate mnemonic
-Use a standard 52-card deck to generate 12 or 24 words. Each word requires 11 bits of entropy.
+## Generate a mnemonic with poker cards
 
-Use a table like the following to record the resulting bits, using the conversion table below.
+This method uses a standard 52-card deck, including all four suits and excluding Jokers. Each draw maps to a bit sequence in the card table below; the number of bits varies by card. Accumulate 11 bits for each provisional word, repeat for 12 or 24 words, and then follow the [final-word procedure](README.md#correct-the-final-word).
+
+Use a table like the following to record the resulting bits in the order drawn.
 
 |1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
@@ -15,7 +16,7 @@ The index is calculated by adding the values in every column containing `1`. For
 
 The index is `1024 + 256 + 128 + 8 + 2 = 1418`. You do not need to calculate it yourself; use the [shared binary words table](binary-table.md) to find the index and word.
 
-## Generate mnemonic with poker cards
+## Card-to-bits mapping
 With a 52-card poker deck, draw one card at a time until you have enough entropy. Return each card to the deck and shuffle it before the next draw.
 
 For each card, find its value in the following table by matching:
