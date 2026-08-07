@@ -20,14 +20,14 @@ Cada método produce un número de 11 bits entre `0` y `2047`. Busca ese número
 
 |Método|Cómo produce cada palabra provisional|
 |------|-------------------------------------|
-|[Moneda](../methods/coin/)|Once lanzamientos: cara es `0` y cruz es `1`.|
-|[D6](../methods/d6/)|Convierte cada tirada en uno o dos bits.|
-|[D8](../methods/d8/)|Cuatro tiradas producen 12 bits; conserva los primeros 11.|
-|[D8/D16/D16](../methods/d8ff/)|Tres dados seleccionan un índice en una sola ronda.|
-|[D8/D8/D8/moneda/moneda](../methods/888cc/)|Tres tiradas y dos lanzamientos seleccionan un índice.|
-|[Póquer](../methods/poker/)|Roba una carta, conviértela en bits, devuélvela y baraja.|
-|[Cartas piacentinas](../methods/piacentine/)|Usa una baraja regional italiana de 40 cartas.|
-|[Tarot](../methods/tarot/)|Usa las 78 cartas y sus valores de bits por nivel.|
+|[Moneda](methods/coin/)|Once lanzamientos: cara es `0` y cruz es `1`.|
+|[D6](methods/d6/)|Convierte cada tirada en uno o dos bits.|
+|[D8](methods/d8/)|Cuatro tiradas producen 12 bits; conserva los primeros 11.|
+|[D8/D16/D16](methods/d8d16d16/)|Tres dados seleccionan un índice en una sola ronda.|
+|[D8/D8/D8/moneda/moneda](methods/888cc/)|Tres tiradas y dos lanzamientos seleccionan un índice.|
+|[Póquer](methods/poker/)|Roba una carta, conviértela en bits, devuélvela y baraja.|
+|[Cartas piacentinas](methods/piacentine/)|Usa una baraja regional italiana de 40 cartas.|
+|[Tarot](methods/tarot/)|Usa las 78 cartas y sus valores de bits por nivel.|
 
 ## Corregir la última palabra
 

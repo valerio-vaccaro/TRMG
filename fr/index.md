@@ -20,14 +20,14 @@ Chaque méthode produit un nombre de 11 bits entre `0` et `2047`. Cherchez ce no
 
 |Méthode|Comment elle produit chaque mot provisoire|
 |-------|-------------------------------------------|
-|[Pièce](../methods/coin/)|Onze lancers : pile vaut `0` et face vaut `1`.|
-|[D6](../methods/d6/)|Convertissez chaque lancer en un ou deux bits.|
-|[D8](../methods/d8/)|Quatre lancers donnent 12 bits ; conservez les 11 premiers.|
-|[D8/D16/D16](../methods/d8ff/)|Trois dés sélectionnent un indice en une seule série de lancers.|
-|[D8/D8/D8/pièce/pièce](../methods/888cc/)|Trois lancers et deux pièces sélectionnent un indice.|
-|[Cartes de poker](../methods/poker/)|Tirez une carte, convertissez-la en bits, remettez-la et mélangez.|
-|[Cartes piacentines](../methods/piacentine/)|Utilisez un jeu régional italien de 40 cartes.|
-|[Tarot](../methods/tarot/)|Utilisez les 78 cartes et leurs valeurs binaires par niveau.|
+|[Pièce](methods/coin/)|Onze lancers : pile vaut `0` et face vaut `1`.|
+|[D6](methods/d6/)|Convertissez chaque lancer en un ou deux bits.|
+|[D8](methods/d8/)|Quatre lancers donnent 12 bits ; conservez les 11 premiers.|
+|[D8/D16/D16](methods/d8d16d16/)|Trois dés sélectionnent un indice en une seule série de lancers.|
+|[D8/D8/D8/pièce/pièce](methods/888cc/)|Trois lancers et deux pièces sélectionnent un indice.|
+|[Cartes de poker](methods/poker/)|Tirez une carte, convertissez-la en bits, remettez-la et mélangez.|
+|[Cartes piacentines](methods/piacentine/)|Utilisez un jeu régional italien de 40 cartes.|
+|[Tarot](methods/tarot/)|Utilisez les 78 cartes et leurs valeurs binaires par niveau.|
 
 ## Corriger le dernier mot
 

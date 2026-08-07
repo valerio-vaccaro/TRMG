@@ -32,6 +32,8 @@ Each method below creates a provisional 11-bit BIP-39 word index. Generate 12 or
 
 All methods are manual and auditable. Keep your recorded words private, and use an offline, trusted tool only when checking or correcting the final word.
 
+The [scripts page](scripts/) describes the generators used to create the lookup tables.
+
 ## Correct the final word
 
 In BIP-39, the final word contains both entropy and a checksum. The checksum is calculated from all the entropy, so a final word selected entirely by dice is not necessarily valid. Keep the entropy portion from the dice result and replace only the checksum portion with the value required by the preceding words.

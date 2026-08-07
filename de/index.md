@@ -20,14 +20,14 @@ Jede Methode erzeugt eine 11-Bit-Zahl von `0` bis `2047`. Suche die Zahl in der 
 
 |Methode|Wie jedes vorläufige Wort entsteht|
 |-------|---------------------------------|
-|[Münze](../methods/coin/)|Elf Würfe: Kopf ist `0`, Zahl ist `1`.|
-|[D6](../methods/d6/)|Wandle jeden Wurf in ein oder zwei Bits um.|
-|[D8](../methods/d8/)|Vier Würfe ergeben 12 Bits; behalte die ersten 11.|
-|[D8/D16/D16](../methods/d8ff/)|Drei Würfel wählen mit einer Wurfserie einen Index.|
-|[D8/D8/D8/Münze/Münze](../methods/888cc/)|Drei Würfe und zwei Münzwürfe wählen einen Index.|
-|[Pokerkarten](../methods/poker/)|Ziehe eine Karte, wandle sie in Bits um, lege sie zurück und mische.|
-|[Piacentine-Karten](../methods/piacentine/)|Nutze ein italienisches Regionaldeck mit 40 Karten.|
-|[Tarot](../methods/tarot/)|Nutze alle 78 Karten und ihre Bitwerte je Stufe.|
+|[Münze](methods/coin/)|Elf Würfe: Kopf ist `0`, Zahl ist `1`.|
+|[D6](methods/d6/)|Wandle jeden Wurf in ein oder zwei Bits um.|
+|[D8](methods/d8/)|Vier Würfe ergeben 12 Bits; behalte die ersten 11.|
+|[D8/D16/D16](methods/d8d16d16/)|Drei Würfel wählen mit einer Wurfserie einen Index.|
+|[D8/D8/D8/Münze/Münze](methods/888cc/)|Drei Würfe und zwei Münzwürfe wählen einen Index.|
+|[Pokerkarten](methods/poker/)|Ziehe eine Karte, wandle sie in Bits um, lege sie zurück und mische.|
+|[Piacentine-Karten](methods/piacentine/)|Nutze ein italienisches Regionaldeck mit 40 Karten.|
+|[Tarot](methods/tarot/)|Nutze alle 78 Karten und ihre Bitwerte je Stufe.|
 
 ## Letztes Wort korrigieren
 

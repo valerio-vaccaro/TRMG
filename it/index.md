@@ -20,14 +20,14 @@ Ogni metodo produce un numero di 11 bit compreso tra `0` e `2047`. Cerca il nume
 
 |Metodo|Come produce ogni parola provvisoria|
 |------|-------------------------------------|
-|[Moneta](../methods/coin/)|Undici lanci: testa vale `0` e croce vale `1`.|
-|[D6](../methods/d6/)|Converti ogni lancio in uno o due bit.|
-|[D8](../methods/d8/)|Quattro lanci producono 12 bit; conserva i primi 11.|
-|[D8/D16/D16](../methods/d8ff/)|Tre dadi selezionano un indice in un'unica serie di lanci.|
-|[D8/D8/D8/moneta/moneta](../methods/888cc/)|Tre lanci e due monete selezionano un indice.|
-|[Carte da poker](../methods/poker/)|Estrai una carta, convertila in bit, rimettila nel mazzo e mescola.|
-|[Carte piacentine](../methods/piacentine/)|Usa un mazzo regionale italiano da 40 carte.|
-|[Tarocchi](../methods/tarot/)|Usa tutte le 78 carte e i loro valori in bit per livello.|
+|[Moneta](methods/coin/)|Undici lanci: testa vale `0` e croce vale `1`.|
+|[D6](methods/d6/)|Converti ogni lancio in uno o due bit.|
+|[D8](methods/d8/)|Quattro lanci producono 12 bit; conserva i primi 11.|
+|[D8/D16/D16](methods/d8d16d16/)|Tre dadi selezionano un indice in un'unica serie di lanci.|
+|[D8/D8/D8/moneta/moneta](methods/888cc/)|Tre lanci e due monete selezionano un indice.|
+|[Carte da poker](methods/poker/)|Estrai una carta, convertila in bit, rimettila nel mazzo e mescola.|
+|[Carte piacentine](methods/piacentine/)|Usa un mazzo regionale italiano da 40 carte.|
+|[Tarocchi](methods/tarot/)|Usa tutte le 78 carte e i loro valori in bit per livello.|
 
 ## Correggere l'ultima parola
 

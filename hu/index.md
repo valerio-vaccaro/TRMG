@@ -20,14 +20,14 @@ Minden módszer egy `0` és `2047` közötti, 11 bites számot hoz létre. Keres
 
 |Módszer|Hogyan jön létre minden ideiglenes szó|
 |-------|--------------------------------------|
-|[Érme](../methods/coin/)|Tizenegy dobás: fej `0`, írás `1`.|
-|[D6](../methods/d6/)|Minden dobást egy vagy két bittel alakíts át.|
-|[D8](../methods/d8/)|Négy dobás 12 bitet ad; tartsd meg az első 11-et.|
-|[D8/D16/D16](../methods/d8ff/)|Három kocka egy dobássorozattal kiválaszt egy indexet.|
-|[D8/D8/D8/érme/érme](../methods/888cc/)|Három dobás és két érmedobás választ ki egy indexet.|
-|[Pókerkártyák](../methods/poker/)|Húzz kártyát, alakítsd bitekké, tedd vissza és keverd meg.|
-|[Piacentine kártyák](../methods/piacentine/)|Használj egy 40 lapos olasz regionális paklit.|
-|[Tarot](../methods/tarot/)|Használd mind a 78 lapot és szintenkénti bitértékeiket.|
+|[Érme](methods/coin/)|Tizenegy dobás: fej `0`, írás `1`.|
+|[D6](methods/d6/)|Minden dobást egy vagy két bittel alakíts át.|
+|[D8](methods/d8/)|Négy dobás 12 bitet ad; tartsd meg az első 11-et.|
+|[D8/D16/D16](methods/d8d16d16/)|Három kocka egy dobássorozattal kiválaszt egy indexet.|
+|[D8/D8/D8/érme/érme](methods/888cc/)|Három dobás és két érmedobás választ ki egy indexet.|
+|[Pókerkártyák](methods/poker/)|Húzz kártyát, alakítsd bitekké, tedd vissza és keverd meg.|
+|[Piacentine kártyák](methods/piacentine/)|Használj egy 40 lapos olasz regionális paklit.|
+|[Tarot](methods/tarot/)|Használd mind a 78 lapot és szintenkénti bitértékeiket.|
 
 ## Az utolsó szó javítása
 
