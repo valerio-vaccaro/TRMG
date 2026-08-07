@@ -1,29 +1,20 @@
 ---
 layout: default
-title: D8/D16/D16
+title: D8/D16/D16-Methode
+description: Erzeuge BIP-39-Wortindizes mit einem D8 und zwei D16.
 lang: de
 permalink: /de/methods/d8d16d16/
 ---
 
-## D8/D16/D16
+## Erzeuge eine Wiederherstellungsphrase mit D8/D16/D16
 
-Wirf einen D8 und zwei D16. Der Index ist `(D8 - 1) × 256 + (erster D16 - 1) × 16 + (zweiter D16 - 1)`. Jede Serie wählt einen Index; siehe [vollständige Tabelle](../../../methods/d8ff/).
+Du benötigst einen D8 sowie zwei D16, als erster, zweiter und dritter Würfel bezeichnet. Jede Serie erzeugt genau einen 11-Bit-Wortindex. Wiederhole dies für 12 oder 24 Wörter und folge dem [Verfahren für das letzte Wort](../../#korrigiere-das-letzte-wort).
 
-## Vollständiger Ablauf
-1. Wende die Regel an bis 11 Bits vorliegen.
-2. Notiere die Bits in ihrer Reihenfolge.
-3. Suche das englische BIP-39 Wort in der verlinkten Tabelle.
-4. Wiederhole für 12 oder 24 vorläufige Wörter.
-5. Korrigiere das letzte Wort.
+Der Index lautet `(D8 - 1) * 2^8 + (D16₁ - 1) * 2^4 + (D16₂ - 1)`.
 
-[Zurück zum vollständigen Leitfaden](../)
+## Worttabelle
 
-
-## Vollständige Nachschlagetabelle
-
-## Words table
-
-|First|Second|Third|Index|Word|Index in binary|Group 12|Group 24|
+|Erster|Zweiter|Dritter|Index|Wort|Binärindex|Gruppe 12|Gruppe 24|
 |-----|------|-----|-----|----|---------------|--------|--------|
 |1|1|1|0|abandon|00000000000|0000000|000|
 |1|1|2|1|ability|00000000001|0000000|000|

@@ -16,11 +16,11 @@ lang: fr
 
 Chaque méthode produit un nombre de 11 bits entre `0` et `2047`. Cherchez ce nombre dans la table des mots, répétez jusqu'à obtenir 12 ou 24 mots provisoires, puis corrigez le dernier mot.
 
-## Méthodes
+## Méthodes {#methods}
 
 |Méthode|Comment elle produit chaque mot provisoire|
 |-------|-------------------------------------------|
-|[Pièce](methods/coin/)|Onze lancers : pile vaut `0` et face vaut `1`.|
+|[Pièce](methods/coin/)|Onze lancers : face vaut `0` et pile vaut `1`.|
 |[D6](methods/d6/)|Convertissez chaque lancer en un ou deux bits.|
 |[D8](methods/d8/)|Quatre lancers donnent 12 bits ; conservez les 11 premiers.|
 |[D8/D16/D16](methods/d8d16d16/)|Trois dés sélectionnent un indice en une seule série de lancers.|
@@ -29,7 +29,7 @@ Chaque méthode produit un nombre de 11 bits entre `0` et `2047`. Cherchez ce no
 |[Cartes piacentines](methods/piacentine/)|Utilisez un jeu régional italien de 40 cartes.|
 |[Tarot](methods/tarot/)|Utilisez les 78 cartes et leurs valeurs binaires par niveau.|
 
-## Corriger le dernier mot
+## Corriger le dernier mot {#correct-the-final-word}
 
 Pour une phrase de 12 mots, générez 12 mots provisoires et corrigez uniquement le douzième. Pour une phrase de 24 mots, générez-en 24 et corrigez uniquement le vingt-quatrième. Le dernier mot contient l'entropie et la somme de contrôle BIP-39.
 

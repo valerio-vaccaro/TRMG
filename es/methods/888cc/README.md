@@ -1,29 +1,27 @@
 ---
 layout: default
-title: D8/D8/D8/moneda/moneda
+title: Método D8/D8/D8/moneda/moneda
+description: Genera índices de palabras BIP-39 con tres D8 y dos monedas.
 lang: es
 permalink: /es/methods/888cc/
 ---
 
-## D8/D8/D8/moneda/moneda
+## Genera una frase de recuperación con tres D8 y dos monedas
 
-Lanza tres D8 y dos monedas. Cara es `0` y cruz es `1`. El índice es `(primer D8 - 1) × 256 + (segundo D8 - 1) × 32 + (tercer D8 - 1) × 4 + primera moneda × 2 + segunda moneda`; consulta la [tabla completa](../../../methods/888cc/).
+Tres tiradas de D8 y dos lanzamientos de moneda producen exactamente un índice de 11 bits. Repite para 12 o 24 palabras y sigue el [procedimiento para la última palabra](../../#corrige-la-ultima-palabra). Cara es `H` (0) y cruz es `T` (1).
 
-## Procedimiento completo
-1. Aplica la regla hasta reunir 11 bits.
-2. Anota los bits en orden.
-3. Busca la palabra BIP-39 inglesa en la tabla enlazada.
-4. Repite para 12 o 24 palabras provisionales.
-5. Corrige la última palabra.
+|Resultado|Valor|
+|------|-----|
+|Cara|0|
+|Cruz|1|
 
-[Volver a la guía completa](../)
+`(D8₁ - 1) * 256 + (D8₂ - 1) * 32 + (D8₃ - 1) * 4 + C₁ * 2 + C₂`
 
+Cada índice de 0 a 2047 aparece exactamente una vez.
 
-## Tabla de consulta completa
+## Tabla de palabras
 
-## Words table
-
-|First D8|Second D8|Third D8|First coin|Second coin|Index|Word|Index in binary|Group 12|Group 24|
+|Primer D8|Segundo D8|Tercer D8|Primera moneda|Segunda moneda|Índice|Palabra|Índice en binario|Grupo 12|Grupo 24|
 |--------|---------|--------|----------|-----------|-----|----|---------------|--------|--------|
 |1|1|1|H|H|0|abandon|00000000000|0000000|000|
 |1|1|1|H|T|1|ability|00000000001|0000000|000|

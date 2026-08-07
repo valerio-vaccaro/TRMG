@@ -25,4 +25,4 @@ Lancia il dado quattro volte, usando questa tabella di conversione:
 
 Dopo quattro lanci, conserva soltanto gli 11 bit più a sinistra e scarta il bit finale.
 
-Usa la [tabella binaria delle parole](../../tables/binary-table/) per associare il valore ottenuto di 11 bit a una parola BIP-39.
+Usa la [tabella binaria delle parole](../../../tables/binary-table/) per associare il valore ottenuto di 11 bit a una parola BIP-39.

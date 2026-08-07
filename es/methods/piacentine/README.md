@@ -1,27 +1,28 @@
 ---
 layout: default
-title: Cartas piacentinas
+title: Método de cartas piacentinas
+description: Genera índices de palabras BIP-39 con cartas piacentinas.
 lang: es
 permalink: /es/methods/piacentine/
 ---
 
-## Cartas piacentinas
+## Genera una frase de recuperación con cartas piacentinas
 
-Usa una baraja piacentina de 40 cartas. Reúne 11 bits con la [tabla de cartas](../../../methods/piacentine/); devuelve y baraja después de cada extracción.
+Usa una baraja piacentina de 40 cartas. Cada carta aporta bits; reúne 11 por palabra, repite para 12 o 24 palabras y sigue el [procedimiento para la última palabra](../../#corrige-la-ultima-palabra).
 
-## Procedimiento completo
-1. Aplica la regla hasta reunir 11 bits.
-2. Anota los bits en orden.
-3. Busca la palabra BIP-39 inglesa en la tabla enlazada.
-4. Repite para 12 o 24 palabras provisionales.
-5. Corrige la última palabra.
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palabra|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Volver a la guía completa](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palabra|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
+Usa la [tabla binaria de palabras](../../../tables/binary-table/).
 
-## Tabla de consulta completa
+## Correspondencia entre cartas y bits
 
-Suit     |Rank|Value|
+Palo     |Valor|Bits|
 |--------|----|-----|
 |Coppe   | A  |00000|
 |Coppe   | 2  |00001|

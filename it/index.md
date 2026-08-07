@@ -16,7 +16,7 @@ lang: it
 
 Ogni metodo produce un numero di 11 bit compreso tra `0` e `2047`. Cerca il numero nella tabella delle parole, ripeti fino a ottenere 12 o 24 parole provvisorie e poi correggi l'ultima parola.
 
-## Metodi
+## Metodi {#methods}
 
 |Metodo|Come produce ogni parola provvisoria|
 |------|-------------------------------------|
@@ -29,7 +29,7 @@ Ogni metodo produce un numero di 11 bit compreso tra `0` e `2047`. Cerca il nume
 |[Carte piacentine](methods/piacentine/)|Usa un mazzo regionale italiano da 40 carte.|
 |[Tarocchi](methods/tarot/)|Usa tutte le 78 carte e i loro valori in bit per livello.|
 
-## Correggere l'ultima parola
+## Correggere l'ultima parola {#correct-the-final-word}
 
 Per una frase di 12 parole, genera 12 parole provvisorie e correggi solo la dodicesima. Per una frase di 24 parole, generane 24 e correggi solo la ventiquattresima. L'ultima parola combina entropia e checksum BIP-39.
 

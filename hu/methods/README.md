@@ -28,24 +28,24 @@ Alakítsd át az `1–8` értékeket `000–111` értékekké. Négy dobás 12 b
 <a id="d8d16d16"></a>
 ### D8/D16/D16
 
-Dobj egy D8-cal és két D16-tal. Az index: `(D8 - 1) × 256 + (első D16 - 1) × 16 + (második D16 - 1)`. Minden sorozat indexet választ; lásd a [teljes táblázatot](../../methods/d8ff/).
+Dobj egy D8-cal és két D16-tal. Az index: `(D8 - 1) × 256 + (első D16 - 1) × 16 + (második D16 - 1)`. Minden sorozat indexet választ; lásd a [teljes táblázatot](d8d16d16/).
 
 <a id="888cc"></a>
 ### D8/D8/D8/érme/érme
 
-Dobj három D8-cal és két érmével. A fej `0`, az írás `1`. Az index: `(első D8 - 1) × 256 + (második D8 - 1) × 32 + (harmadik D8 - 1) × 4 + első érme × 2 + második érme`; lásd a [teljes táblázatot](../../methods/888cc/).
+Dobj három D8-cal és két érmével. A fej `0`, az írás `1`. Az index: `(első D8 - 1) × 256 + (második D8 - 1) × 32 + (harmadik D8 - 1) × 4 + első érme × 2 + második érme`; lásd a [teljes táblázatot](888cc/).
 
 <a id="poker"></a>
 ### Pókerkártyák
 
-Használj 52 lapot jokerek nélkül. Alakítsd át minden kártyát a [pókertáblázat](../../methods/poker/) szerint, tedd vissza és keverd meg, amíg 11 bitet gyűjtesz.
+Használj 52 lapot jokerek nélkül. Alakítsd át minden kártyát a [pókertáblázat](poker/) szerint, tedd vissza és keverd meg, amíg 11 bitet gyűjtesz.
 
 <a id="piacentine"></a>
 ### Piacentine kártyák
 
-Használj 40 lapos Piacentine paklit. Gyűjts 11 bitet a [kártyatáblázat](../../methods/piacentine/) alapján; minden húzás után tedd vissza és keverd meg.
+Használj 40 lapos Piacentine paklit. Gyűjts 11 bitet a [kártyatáblázat](piacentine/) alapján; minden húzás után tedd vissza és keverd meg.
 
 <a id="tarot"></a>
 ### Tarot
 
-Használd mind a 78 lapot. A szintjük egytől hat bitig ad; húzz, jegyezd fel, tedd vissza és keverd meg, amíg 11 bitet gyűjtesz. Lásd a [Tarot-táblázatot](../../methods/tarot/).
+Használd mind a 78 lapot. A szintjük egytől hat bitig ad; húzz, jegyezd fel, tedd vissza és keverd meg, amíg 11 bitet gyűjtesz. Lásd a [Tarot-táblázatot](tarot/).

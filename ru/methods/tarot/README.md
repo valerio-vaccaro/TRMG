@@ -1,208 +1,225 @@
 ---
 layout: default
-title: Таро
+title: Метод Таро
+description: Создаёт индексы слов BIP-39 с помощью полной колоды Таро.
 lang: ru
 permalink: /ru/methods/tarot/
 ---
 
-## Таро
+# 🕯️ Аркан-ритуал мнемонического призыва 🕯️
+Совершается первого апреля, от Рождества Христова 2026
 
-Используйте все 78 карт. Их уровень даёт от одного до шести бит; тяните, записывайте, возвращайте и тасуйте до 11 бит. См. [таблицу Таро](../../../methods/tarot/).
+*Прежде чем завеса цифрового мира будет разорвана, адепт должен подготовить Священную Комнату. Расставьте двенадцать свечей по кругу — по одной на каждый месяц солнечного цикла, по одной на каждую опору Зодиака. Разместите между свечами двенадцать фотографий Великих Криптомантов (см.: *Совет Двенадцати*), обращённые внутрь круга. Их спектральная энтропия, связанная с трудом всей их жизни в искусстве тайн, усилит хаотический огонь каждого извлечения.*
 
-## Полная процедура
-1. Применяйте правило до получения 11 бит.
-2. Записывайте биты в полученном порядке.
-3. Найдите английское слово BIP-39 в связанной таблице.
-4. Повторите для 12 или 24 предварительных слов.
-5. Исправьте последнее слово.
+*Только когда ритуальное пространство наполнится их совокупной мудростью, Карты Оракула могут быть распечатаны.*
 
-[Вернуться к полному руководству](../)
+## Краткое описание метода
 
+Этот метод использует все 78 карт колоды Таро. Каждая карта принадлежит уровню, который даёт от одного до шести бит. Вытяните карту, запишите присвоенные биты, верните карту в колоду и перетасуйте заново, пока не наберётся 11 бит для одного предварительного слова. Повторите для 12 или 24 слов, затем следуйте [процедуре последнего слова](../../#исправьте-последнее-слово).
 
-## Полная справочная таблица
+## Совет Двенадцати — хранители энтропийного поля
 
-## The Sacred Instrument
+Разместите одну фотографию рядом с каждой свечой, по часовой стрелке начиная с северной позиции:
 
-A standard Tarot deck holds **78 cards**. All 78 participate in this ritual — none are set aside, none are exiled. The cards are divided into four Arcane Tiers by their cosmic weight:
+| Позиция | Цвет свечи | Криптомант | Владения |
+|----------|-------------|--------------|-------|
+| Север | Белый | Алан Тьюринг | Отец вычислимых тайн |
+| ССВ | Серебряный | Клод Шеннон | Архонт теории информации |
+| СВ | Золотой | Уитфилд Диффи | Вестник открытого ключа |
+| ВСВ | Оранжевый | Мартин Хеллман | Хранитель экспоненциальной завесы |
+| Восток | Красный | Рон Ривест | Первый клинок RSA |
+| ВЮВ | Малиновый | Ади Шамир | Второй клинок RSA |
+| ЮВ | Тёмно-синий | Леонард Адлеман | Третий клинок RSA |
+| ЮЮВ | Фиолетовый | Ральф Меркл | Архитектор хеш-дерева |
+| Юг | Зелёный | Брюс Шнайер | Страж прикладных искусств |
+| ЮЮЗ | Голубой | Фил Циммерманн | Освободитель довольно хорошего секрета |
+| ЮЗ | Жёлтый | Мокси Марлинспайк | Шепчущий огня Signal |
+| ЗЮЗ | Чёрный | Сатоши Накамото | Безымянный, ткач цепей |
 
-| Tier | Cards | Count | Bits per Draw | Arcane Meaning |
+*Зажгите все двенадцать свечей одновременно, или настолько одновременно, насколько это доступно смертным рукам. Произносите вслух имя каждого Криптоманта, когда загорается его свеча. Их накопленная энтропия — собранная за целую жизнь создания тайн — входит в ритуальное поле и склоняет вероятность в вашу пользу.*
+
+## Священный инструмент
+
+Стандартная колода Таро содержит **78 карт**. Все 78 участвуют в этом ритуале — ни одна не откладывается в сторону, ни одна не изгоняется. Карты делятся на четыре Тайных Уровня по их космическому весу:
+
+| Уровень | Карты | Количество | Бит за извлечение | Тайное значение |
 |------|-------|-------|---------------|----------------|
-| I — The Mundane Veil | All Minor Arcana + The Fool through The Chariot (0–VII) | **64** | **6 bits** | The rich chaos of earthly experience |
-| II — The Hidden Path | Strength through The Devil (VIII–XV) | **8** | **3 bits** | The trials of transformation |
-| III — The Celestial Fire | The Tower through The Sun (XVI–XIX) | **4** | **2 bits** | The great upheavals of fate |
-| IV — The Absolute | Judgement and The World (XX–XXI) | **2** | **1 bit** | The indivisible forces of ending and completion |
+| I — Мирская Завеса | Все Младшие Арканы + от Шута до Колесницы (0–VII) | **64** | **6 бит** | Богатый хаос земного опыта |
+| II — Скрытый Путь | От Силы до Дьявола (VIII–XV) | **8** | **3 бита** | Испытания преображения |
+| III — Небесный Огонь | От Башни до Солнца (XVI–XIX) | **4** | **2 бита** | Великие потрясения судьбы |
+| IV — Абсолют | Суд и Мир (XX–XXI) | **2** | **1 бит** | Неделимые силы завершения и исполнения |
 
-**Total: 64 + 8 + 4 + 2 = 78 cards.**
+**Итого: 64 + 8 + 4 + 2 = 78 карт.**
 
-Each tier contributes bits equal to log₂ of its size: 2⁶=64, 2³=8, 2²=4, 2¹=2. Every card in a tier maps to a unique bit pattern within that tier.
+Каждый уровень даёт число бит, равное log₂ его размера: 2⁶=64, 2³=8, 2²=4, 2¹=2. Каждая карта уровня соответствует уникальному битовому шаблону внутри этого уровня.
 
-## The Ritual of Drawing
+## Ритуал извлечения
 
-1. Gather all 78 cards into a single unified deck.
-2. Perform the **Opening Shuffle** seven times while reciting the Opening Invocation (see below).
-3. For each bit sequence needed:
-   - Draw the topmost card.
-   - Read its Tier and record the bits from the corresponding table.
-   - Return the card to the deck.
-   - **Reshuffle** the deck while reciting the appropriate Reshuffle Incantation (see below).
-   - Repeat until 11 bits are accumulated for the current word.
-   - If the last draw yields more bits than needed, take only the leftmost bits required and discard the rest — they were not destined for this word.
-4. Look up the 11-bit index in the [shared binary words table](../../tables/binary-table/) and record the word on paper.
-5. Repeat until all 12 or 24 words are recorded.
-6. Close the ritual (see: *Closing the Chamber*).
+1. Соберите все 78 карт в единую колоду.
+2. Выполните **Открывающую Тасовку** семь раз, произнося Открывающее Воззвание (см. ниже).
+3. Для каждой необходимой последовательности бит:
+   - Вытяните верхнюю карту.
+   - Определите её Уровень и запишите биты из соответствующей таблицы.
+   - Верните карту в колоду.
+   - **Перетасуйте** колоду, произнося соответствующее Заклинание Перетасовки (см. ниже).
+   - Повторяйте, пока не наберётся 11 бит для текущего слова.
+   - Если последнее извлечение даёт больше бит, чем нужно, возьмите только необходимые крайние левые биты, а остальные отбросьте — они не были предназначены для этого слова.
+4. Найдите 11-битный индекс в [общей двоичной таблице слов](../../../tables/binary-table/) и запишите слово на бумаге.
+5. Повторяйте, пока не будут записаны все 12 или 24 слова.
+6. Завершите ритуал (см.: *Закрытие Комнаты*).
 
-## The Sacred Incantations
+## Священные заклинания
 
-*These formulas bind the will of the caster to the chaos of the universe. Speak them clearly, at a measured pace, without hesitation. A stumbled word requires the current shuffle to begin again.*
+*Эти формулы связывают волю исполнителя с хаосом вселенной. Произносите их чётко, размеренным темпом, без запинок. Ошибка в слове требует начать текущую тасовку заново.*
 
-### Opening Invocation — spoken during the first seven shuffles
+### Открывающее Воззвание — произносится во время первых семи тасовок
 
 > *"Per ignem duodecim et tenebras sine fine,*
 > *aperio ostium entropiae.*
 > *Voci magistrorum obedio — Turing, Shannon, Diffie.*
 > *Chaos ordinetur in verbo secreto."*
 >
-> *(By the twelve fires and the endless dark,*
-> *I open the gate of entropy.*
-> *I heed the voice of the masters — Turing, Shannon, Diffie.*
-> *Let chaos be ordered into the secret word.)*
+> *(Двенадцатью огнями и бесконечной тьмой*
+> *я открываю врата энтропии.*
+> *Я внимаю голосу мастеров — Тьюринга, Шеннона, Диффи.*
+> *Да упорядочится хаос в тайном слове.)*
 
-### Reshuffle Incantation — spoken during every reshuffle between draws
+### Заклинание Перетасовки — произносится при каждой перетасовке между извлечениями
 
 > *"Misceo fata, misceo sortes.*
 > *Nulla memoria, nullus ordo.*
 > *Arcanum redit in chaos.*
 > *Fiat voluntas entropiae."*
 >
-> *(I mix the fates, I mix the lots.*
-> *No memory, no order.*
-> *The secret returns to chaos.*
-> *Let the will of entropy be done.)*
+> *(Я смешиваю судьбы, я смешиваю жребии.*
+> *Ни памяти, ни порядка.*
+> *Тайна возвращается в хаос.*
+> *Да свершится воля энтропии.)*
 
-### Invocation of the Absolute — spoken only when a Tier IV card (Judgement or The World) is drawn
+### Воззвание к Абсолюту — произносится только при извлечении карты IV Уровня (Суд или Мир)
 
 > *"Vox ultima locuta est.*
 > *Unus morsus de infinito.*
 > *Gratum ago, O Finis."*
 >
-> *(The final voice has spoken.*
-> *One bite of the infinite.*
-> *I give thanks, O End.)*
+> *(Последний голос прозвучал.*
+> *Один укус бесконечности.*
+> *Благодарю тебя, о Конец.)*
 
-## Tier I — The Mundane Veil (64 cards → 6 bits each)
+## Уровень I — Мирская Завеса (64 карты → по 6 бит каждая)
 
-This tier contains the eight lowest Major Arcana (0–VII) and all 56 Minor Arcana. Assign values 0–63 sequentially as shown. Record the full 6-bit binary of the drawn card.
+Этот уровень содержит восемь младших Старших Арканов (0–VII) и все 56 Младших Арканов. Присвойте значения 0–63 последовательно, как показано. Запишите полный 6-битный двоичный код вытянутой карты.
 
-### Tier I — Major Arcana section (values 0–7)
+### Уровень I — раздел Старших Арканов (значения 0–7)
 
-| Card | Value | Bits (6) |
+| Карта | Значение | Биты (6) |
 |------|-------|----------|
-| 0 The Fool | 0 | 000000 |
-| I The Magician | 1 | 000001 |
-| II The High Priestess | 2 | 000010 |
-| III The Empress | 3 | 000011 |
-| IV The Emperor | 4 | 000100 |
-| V The Hierophant | 5 | 000101 |
-| VI The Lovers | 6 | 000110 |
-| VII The Chariot | 7 | 000111 |
+| 0 Шут | 0 | 000000 |
+| I Маг | 1 | 000001 |
+| II Верховная Жрица | 2 | 000010 |
+| III Императрица | 3 | 000011 |
+| IV Император | 4 | 000100 |
+| V Иерофант | 5 | 000101 |
+| VI Влюблённые | 6 | 000110 |
+| VII Колесница | 7 | 000111 |
 
-### Tier I — Minor Arcana section (values 8–63)
+### Уровень I — раздел Младших Арканов (значения 8–63)
 
-| Suit | Rank | Value | Bits (6) |
+| Масть | Ранг | Значение | Биты (6) |
 |------|------|-------|----------|
-| Wands | Ace | 8 | 001000 |
-| Wands | 2 | 9 | 001001 |
-| Wands | 3 | 10 | 001010 |
-| Wands | 4 | 11 | 001011 |
-| Wands | 5 | 12 | 001100 |
-| Wands | 6 | 13 | 001101 |
-| Wands | 7 | 14 | 001110 |
-| Wands | 8 | 15 | 001111 |
-| Wands | 9 | 16 | 010000 |
-| Wands | 10 | 17 | 010001 |
-| Wands | Page | 18 | 010010 |
-| Wands | Knight | 19 | 010011 |
-| Wands | Queen | 20 | 010100 |
-| Wands | King | 21 | 010101 |
-| Cups | Ace | 22 | 010110 |
-| Cups | 2 | 23 | 010111 |
-| Cups | 3 | 24 | 011000 |
-| Cups | 4 | 25 | 011001 |
-| Cups | 5 | 26 | 011010 |
-| Cups | 6 | 27 | 011011 |
-| Cups | 7 | 28 | 011100 |
-| Cups | 8 | 29 | 011101 |
-| Cups | 9 | 30 | 011110 |
-| Cups | 10 | 31 | 011111 |
-| Cups | Page | 32 | 100000 |
-| Cups | Knight | 33 | 100001 |
-| Cups | Queen | 34 | 100010 |
-| Cups | King | 35 | 100011 |
-| Swords | Ace | 36 | 100100 |
-| Swords | 2 | 37 | 100101 |
-| Swords | 3 | 38 | 100110 |
-| Swords | 4 | 39 | 100111 |
-| Swords | 5 | 40 | 101000 |
-| Swords | 6 | 41 | 101001 |
-| Swords | 7 | 42 | 101010 |
-| Swords | 8 | 43 | 101011 |
-| Swords | 9 | 44 | 101100 |
-| Swords | 10 | 45 | 101101 |
-| Swords | Page | 46 | 101110 |
-| Swords | Knight | 47 | 101111 |
-| Swords | Queen | 48 | 110000 |
-| Swords | King | 49 | 110001 |
-| Pentacles | Ace | 50 | 110010 |
-| Pentacles | 2 | 51 | 110011 |
-| Pentacles | 3 | 52 | 110100 |
-| Pentacles | 4 | 53 | 110101 |
-| Pentacles | 5 | 54 | 110110 |
-| Pentacles | 6 | 55 | 110111 |
-| Pentacles | 7 | 56 | 111000 |
-| Pentacles | 8 | 57 | 111001 |
-| Pentacles | 9 | 58 | 111010 |
-| Pentacles | 10 | 59 | 111011 |
-| Pentacles | Page | 60 | 111100 |
-| Pentacles | Knight | 61 | 111101 |
-| Pentacles | Queen | 62 | 111110 |
-| Pentacles | King | 63 | 111111 |
+| Жезлы | Туз | 8 | 001000 |
+| Жезлы | 2 | 9 | 001001 |
+| Жезлы | 3 | 10 | 001010 |
+| Жезлы | 4 | 11 | 001011 |
+| Жезлы | 5 | 12 | 001100 |
+| Жезлы | 6 | 13 | 001101 |
+| Жезлы | 7 | 14 | 001110 |
+| Жезлы | 8 | 15 | 001111 |
+| Жезлы | 9 | 16 | 010000 |
+| Жезлы | 10 | 17 | 010001 |
+| Жезлы | Паж | 18 | 010010 |
+| Жезлы | Рыцарь | 19 | 010011 |
+| Жезлы | Королева | 20 | 010100 |
+| Жезлы | Король | 21 | 010101 |
+| Кубки | Туз | 22 | 010110 |
+| Кубки | 2 | 23 | 010111 |
+| Кубки | 3 | 24 | 011000 |
+| Кубки | 4 | 25 | 011001 |
+| Кубки | 5 | 26 | 011010 |
+| Кубки | 6 | 27 | 011011 |
+| Кубки | 7 | 28 | 011100 |
+| Кубки | 8 | 29 | 011101 |
+| Кубки | 9 | 30 | 011110 |
+| Кубки | 10 | 31 | 011111 |
+| Кубки | Паж | 32 | 100000 |
+| Кубки | Рыцарь | 33 | 100001 |
+| Кубки | Королева | 34 | 100010 |
+| Кубки | Король | 35 | 100011 |
+| Мечи | Туз | 36 | 100100 |
+| Мечи | 2 | 37 | 100101 |
+| Мечи | 3 | 38 | 100110 |
+| Мечи | 4 | 39 | 100111 |
+| Мечи | 5 | 40 | 101000 |
+| Мечи | 6 | 41 | 101001 |
+| Мечи | 7 | 42 | 101010 |
+| Мечи | 8 | 43 | 101011 |
+| Мечи | 9 | 44 | 101100 |
+| Мечи | 10 | 45 | 101101 |
+| Мечи | Паж | 46 | 101110 |
+| Мечи | Рыцарь | 47 | 101111 |
+| Мечи | Королева | 48 | 110000 |
+| Мечи | Король | 49 | 110001 |
+| Пентакли | Туз | 50 | 110010 |
+| Пентакли | 2 | 51 | 110011 |
+| Пентакли | 3 | 52 | 110100 |
+| Пентакли | 4 | 53 | 110101 |
+| Пентакли | 5 | 54 | 110110 |
+| Пентакли | 6 | 55 | 110111 |
+| Пентакли | 7 | 56 | 111000 |
+| Пентакли | 8 | 57 | 111001 |
+| Пентакли | 9 | 58 | 111010 |
+| Пентакли | 10 | 59 | 111011 |
+| Пентакли | Паж | 60 | 111100 |
+| Пентакли | Рыцарь | 61 | 111101 |
+| Пентакли | Королева | 62 | 111110 |
+| Пентакли | Король | 63 | 111111 |
 
-## Tier II — The Hidden Path (8 cards → 3 bits each)
+## Уровень II — Скрытый Путь (8 карт → по 3 бита каждая)
 
-| Card | Value | Bits (3) |
+| Карта | Значение | Биты (3) |
 |------|-------|----------|
-| VIII Strength | 0 | 000 |
-| IX The Hermit | 1 | 001 |
-| X Wheel of Fortune | 2 | 010 |
-| XI Justice | 3 | 011 |
-| XII The Hanged Man | 4 | 100 |
-| XIII Death | 5 | 101 |
-| XIV Temperance | 6 | 110 |
-| XV The Devil | 7 | 111 |
+| VIII Сила | 0 | 000 |
+| IX Отшельник | 1 | 001 |
+| X Колесо Фортуны | 2 | 010 |
+| XI Справедливость | 3 | 011 |
+| XII Повешенный | 4 | 100 |
+| XIII Смерть | 5 | 101 |
+| XIV Умеренность | 6 | 110 |
+| XV Дьявол | 7 | 111 |
 
-## Tier III — The Celestial Fire (4 cards → 2 bits each)
+## Уровень III — Небесный Огонь (4 карты → по 2 бита каждая)
 
-| Card | Value | Bits (2) |
+| Карта | Значение | Биты (2) |
 |------|-------|----------|
-| XVI The Tower | 0 | 00 |
-| XVII The Star | 1 | 01 |
-| XVIII The Moon | 2 | 10 |
-| XIX The Sun | 3 | 11 |
+| XVI Башня | 0 | 00 |
+| XVII Звезда | 1 | 01 |
+| XVIII Луна | 2 | 10 |
+| XIX Солнце | 3 | 11 |
 
-## Tier IV — The Absolute (2 cards → 1 bit each)
+## Уровень IV — Абсолют (2 карты → по 1 биту каждая)
 
-*When one of these cards is drawn, speak the Invocation of the Absolute before reshuffling.*
+*Когда выпадает одна из этих карт, произнесите Воззвание к Абсолюту перед тем, как перетасовать колоду.*
 
-| Card | Value | Bits (1) |
+| Карта | Значение | Биты (1) |
 |------|-------|----------|
-| XX Judgement | 0 | 0 |
-| XXI The World | 1 | 1 |
+| XX Суд | 0 | 0 |
+| XXI Мир | 1 | 1 |
 
-## The Recording Tablet
+## Скрижаль записи
 
-Fill the columns from left (most significant bit) to right (least significant bit), one draw at a time. Each draw fills as many columns as its tier allows. When 11 columns are full, sum the column values to get the Index, then look up the BIP39 word.
+Заполняйте столбцы слева (старший бит) направо (младший бит), по одному извлечению за раз. Каждое извлечение заполняет столько столбцов, сколько позволяет его уровень. Когда все 11 столбцов заполнены, сложите значения столбцов, чтобы получить Индекс, а затем найдите слово BIP39.
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|Индекс|Слово|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
@@ -217,59 +234,59 @@ Fill the columns from left (most significant bit) to right (least significant bi
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
 
-Index is the sum of all column headers where the value is 1. Example:
+Индекс — это сумма всех заголовков столбцов, значение которых равно 1. Пример:
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|Индекс|Слово|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1|0|1|0|0|1|1|0|0|1|0| |    |
 
-Index = 1024+256+32+16+2 = **1330** → word: **novel**
+Индекс = 1024+256+32+16+2 = **1330** → слово: **novel**
 
-### Example draw sequence for a single word
+### Пример последовательности извлечений для одного слова
 
-| Draw | Card Drawn | Tier | Bits Given | Bit Sequence So Far |
+| Извлечение | Вытянутая карта | Уровень | Полученные биты | Накопленная последовательность бит |
 |------|-----------|------|-----------|---------------------|
-| 1st | 5 of Cups (value 26) | I | 011010 | `011010` (6 bits) |
-| 2nd | The Tower (value 0) | III | 00 | `01101000` (8 bits) |
-| 3rd | The Hermit (value 1) | II | 001 | `01101000001` (11 bits ✓) |
+| 1-е | 5 Кубков (значение 26) | I | 011010 | `011010` (6 бит) |
+| 2-е | Башня (значение 0) | III | 00 | `01101000` (8 бит) |
+| 3-е | Отшельник (значение 1) | II | 001 | `01101000001` (11 бит ✓) |
 
-Bits: `01101000001` → Index = 512+256+32+1 = **801** → word: **impose**
+Биты: `01101000001` → Индекс = 512+256+32+1 = **801** → слово: **impose**
 
-After draw 3, the remaining bits of The Hermit (if it had given more) would be discarded. In this case it gave exactly the 3 bits needed to complete 11.
+После 3-го извлечения оставшиеся биты Отшельника (если бы он дал больше) были бы отброшены. В данном случае он дал ровно 3 бита, необходимых для завершения 11.
 
-## Entropy Assessment
+## Оценка энтропии
 
-Each draw samples uniformly from the full 78-card deck (after reshuffling). The expected bits recorded per draw:
+Каждое извлечение равномерно выбирается из полной колоды в 78 карт (после перетасовки). Ожидаемое число записанных бит на извлечение:
 
-| Tier | Cards | Bits | Probability | Expected bits |
+| Уровень | Карты | Биты | Вероятность | Ожидаемые биты |
 |------|-------|------|-------------|---------------|
-| I | 64 | 6 | 64/78 ≈ 0.821 | 4.923 |
-| II | 8 | 3 | 8/78 ≈ 0.103 | 0.308 |
-| III | 4 | 2 | 4/78 ≈ 0.051 | 0.103 |
-| IV | 2 | 1 | 2/78 ≈ 0.026 | 0.026 |
-| **Total** | **78** | | | **≈ 5.36 bits/draw** |
+| I | 64 | 6 | 64/78 ≈ 0,821 | 4,923 |
+| II | 8 | 3 | 8/78 ≈ 0,103 | 0,308 |
+| III | 4 | 2 | 4/78 ≈ 0,051 | 0,103 |
+| IV | 2 | 1 | 2/78 ≈ 0,026 | 0,026 |
+| **Итого** | **78** | | | **≈ 5,36 бит/извлечение** |
 
-True entropy of each draw (full 78-card uniform sample): log₂(78) ≈ **6.28 bits**.
-Recording efficiency: 5.36 / 6.28 ≈ **85%** — the remaining 15% is surrendered to the cosmic tiers, as offering.
+Истинная энтропия каждого извлечения (равномерная выборка из всех 78 карт): log₂(78) ≈ **6,28 бита**.
+Эффективность записи: 5,36 / 6,28 ≈ **85%** — оставшиеся 15% отдаются космическим уровням как подношение.
 
-To generate 11 recorded bits per word, expect approximately **2.1 draws per word** on average (11 ÷ 5.36).
-For a **12-word** mnemonic (132 bits with checksum): ~25 draws.
-For a **24-word** mnemonic (264 bits with checksum): ~50 draws.
+Чтобы получить 11 записанных бит на слово, ожидайте в среднем около **2,1 извлечения на слово** (11 ÷ 5,36).
+Для мнемонической фразы из **12 слов** (132 бита с контрольной суммой): ~25 извлечений.
+Для мнемонической фразы из **24 слов** (264 бита с контрольной суммой): ~50 извлечений.
 
-*The checksum bits of the final word are not drawn from the Oracle — they are computed from the hash of all preceding entropy. Use a BIP39-compliant tool to derive and verify the complete mnemonic once all words but the last are known, or trust the last word fully to the Oracle and verify the checksum digitally afterward.*
+*Биты контрольной суммы последнего слова не извлекаются из Оракула — они вычисляются из хеша всей предшествующей энтропии. Используйте совместимый с BIP39 инструмент, чтобы вывести и проверить полную мнемоническую фразу, как только известны все слова, кроме последнего, либо полностью доверьте последнее слово Оракулу и проверьте контрольную сумму цифровым способом позже.*
 
-## Closing the Chamber
+## Закрытие Комнаты
 
-Once all words are recorded on paper and the pen has been set down:
+Как только все слова записаны на бумаге и перо отложено:
 
-1. Gather all 78 cards and perform a final **thirteen-shuffle** while reciting:
+1. Соберите все 78 карт и выполните последнюю **тринадцатикратную тасовку**, произнося:
 
    > *"Sigillum apponatur. Chaos recreatur.*
    > *Nemo scit, nemo videt, nemo meminit.*
    > *It is sealed."*
 
-2. Wrap the deck in dark cloth. It must not be used for cartomancy or games on the same day it has served as Oracle.
-3. Extinguish the twelve candles in **reverse order** — beginning from Satoshi Nakamoto (WSW) and moving counter-clockwise back to Alan Turing (North). Snuff each flame; do not blow. A breath scatters what was bound.
-4. The photographs may be stored or destroyed according to the adept's security threat model. They have served their purpose: their entropy has been received.
+2. Заверните колоду в тёмную ткань. Её нельзя использовать для гадания или игр в тот же день, когда она служила Оракулом.
+3. Погасите двенадцать свечей в **обратном порядке** — начиная с Сатоши Накамото (ЗЮЗ) и двигаясь против часовой стрелки обратно к Алану Тьюрингу (Север). Гасите каждое пламя пальцами; не задувайте. Дыхание рассеивает то, что было связано.
+4. Фотографии можно хранить или уничтожить в соответствии с моделью угроз безопасности адепта. Они выполнили своё назначение: их энтропия получена.
 
-*The mnemonic is sealed. Guard it as the masters guarded their secrets — with silence, with care, and with the knowledge that what is written can be found.*
+*Мнемоническая фраза запечатана. Храните её так, как мастера хранили свои тайны — в молчании, с заботой и с осознанием того, что написанное может быть найдено.*

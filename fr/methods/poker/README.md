@@ -1,86 +1,87 @@
 ---
 layout: default
-title: Cartes de poker
+title: Méthode des cartes de poker
+description: Génère des indices de mots BIP-39 avec des cartes de poker.
 lang: fr
 permalink: /fr/methods/poker/
 ---
 
-## Cartes de poker
+## Générer une phrase de récupération avec des cartes de poker
 
-Utilisez 52 cartes sans Jokers. Convertissez chaque carte avec la [table de poker](../../../methods/poker/), remettez-la et mélangez jusqu'à 11 bits.
+Utilisez un jeu standard de 52 cartes sans jokers. Chaque carte fournit des bits ; accumulez-en 11 par mot, répétez pour 12 ou 24 mots, puis suivez la [procédure du dernier mot](../../#corriger-le-dernier-mot).
 
-## Procédure complète
-1. Appliquez la règle jusqu à 11 bits.
-2. Notez les bits dans leur ordre.
-3. Cherchez le mot BIP-39 anglais dans la table liée.
-4. Répétez pour 12 ou 24 mots provisoires.
-5. Corrigez le dernier mot.
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Mot|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Retour au guide complet](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Mot|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
+Utilisez la [table binaire des mots](../../../tables/binary-table/).
 
-## Table de référence complète
+## Correspondance cartes-bits
 
-|Suit    |Rank|Value|
+|Couleur |Rang|Bits|
 |--------|----|-----|
-|Spades  | A  |00000|
-|Spades  | 2  |00001|
-|Spades  | 3  |00010|
-|Spades  | 4  |00011|
-|Spades  | 5  |00100|
-|Spades  | 6  |00101|
-|Spades  | 7  |00110|
-|Spades  | 8  |00111|
-|Spades  | 9  |01000|
-|Spades  | 10 |01001|
-|Spades  | J  |01010|
-|Spades  | Q  |01011|
-|Spades  | K  |01100|
-|Hearts  | A  |01101|
-|Hearts  | 2  |01110|
-|Hearts  | 3  |01111|
-|Hearts  | 4  |10000|
-|Hearts  | 5  |10001|
-|Hearts  | 6  |10010|
-|Hearts  | 7  |10011|
-|Hearts  | 8  |10100|
-|Hearts  | 9  |10101|
-|Hearts  | 10 |10110|
-|Hearts  | J  |10111|
-|Hearts  | Q  |11000|
-|Hearts  | K  |11001|
-|Clubs   | A  |11010|
-|Clubs   | 2  |11011|
-|Clubs   | 3  |11100|
-|Clubs   | 4  |11101|
-|Clubs   | 5  |11110|
-|Clubs   | 6  |11111|
-|Clubs   | 7  |0000 |
-|Clubs   | 8  |0001 |
-|Clubs   | 9  |0010 |
-|Clubs   | 10 |0011 |
-|Clubs   | J  |0100 |
-|Clubs   | Q  |0101 |
-|Clubs   | K  |0110 |
-|Diamonds| A  |0111 |
-|Diamonds| 2  |1000 |
-|Diamonds| 3  |1001 |
-|Diamonds| 4  |1010 |
-|Diamonds| 5  |1011 |
-|Diamonds| 6  |1100 |
-|Diamonds| 7  |1101 |
-|Diamonds| 8  |1110 |
-|Diamonds| 9  |1111 |
-|Diamonds| 10 |00   |
-|Diamonds| J  |01   |
-|Diamonds| Q  |10   |
-|Diamonds| K  |11   |
+|Piques  | As |00000|
+|Piques  | 2  |00001|
+|Piques  | 3  |00010|
+|Piques  | 4  |00011|
+|Piques  | 5  |00100|
+|Piques  | 6  |00101|
+|Piques  | 7  |00110|
+|Piques  | 8  |00111|
+|Piques  | 9  |01000|
+|Piques  | 10 |01001|
+|Piques  | Valet |01010|
+|Piques  | Dame |01011|
+|Piques  | Roi |01100|
+|Cœurs  | As |01101|
+|Cœurs  | 2  |01110|
+|Cœurs  | 3  |01111|
+|Cœurs  | 4  |10000|
+|Cœurs  | 5  |10001|
+|Cœurs  | 6  |10010|
+|Cœurs  | 7  |10011|
+|Cœurs  | 8  |10100|
+|Cœurs  | 9  |10101|
+|Cœurs  | 10 |10110|
+|Cœurs  | Valet |10111|
+|Cœurs  | Dame |11000|
+|Cœurs  | Roi |11001|
+|Trèfles   | As |11010|
+|Trèfles   | 2  |11011|
+|Trèfles   | 3  |11100|
+|Trèfles   | 4  |11101|
+|Trèfles   | 5  |11110|
+|Trèfles   | 6  |11111|
+|Trèfles   | 7  |0000 |
+|Trèfles   | 8  |0001 |
+|Trèfles   | 9  |0010 |
+|Trèfles   | 10 |0011 |
+|Trèfles   | Valet |0100 |
+|Trèfles   | Dame |0101 |
+|Trèfles   | Roi |0110 |
+|Carreaux| As |0111 |
+|Carreaux| 2  |1000 |
+|Carreaux| 3  |1001 |
+|Carreaux| 4  |1010 |
+|Carreaux| 5  |1011 |
+|Carreaux| 6  |1100 |
+|Carreaux| 7  |1101 |
+|Carreaux| 8  |1110 |
+|Carreaux| 9  |1111 |
+|Carreaux| 10 |00   |
+|Carreaux| Valet |01   |
+|Carreaux| Dame |10   |
+|Carreaux| Roi |11   |
 
 If the final draw provides too many bits, truncate the result to the required length.
 
-## Words table
+## Table des mots
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|Group 12|Group 24|
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Mot|Groupe 12|Groupe 24|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|--------|--------|
 |0|0|0|0|0|0|0|0|0|0|0|0|abandon|00000000000|0000000|000|
 |0|0|0|0|0|0|0|0|0|0|1|1|ability|00000000001|0000000|000|

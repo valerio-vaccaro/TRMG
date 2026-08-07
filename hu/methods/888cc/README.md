@@ -1,29 +1,27 @@
 ---
 layout: default
-title: D8/D8/D8/érme/érme
+title: D8/D8/D8/érme/érme-módszer
+description: BIP-39 szavak indexeit állítja elő három D8-cal és két érmével.
 lang: hu
 permalink: /hu/methods/888cc/
 ---
 
-## D8/D8/D8/érme/érme
+## Helyreállítási kifejezés létrehozása három D8-cal és két érmével
 
-Dobj három D8-cal és két érmével. A fej `0`, az írás `1`. Az index: `(első D8 - 1) × 256 + (második D8 - 1) × 32 + (harmadik D8 - 1) × 4 + első érme × 2 + második érme`; lásd a [teljes táblázatot](../../../methods/888cc/).
+Három D8-dobás és két érmedobás pontosan egy 11 bites indexet ad. Ismételd 12 vagy 24 szónál, majd kövesd az [utolsó szó eljárását](../../#javitsd-az-utolso-szot). A fej `H` (0), az írás `T` (1).
 
-## Teljes eljárás
-1. Alkalmazd a szabályt 11 bit eléréséig.
-2. A biteket kapott sorrendben írd fel.
-3. Keresd ki az angol BIP-39 szót a hivatkozott táblázatban.
-4. Ismételd 12 vagy 24 ideiglenes szóhoz.
-5. Javítsd az utolsó szót.
+|Eredmény|Érték|
+|------|-----|
+|Fej|0|
+|Írás|1|
 
-[Vissza a teljes útmutatóhoz](../)
+`(D8₁ - 1) * 256 + (D8₂ - 1) * 32 + (D8₃ - 1) * 4 + C₁ * 2 + C₂`
 
+Minden 0 és 2047 közötti index pontosan egyszer szerepel.
 
-## Teljes keresőtáblázat
+## Szótáblázat
 
-## Words table
-
-|First D8|Second D8|Third D8|First coin|Second coin|Index|Word|Index in binary|Group 12|Group 24|
+|Első D8|Második D8|Harmadik D8|Első érme|Második érme|Index|Szó|Bináris index|12. csoport|24. csoport|
 |--------|---------|--------|----------|-----------|-----|----|---------------|--------|--------|
 |1|1|1|H|H|0|abandon|00000000000|0000000|000|
 |1|1|1|H|T|1|ability|00000000001|0000000|000|

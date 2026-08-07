@@ -1,208 +1,225 @@
 ---
 layout: default
-title: Tarot
+title: Tarot-módszer
+description: BIP-39 szóindexeket állít elő egy teljes Tarot-pakli segítségével.
 lang: hu
 permalink: /hu/methods/tarot/
 ---
 
-## Tarot
+# 🕯️ A mnemonikus idézés arkánrituáléja 🕯️
+Megtartva április elsején, Anno Domini 2026-ban
 
-Használd mind a 78 lapot. A szintjük egytől hat bitig ad; húzz, jegyezd fel, tedd vissza és keverd meg, amíg 11 bitet gyűjtesz. Lásd a [Tarot-táblázatot](../../../methods/tarot/).
+*Mielőtt a digitális birodalom fátyla megnyílna, az adeptusnak elő kell készítenie a Szent Kamrát. Helyezz el tizenkét gyertyát körben — egyet a naptári év minden hónapjára, egyet az Állatöv minden pillérére. Rendezz el a gyertyák között tizenkét fényképet a Nagy Kriptomantákról (lásd: *A Tizenkettek Tanácsa*), mindegyiket befelé fordítva. Spektrális entrópiájuk, amely egy életen át tartó titokalkotó munkájukhoz kötődik, felerősíti minden húzás kaotikus tüzét.*
 
-## Teljes eljárás
-1. Alkalmazd a szabályt 11 bit eléréséig.
-2. A biteket kapott sorrendben írd fel.
-3. Keresd ki az angol BIP-39 szót a hivatkozott táblázatban.
-4. Ismételd 12 vagy 24 ideiglenes szóhoz.
-5. Javítsd az utolsó szót.
+*Az Orákulum Lapjai csak akkor pecsételhetők fel, ha a rituális tér az ő egyesített bölcsességükkel telik meg.*
 
-[Vissza a teljes útmutatóhoz](../)
+## A módszer összefoglalása
 
+Ez a módszer egy Tarot-pakli mind a 78 lapját használja. Minden lap egy szinthez tartozik, amely egy és hat bit közötti értéket ad. Húzz, jegyezd fel a hozzárendelt biteket, tedd vissza a lapot a paklihoz, és keverd újra, amíg össze nem gyűlik 11 bit egy ideiglenes szóhoz. Ismételd 12 vagy 24 szóig, majd kövesd az [utolsó szó eljárását](../../#javitsd-az-utolso-szot).
 
-## Teljes keresőtáblázat
+## A Tizenkettek Tanácsa — az entropikus mező őrzői
 
-## The Sacred Instrument
+Helyezz egy-egy fényképet minden gyertya mellé, óramutató járásával megegyező sorrendben, az északi pozíciótól kezdve:
 
-A standard Tarot deck holds **78 cards**. All 78 participate in this ritual — none are set aside, none are exiled. The cards are divided into four Arcane Tiers by their cosmic weight:
+| Pozíció | Gyertya színe | Kriptomanta | Birodalom |
+|----------|-------------|--------------|-------|
+| Észak | Fehér | Alan Turing | A kiszámítható rejtélyek atyja |
+| ÉÉK | Ezüst | Claude Shannon | Az információelmélet arkhónja |
+| ÉK | Arany | Whitfield Diffie | A nyilvános kulcs hírnöke |
+| KÉK | Narancssárga | Martin Hellman | Az exponenciális fátyol őrzője |
+| Kelet | Piros | Ron Rivest | Az RSA első pengéje |
+| KDK | Bíborvörös | Adi Shamir | Az RSA második pengéje |
+| DK | Sötétkék | Leonard Adleman | Az RSA harmadik pengéje |
+| DDK | Ibolya | Ralph Merkle | A hasfa építésze |
+| Dél | Zöld | Bruce Schneier | Az alkalmazott művészetek őre |
+| DDNy | Cián | Phil Zimmermann | A meglehetősen jó titok felszabadítója |
+| DNy | Sárga | Moxie Marlinspike | A Signal-tűz suttogója |
+| NyDNy | Fekete | Satoshi Nakamoto | A Névtelen, láncok szövője |
 
-| Tier | Cards | Count | Bits per Draw | Arcane Meaning |
+*Gyújtsd meg mind a tizenkét gyertyát egyszerre, vagy amennyire ez halandó kéznek lehetséges. Mondd ki hangosan minden Kriptomanta nevét, ahogy a gyertyája lángra lobban. Felhalmozott entrópiájuk — amelyet egy titkokat alkotó élet során gyűjtöttek — belép a rituális mezőbe, és a valószínűséget a te javadra hajlítja.*
+
+## A szent eszköz
+
+Egy szabványos Tarot-pakli **78 lapot** tartalmaz. Mind a 78 részt vesz ebben a rituáléban — egyik sincs félretéve, egyik sincs száműzve. A lapok kozmikus súlyuk szerint négy arkán szintre oszlanak:
+
+| Szint | Lapok | Darabszám | Bit húzásonként | Arkán jelentés |
 |------|-------|-------|---------------|----------------|
-| I — The Mundane Veil | All Minor Arcana + The Fool through The Chariot (0–VII) | **64** | **6 bits** | The rich chaos of earthly experience |
-| II — The Hidden Path | Strength through The Devil (VIII–XV) | **8** | **3 bits** | The trials of transformation |
-| III — The Celestial Fire | The Tower through The Sun (XVI–XIX) | **4** | **2 bits** | The great upheavals of fate |
-| IV — The Absolute | Judgement and The World (XX–XXI) | **2** | **1 bit** | The indivisible forces of ending and completion |
+| I — A hétköznapi fátyol | Az összes Kis Arkánum + A Bolondtól A Szekérig (0–VII) | **64** | **6 bit** | A földi tapasztalat gazdag kaosza |
+| II — A rejtett ösvény | Az Erőtől Az Ördögig (VIII–XV) | **8** | **3 bit** | Az átalakulás próbatételei |
+| III — A mennyei tűz | A Toronytól A Napig (XVI–XIX) | **4** | **2 bit** | A sors nagy megrázkódtatásai |
+| IV — Az Abszolút | Az Ítélet és A Világ (XX–XXI) | **2** | **1 bit** | A befejezés és beteljesülés oszthatatlan erői |
 
-**Total: 64 + 8 + 4 + 2 = 78 cards.**
+**Összesen: 64 + 8 + 4 + 2 = 78 lap.**
 
-Each tier contributes bits equal to log₂ of its size: 2⁶=64, 2³=8, 2²=4, 2¹=2. Every card in a tier maps to a unique bit pattern within that tier.
+Minden szint annyi bitet ad, amennyi a méretének log₂ értéke: 2⁶=64, 2³=8, 2²=4, 2¹=2. Egy szinten belül minden lap egyedi bitmintázatnak felel meg.
 
-## The Ritual of Drawing
+## A húzás rituáléja
 
-1. Gather all 78 cards into a single unified deck.
-2. Perform the **Opening Shuffle** seven times while reciting the Opening Invocation (see below).
-3. For each bit sequence needed:
-   - Draw the topmost card.
-   - Read its Tier and record the bits from the corresponding table.
-   - Return the card to the deck.
-   - **Reshuffle** the deck while reciting the appropriate Reshuffle Incantation (see below).
-   - Repeat until 11 bits are accumulated for the current word.
-   - If the last draw yields more bits than needed, take only the leftmost bits required and discard the rest — they were not destined for this word.
-4. Look up the 11-bit index in the [shared binary words table](../../tables/binary-table/) and record the word on paper.
-5. Repeat until all 12 or 24 words are recorded.
-6. Close the ritual (see: *Closing the Chamber*).
+1. Gyűjtsd össze mind a 78 lapot egyetlen egységes paklivá.
+2. Végezd el a **Nyitó Keverést** hétszer, miközben elmondod a Nyitó Idézést (lásd lentebb).
+3. Minden szükséges bitsorozathoz:
+   - Húzd a legfelső lapot.
+   - Olvasd le a szintjét, és jegyezd fel a biteket a megfelelő táblázatból.
+   - Tedd vissza a lapot a paklihoz.
+   - **Keverd meg újra** a paklit, miközben elmondod a megfelelő Újrakeverési Formulát (lásd lentebb).
+   - Ismételd, amíg 11 bit össze nem gyűlik az aktuális szóhoz.
+   - Ha az utolsó húzás több bitet ad a szükségesnél, csak a szükséges, legbaloldalibb biteket vedd figyelembe, a többit vesd el — azok nem ehhez a szóhoz voltak rendelve.
+4. Keresd meg a 11 bites indexet a [közös bináris szótáblázatban](../../../tables/binary-table/), és jegyezd fel a szót papírra.
+5. Ismételd, amíg mind a 12 vagy 24 szó fel nem lett jegyezve.
+6. Zárd le a rituálét (lásd: *A Kamra lezárása*).
 
-## The Sacred Incantations
+## A szent formulák
 
-*These formulas bind the will of the caster to the chaos of the universe. Speak them clearly, at a measured pace, without hesitation. A stumbled word requires the current shuffle to begin again.*
+*Ezek a formulák a szertartást végző akaratát a világegyetem kaoszához kötik. Mondd ki őket tisztán, mért tempóban, tétovázás nélkül. Egy elhibázott szó miatt az aktuális keverést elölről kell kezdeni.*
 
-### Opening Invocation — spoken during the first seven shuffles
+### Nyitó Idézés — az első hét keverés alatt mondva
 
 > *"Per ignem duodecim et tenebras sine fine,*
 > *aperio ostium entropiae.*
 > *Voci magistrorum obedio — Turing, Shannon, Diffie.*
 > *Chaos ordinetur in verbo secreto."*
 >
-> *(By the twelve fires and the endless dark,*
-> *I open the gate of entropy.*
-> *I heed the voice of the masters — Turing, Shannon, Diffie.*
-> *Let chaos be ordered into the secret word.)*
+> *(A tizenkét tűz és a végtelen sötétség által*
+> *megnyitom az entrópia kapuját.*
+> *Hallgatok a mesterek hangjára — Turing, Shannon, Diffie.*
+> *Rendeződjön a kaosz a titkos szóvá.)*
 
-### Reshuffle Incantation — spoken during every reshuffle between draws
+### Újrakeverési Formula — minden húzások közötti újrakeverésnél mondva
 
 > *"Misceo fata, misceo sortes.*
 > *Nulla memoria, nullus ordo.*
 > *Arcanum redit in chaos.*
 > *Fiat voluntas entropiae."*
 >
-> *(I mix the fates, I mix the lots.*
-> *No memory, no order.*
-> *The secret returns to chaos.*
-> *Let the will of entropy be done.)*
+> *(Keverem a sorsokat, keverem a végzeteket.*
+> *Nincs emlékezet, nincs rend.*
+> *A titok visszatér a kaoszba.*
+> *Teljesüljön az entrópia akarata.)*
 
-### Invocation of the Absolute — spoken only when a Tier IV card (Judgement or The World) is drawn
+### Az Abszolút Idézése — csak akkor mondva, ha egy IV. szintű lap (Az Ítélet vagy A Világ) kerül húzásra
 
 > *"Vox ultima locuta est.*
 > *Unus morsus de infinito.*
 > *Gratum ago, O Finis."*
 >
-> *(The final voice has spoken.*
-> *One bite of the infinite.*
-> *I give thanks, O End.)*
+> *(Az utolsó hang megszólalt.*
+> *Egy falat a végtelenből.*
+> *Hálát adok, ó Vég.)*
 
-## Tier I — The Mundane Veil (64 cards → 6 bits each)
+## I. szint — A hétköznapi fátyol (64 lap → egyenként 6 bit)
 
-This tier contains the eight lowest Major Arcana (0–VII) and all 56 Minor Arcana. Assign values 0–63 sequentially as shown. Record the full 6-bit binary of the drawn card.
+Ez a szint a nyolc legalacsonyabb Nagy Arkánumot (0–VII) és mind az 56 Kis Arkánumot tartalmazza. Rendeld hozzá a 0–63 értékeket sorban, ahogy az látható. Jegyezd fel a húzott lap teljes 6 bites bináris értékét.
 
-### Tier I — Major Arcana section (values 0–7)
+### I. szint — Nagy Arkánumok szakasz (0–7 értékek)
 
-| Card | Value | Bits (6) |
+| Lap | Érték | Bit (6) |
 |------|-------|----------|
-| 0 The Fool | 0 | 000000 |
-| I The Magician | 1 | 000001 |
-| II The High Priestess | 2 | 000010 |
-| III The Empress | 3 | 000011 |
-| IV The Emperor | 4 | 000100 |
-| V The Hierophant | 5 | 000101 |
-| VI The Lovers | 6 | 000110 |
-| VII The Chariot | 7 | 000111 |
+| 0 A Bolond | 0 | 000000 |
+| I A Mágus | 1 | 000001 |
+| II A Főpapnő | 2 | 000010 |
+| III A Császárnő | 3 | 000011 |
+| IV A Császár | 4 | 000100 |
+| V A Főpap | 5 | 000101 |
+| VI A Szerelmesek | 6 | 000110 |
+| VII A Szekér | 7 | 000111 |
 
-### Tier I — Minor Arcana section (values 8–63)
+### I. szint — Kis Arkánumok szakasz (8–63 értékek)
 
-| Suit | Rank | Value | Bits (6) |
+| Szín | Rang | Érték | Bit (6) |
 |------|------|-------|----------|
-| Wands | Ace | 8 | 001000 |
-| Wands | 2 | 9 | 001001 |
-| Wands | 3 | 10 | 001010 |
-| Wands | 4 | 11 | 001011 |
-| Wands | 5 | 12 | 001100 |
-| Wands | 6 | 13 | 001101 |
-| Wands | 7 | 14 | 001110 |
-| Wands | 8 | 15 | 001111 |
-| Wands | 9 | 16 | 010000 |
-| Wands | 10 | 17 | 010001 |
-| Wands | Page | 18 | 010010 |
-| Wands | Knight | 19 | 010011 |
-| Wands | Queen | 20 | 010100 |
-| Wands | King | 21 | 010101 |
-| Cups | Ace | 22 | 010110 |
-| Cups | 2 | 23 | 010111 |
-| Cups | 3 | 24 | 011000 |
-| Cups | 4 | 25 | 011001 |
-| Cups | 5 | 26 | 011010 |
-| Cups | 6 | 27 | 011011 |
-| Cups | 7 | 28 | 011100 |
-| Cups | 8 | 29 | 011101 |
-| Cups | 9 | 30 | 011110 |
-| Cups | 10 | 31 | 011111 |
-| Cups | Page | 32 | 100000 |
-| Cups | Knight | 33 | 100001 |
-| Cups | Queen | 34 | 100010 |
-| Cups | King | 35 | 100011 |
-| Swords | Ace | 36 | 100100 |
-| Swords | 2 | 37 | 100101 |
-| Swords | 3 | 38 | 100110 |
-| Swords | 4 | 39 | 100111 |
-| Swords | 5 | 40 | 101000 |
-| Swords | 6 | 41 | 101001 |
-| Swords | 7 | 42 | 101010 |
-| Swords | 8 | 43 | 101011 |
-| Swords | 9 | 44 | 101100 |
-| Swords | 10 | 45 | 101101 |
-| Swords | Page | 46 | 101110 |
-| Swords | Knight | 47 | 101111 |
-| Swords | Queen | 48 | 110000 |
-| Swords | King | 49 | 110001 |
-| Pentacles | Ace | 50 | 110010 |
-| Pentacles | 2 | 51 | 110011 |
-| Pentacles | 3 | 52 | 110100 |
-| Pentacles | 4 | 53 | 110101 |
-| Pentacles | 5 | 54 | 110110 |
-| Pentacles | 6 | 55 | 110111 |
-| Pentacles | 7 | 56 | 111000 |
-| Pentacles | 8 | 57 | 111001 |
-| Pentacles | 9 | 58 | 111010 |
-| Pentacles | 10 | 59 | 111011 |
-| Pentacles | Page | 60 | 111100 |
-| Pentacles | Knight | 61 | 111101 |
-| Pentacles | Queen | 62 | 111110 |
-| Pentacles | King | 63 | 111111 |
+| Botok | Ász | 8 | 001000 |
+| Botok | 2 | 9 | 001001 |
+| Botok | 3 | 10 | 001010 |
+| Botok | 4 | 11 | 001011 |
+| Botok | 5 | 12 | 001100 |
+| Botok | 6 | 13 | 001101 |
+| Botok | 7 | 14 | 001110 |
+| Botok | 8 | 15 | 001111 |
+| Botok | 9 | 16 | 010000 |
+| Botok | 10 | 17 | 010001 |
+| Botok | Apród | 18 | 010010 |
+| Botok | Lovag | 19 | 010011 |
+| Botok | Királynő | 20 | 010100 |
+| Botok | Király | 21 | 010101 |
+| Kelyhek | Ász | 22 | 010110 |
+| Kelyhek | 2 | 23 | 010111 |
+| Kelyhek | 3 | 24 | 011000 |
+| Kelyhek | 4 | 25 | 011001 |
+| Kelyhek | 5 | 26 | 011010 |
+| Kelyhek | 6 | 27 | 011011 |
+| Kelyhek | 7 | 28 | 011100 |
+| Kelyhek | 8 | 29 | 011101 |
+| Kelyhek | 9 | 30 | 011110 |
+| Kelyhek | 10 | 31 | 011111 |
+| Kelyhek | Apród | 32 | 100000 |
+| Kelyhek | Lovag | 33 | 100001 |
+| Kelyhek | Királynő | 34 | 100010 |
+| Kelyhek | Király | 35 | 100011 |
+| Kardok | Ász | 36 | 100100 |
+| Kardok | 2 | 37 | 100101 |
+| Kardok | 3 | 38 | 100110 |
+| Kardok | 4 | 39 | 100111 |
+| Kardok | 5 | 40 | 101000 |
+| Kardok | 6 | 41 | 101001 |
+| Kardok | 7 | 42 | 101010 |
+| Kardok | 8 | 43 | 101011 |
+| Kardok | 9 | 44 | 101100 |
+| Kardok | 10 | 45 | 101101 |
+| Kardok | Apród | 46 | 101110 |
+| Kardok | Lovag | 47 | 101111 |
+| Kardok | Királynő | 48 | 110000 |
+| Kardok | Király | 49 | 110001 |
+| Érmék | Ász | 50 | 110010 |
+| Érmék | 2 | 51 | 110011 |
+| Érmék | 3 | 52 | 110100 |
+| Érmék | 4 | 53 | 110101 |
+| Érmék | 5 | 54 | 110110 |
+| Érmék | 6 | 55 | 110111 |
+| Érmék | 7 | 56 | 111000 |
+| Érmék | 8 | 57 | 111001 |
+| Érmék | 9 | 58 | 111010 |
+| Érmék | 10 | 59 | 111011 |
+| Érmék | Apród | 60 | 111100 |
+| Érmék | Lovag | 61 | 111101 |
+| Érmék | Királynő | 62 | 111110 |
+| Érmék | Király | 63 | 111111 |
 
-## Tier II — The Hidden Path (8 cards → 3 bits each)
+## II. szint — A rejtett ösvény (8 lap → egyenként 3 bit)
 
-| Card | Value | Bits (3) |
+| Lap | Érték | Bit (3) |
 |------|-------|----------|
-| VIII Strength | 0 | 000 |
-| IX The Hermit | 1 | 001 |
-| X Wheel of Fortune | 2 | 010 |
-| XI Justice | 3 | 011 |
-| XII The Hanged Man | 4 | 100 |
-| XIII Death | 5 | 101 |
-| XIV Temperance | 6 | 110 |
-| XV The Devil | 7 | 111 |
+| VIII Erő | 0 | 000 |
+| IX A Remete | 1 | 001 |
+| X Szerencsekerék | 2 | 010 |
+| XI Igazság | 3 | 011 |
+| XII Az Akasztott Ember | 4 | 100 |
+| XIII A Halál | 5 | 101 |
+| XIV Mértékletesség | 6 | 110 |
+| XV Az Ördög | 7 | 111 |
 
-## Tier III — The Celestial Fire (4 cards → 2 bits each)
+## III. szint — A mennyei tűz (4 lap → egyenként 2 bit)
 
-| Card | Value | Bits (2) |
+| Lap | Érték | Bit (2) |
 |------|-------|----------|
-| XVI The Tower | 0 | 00 |
-| XVII The Star | 1 | 01 |
-| XVIII The Moon | 2 | 10 |
-| XIX The Sun | 3 | 11 |
+| XVI A Torony | 0 | 00 |
+| XVII A Csillag | 1 | 01 |
+| XVIII A Hold | 2 | 10 |
+| XIX A Nap | 3 | 11 |
 
-## Tier IV — The Absolute (2 cards → 1 bit each)
+## IV. szint — Az Abszolút (2 lap → egyenként 1 bit)
 
-*When one of these cards is drawn, speak the Invocation of the Absolute before reshuffling.*
+*Ha ezen lapok egyike kerül húzásra, mondd el az Abszolút Idézését, mielőtt újra keversz.*
 
-| Card | Value | Bits (1) |
+| Lap | Érték | Bit (1) |
 |------|-------|----------|
-| XX Judgement | 0 | 0 |
-| XXI The World | 1 | 1 |
+| XX Az Ítélet | 0 | 0 |
+| XXI A Világ | 1 | 1 |
 
-## The Recording Tablet
+## A feljegyzőtábla
 
-Fill the columns from left (most significant bit) to right (least significant bit), one draw at a time. Each draw fills as many columns as its tier allows. When 11 columns are full, sum the column values to get the Index, then look up the BIP39 word.
+Töltsd ki az oszlopokat balról (legjelentősebb bit) jobbra (legkevésbé jelentős bit) haladva, húzásonként egyet. Minden húzás annyi oszlopot tölt ki, amennyit a szintje megenged. Amikor mind a 11 oszlop megtelt, add össze az oszlopértékeket az Index megállapításához, majd keresd ki a BIP39 szót.
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Szó|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
@@ -217,59 +234,59 @@ Fill the columns from left (most significant bit) to right (least significant bi
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
 
-Index is the sum of all column headers where the value is 1. Example:
+Az Index az összes olyan oszlopfejléc összege, amelynek értéke 1. Példa:
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Szó|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1|0|1|0|0|1|1|0|0|1|0| |    |
 
-Index = 1024+256+32+16+2 = **1330** → word: **novel**
+Index = 1024+256+32+16+2 = **1330** → szó: **novel**
 
-### Example draw sequence for a single word
+### Egyetlen szóhoz tartozó húzássorozat példája
 
-| Draw | Card Drawn | Tier | Bits Given | Bit Sequence So Far |
+| Húzás | Húzott lap | Szint | Kapott bitek | Bitsorozat eddig |
 |------|-----------|------|-----------|---------------------|
-| 1st | 5 of Cups (value 26) | I | 011010 | `011010` (6 bits) |
-| 2nd | The Tower (value 0) | III | 00 | `01101000` (8 bits) |
-| 3rd | The Hermit (value 1) | II | 001 | `01101000001` (11 bits ✓) |
+| 1. | 5 Kelyhek (érték 26) | I | 011010 | `011010` (6 bit) |
+| 2. | A Torony (érték 0) | III | 00 | `01101000` (8 bit) |
+| 3. | A Remete (érték 1) | II | 001 | `01101000001` (11 bit ✓) |
 
-Bits: `01101000001` → Index = 512+256+32+1 = **801** → word: **impose**
+Bitek: `01101000001` → Index = 512+256+32+1 = **801** → szó: **impose**
 
-After draw 3, the remaining bits of The Hermit (if it had given more) would be discarded. In this case it gave exactly the 3 bits needed to complete 11.
+A 3. húzás után A Remete fennmaradó bitjeit (ha többet adott volna) elvetnénk. Ebben az esetben pontosan a szükséges 3 bitet adta a 11 kiegészítéséhez.
 
-## Entropy Assessment
+## Entrópiaértékelés
 
-Each draw samples uniformly from the full 78-card deck (after reshuffling). The expected bits recorded per draw:
+Minden húzás egyenletesen mintavételez a teljes 78 lapos pakliból (az újrakeverés után). A húzásonként várható rögzített bitek:
 
-| Tier | Cards | Bits | Probability | Expected bits |
+| Szint | Lapok | Bit | Valószínűség | Várható bitek |
 |------|-------|------|-------------|---------------|
-| I | 64 | 6 | 64/78 ≈ 0.821 | 4.923 |
-| II | 8 | 3 | 8/78 ≈ 0.103 | 0.308 |
-| III | 4 | 2 | 4/78 ≈ 0.051 | 0.103 |
-| IV | 2 | 1 | 2/78 ≈ 0.026 | 0.026 |
-| **Total** | **78** | | | **≈ 5.36 bits/draw** |
+| I | 64 | 6 | 64/78 ≈ 0,821 | 4,923 |
+| II | 8 | 3 | 8/78 ≈ 0,103 | 0,308 |
+| III | 4 | 2 | 4/78 ≈ 0,051 | 0,103 |
+| IV | 2 | 1 | 2/78 ≈ 0,026 | 0,026 |
+| **Összesen** | **78** | | | **≈ 5,36 bit/húzás** |
 
-True entropy of each draw (full 78-card uniform sample): log₂(78) ≈ **6.28 bits**.
-Recording efficiency: 5.36 / 6.28 ≈ **85%** — the remaining 15% is surrendered to the cosmic tiers, as offering.
+Minden húzás valódi entrópiája (egyenletes minta a teljes 78 lapból): log₂(78) ≈ **6,28 bit**.
+Rögzítési hatékonyság: 5,36 / 6,28 ≈ **85%** — a fennmaradó 15% a kozmikus szintek számára áldozatként vész el.
 
-To generate 11 recorded bits per word, expect approximately **2.1 draws per word** on average (11 ÷ 5.36).
-For a **12-word** mnemonic (132 bits with checksum): ~25 draws.
-For a **24-word** mnemonic (264 bits with checksum): ~50 draws.
+Ahhoz, hogy szavanként 11 rögzített bitet kapj, átlagosan körülbelül **2,1 húzásra** számíthatsz szavanként (11 ÷ 5,36).
+Egy **12 szavas** mnemonikához (132 bit ellenőrzőösszeggel): ~25 húzás.
+Egy **24 szavas** mnemonikához (264 bit ellenőrzőösszeggel): ~50 húzás.
 
-*The checksum bits of the final word are not drawn from the Oracle — they are computed from the hash of all preceding entropy. Use a BIP39-compliant tool to derive and verify the complete mnemonic once all words but the last are known, or trust the last word fully to the Oracle and verify the checksum digitally afterward.*
+*Az utolsó szó ellenőrzőösszeg-bitjeit nem az Orákulumtól húzod — azokat az összes megelőző entrópia hasheléséből számítják ki. Használj egy BIP39-kompatibilis eszközt a teljes mnemonika levezetésére és ellenőrzésére, amint minden szó ismert az utolsó kivételével, vagy bízd teljesen az Orákulumra az utolsó szót, és ellenőrizd az ellenőrzőösszeget utólag digitálisan.*
 
-## Closing the Chamber
+## A Kamra lezárása
 
-Once all words are recorded on paper and the pen has been set down:
+Miután minden szó fel lett jegyezve papírra, és a toll letéve:
 
-1. Gather all 78 cards and perform a final **thirteen-shuffle** while reciting:
+1. Gyűjtsd össze mind a 78 lapot, és végezz el egy utolsó **tizenháromszoros keverést**, miközben elmondod:
 
    > *"Sigillum apponatur. Chaos recreatur.*
    > *Nemo scit, nemo videt, nemo meminit.*
    > *It is sealed."*
 
-2. Wrap the deck in dark cloth. It must not be used for cartomancy or games on the same day it has served as Oracle.
-3. Extinguish the twelve candles in **reverse order** — beginning from Satoshi Nakamoto (WSW) and moving counter-clockwise back to Alan Turing (North). Snuff each flame; do not blow. A breath scatters what was bound.
-4. The photographs may be stored or destroyed according to the adept's security threat model. They have served their purpose: their entropy has been received.
+2. Csavard be a paklit sötét kendőbe. Aznap, amikor Orákulumként szolgált, nem használható kártyavetésre vagy játékra.
+3. Oltsd el a tizenkét gyertyát **fordított sorrendben** — kezdve Satoshi Nakamotóval (NyDNy), és óramutató járásával ellentétesen haladva vissza Alan Turingig (Észak). Fojtsd el mindegyik lángot; ne fújd el. Egy lehelet szétszórja, ami kötve volt.
+4. A fényképek megőrizhetők vagy megsemmisíthetők az adeptus biztonsági fenyegetettségi modellje szerint. Betöltötték célját: entrópiájuk átvételre került.
 
-*The mnemonic is sealed. Guard it as the masters guarded their secrets — with silence, with care, and with the knowledge that what is written can be found.*
+*A mnemonika le van pecsételve. Őrizd úgy, ahogyan a mesterek őrizték titkaikat — csenddel, gondossággal, és annak tudatában, hogy amit leírtak, az megtalálható.*

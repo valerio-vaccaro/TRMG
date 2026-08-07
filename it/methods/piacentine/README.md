@@ -22,7 +22,7 @@ L’indice si calcola sommando i valori di ogni colonna che contiene `1`. Per es
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-L’indice è `1024 + 256 + 128 + 8 + 2 = 1418`. Non è necessario calcolarlo manualmente; usa la [tabella binaria condivisa delle parole](../../tables/binary-table/) per trovare indice e parola.
+L’indice è `1024 + 256 + 128 + 8 + 2 = 1418`. Non è necessario calcolarlo manualmente; usa la [tabella binaria condivisa delle parole](../../../tables/binary-table/) per trovare indice e parola.
 
 
 ## Corrispondenza carte-bit
@@ -44,7 +44,7 @@ Per ogni carta, trova il suo valore nella tabella seguente abbinando:
 - il valore (A per Asso, 2-7, 8/J per Fante, 9/Q per Donna, 10/K per Re).
 
 
-Suit     |Rank|Value|
+Seme     |Valore|Bit|
 |--------|----|-----|
 |Coppe   | A  |00000|
 |Coppe   | 2  |00001|

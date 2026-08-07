@@ -1,86 +1,89 @@
 ---
 layout: default
-title: Pokerkarten
+title: Pokerkartenmethode
+description: Erzeuge BIP-39-Wortindizes mit Pokerkarten.
 lang: de
 permalink: /de/methods/poker/
 ---
 
-## Pokerkarten
+## Erzeuge eine Wiederherstellungsphrase mit Pokerkarten
 
-Nutze 52 Karten ohne Joker. Wandle jede Karte mit der [Pokertabelle](../../../methods/poker/) um, lege sie zurück und mische bis 11 Bits gesammelt sind.
+Nutze ein Standarddeck mit 52 Karten ohne Joker. Jede Karte liefert Bits aus der folgenden Tabelle. Sammle 11 Bits pro Wort, wiederhole dies für 12 oder 24 Wörter und folge dem [Verfahren für das letzte Wort](../../#korrigiere-das-letzte-wort).
 
-## Vollständiger Ablauf
-1. Wende die Regel an bis 11 Bits vorliegen.
-2. Notiere die Bits in ihrer Reihenfolge.
-3. Suche das englische BIP-39 Wort in der verlinkten Tabelle.
-4. Wiederhole für 12 oder 24 vorläufige Wörter.
-5. Korrigiere das letzte Wort.
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Wort|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Zurück zum vollständigen Leitfaden](../)
+Der Index ist die Summe der Spalten mit `1`.
 
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Wort|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-## Vollständige Nachschlagetabelle
+Verwende die [gemeinsame binäre Worttabelle](../../../tables/binary-table/), um den Index und das Wort zu finden.
 
-|Suit    |Rank|Value|
+## Karten-Bit-Zuordnung
+
+|Farbe   |Rang|Bitfolge|
 |--------|----|-----|
-|Spades  | A  |00000|
-|Spades  | 2  |00001|
-|Spades  | 3  |00010|
-|Spades  | 4  |00011|
-|Spades  | 5  |00100|
-|Spades  | 6  |00101|
-|Spades  | 7  |00110|
-|Spades  | 8  |00111|
-|Spades  | 9  |01000|
-|Spades  | 10 |01001|
-|Spades  | J  |01010|
-|Spades  | Q  |01011|
-|Spades  | K  |01100|
-|Hearts  | A  |01101|
-|Hearts  | 2  |01110|
-|Hearts  | 3  |01111|
-|Hearts  | 4  |10000|
-|Hearts  | 5  |10001|
-|Hearts  | 6  |10010|
-|Hearts  | 7  |10011|
-|Hearts  | 8  |10100|
-|Hearts  | 9  |10101|
-|Hearts  | 10 |10110|
-|Hearts  | J  |10111|
-|Hearts  | Q  |11000|
-|Hearts  | K  |11001|
-|Clubs   | A  |11010|
-|Clubs   | 2  |11011|
-|Clubs   | 3  |11100|
-|Clubs   | 4  |11101|
-|Clubs   | 5  |11110|
-|Clubs   | 6  |11111|
-|Clubs   | 7  |0000 |
-|Clubs   | 8  |0001 |
-|Clubs   | 9  |0010 |
-|Clubs   | 10 |0011 |
-|Clubs   | J  |0100 |
-|Clubs   | Q  |0101 |
-|Clubs   | K  |0110 |
-|Diamonds| A  |0111 |
-|Diamonds| 2  |1000 |
-|Diamonds| 3  |1001 |
-|Diamonds| 4  |1010 |
-|Diamonds| 5  |1011 |
-|Diamonds| 6  |1100 |
-|Diamonds| 7  |1101 |
-|Diamonds| 8  |1110 |
-|Diamonds| 9  |1111 |
-|Diamonds| 10 |00   |
-|Diamonds| J  |01   |
-|Diamonds| Q  |10   |
-|Diamonds| K  |11   |
+|Pik  | Ass |00000|
+|Pik  | 2  |00001|
+|Pik  | 3  |00010|
+|Pik  | 4  |00011|
+|Pik  | 5  |00100|
+|Pik  | 6  |00101|
+|Pik  | 7  |00110|
+|Pik  | 8  |00111|
+|Pik  | 9  |01000|
+|Pik  | 10 |01001|
+|Pik  | Bube |01010|
+|Pik  | Dame |01011|
+|Pik  | König |01100|
+|Herz  | Ass |01101|
+|Herz  | 2  |01110|
+|Herz  | 3  |01111|
+|Herz  | 4  |10000|
+|Herz  | 5  |10001|
+|Herz  | 6  |10010|
+|Herz  | 7  |10011|
+|Herz  | 8  |10100|
+|Herz  | 9  |10101|
+|Herz  | 10 |10110|
+|Herz  | Bube |10111|
+|Herz  | Dame |11000|
+|Herz  | König |11001|
+|Kreuz   | Ass |11010|
+|Kreuz   | 2  |11011|
+|Kreuz   | 3  |11100|
+|Kreuz   | 4  |11101|
+|Kreuz   | 5  |11110|
+|Kreuz   | 6  |11111|
+|Kreuz   | 7  |0000 |
+|Kreuz   | 8  |0001 |
+|Kreuz   | 9  |0010 |
+|Kreuz   | 10 |0011 |
+|Kreuz   | Bube |0100 |
+|Kreuz   | Dame |0101 |
+|Kreuz   | König |0110 |
+|Karo| Ass |0111 |
+|Karo| 2  |1000 |
+|Karo| 3  |1001 |
+|Karo| 4  |1010 |
+|Karo| 5  |1011 |
+|Karo| 6  |1100 |
+|Karo| 7  |1101 |
+|Karo| 8  |1110 |
+|Karo| 9  |1111 |
+|Karo| 10 |00   |
+|Karo| Bube |01   |
+|Karo| Dame |10   |
+|Karo| König |11   |
 
 If the final draw provides too many bits, truncate the result to the required length.
 
-## Words table
+## Worttabelle
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|Group 12|Group 24|
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Wort|Gruppe 12|Gruppe 24|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|--------|--------|
 |0|0|0|0|0|0|0|0|0|0|0|0|abandon|00000000000|0000000|000|
 |0|0|0|0|0|0|0|0|0|0|1|1|ability|00000000001|0000000|000|

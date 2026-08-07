@@ -1,86 +1,87 @@
 ---
 layout: default
-title: Pókerkártyák
+title: Pókerkártya-módszer
+description: BIP-39 szavak indexeit állítja elő pókerkártyákkal.
 lang: hu
 permalink: /hu/methods/poker/
 ---
 
-## Pókerkártyák
+## Helyreállítási kifejezés létrehozása pókerkártyákkal
 
-Használj 52 lapot jokerek nélkül. Alakítsd át minden kártyát a [pókertáblázat](../../../methods/poker/) szerint, tedd vissza és keverd meg, amíg 11 bitet gyűjtesz.
+Használj szabványos, 52 lapos paklit jokerek nélkül. Minden kártya biteket ad; gyűjts 11 bitet szavanként, ismételd 12 vagy 24 szónál, majd kövesd az [utolsó szó eljárását](../../#javitsd-az-utolso-szot).
 
-## Teljes eljárás
-1. Alkalmazd a szabályt 11 bit eléréséig.
-2. A biteket kapott sorrendben írd fel.
-3. Keresd ki az angol BIP-39 szót a hivatkozott táblázatban.
-4. Ismételd 12 vagy 24 ideiglenes szóhoz.
-5. Javítsd az utolsó szót.
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Szó|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Vissza a teljes útmutatóhoz](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Szó|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
+Használd a [bináris szótáblázatot](../../../tables/binary-table/).
 
-## Teljes keresőtáblázat
+## Kártya-bit megfeleltetés
 
-|Suit    |Rank|Value|
+|Szín    |Érték|Bitsorozat|
 |--------|----|-----|
-|Spades  | A  |00000|
-|Spades  | 2  |00001|
-|Spades  | 3  |00010|
-|Spades  | 4  |00011|
-|Spades  | 5  |00100|
-|Spades  | 6  |00101|
-|Spades  | 7  |00110|
-|Spades  | 8  |00111|
-|Spades  | 9  |01000|
-|Spades  | 10 |01001|
-|Spades  | J  |01010|
-|Spades  | Q  |01011|
-|Spades  | K  |01100|
-|Hearts  | A  |01101|
-|Hearts  | 2  |01110|
-|Hearts  | 3  |01111|
-|Hearts  | 4  |10000|
-|Hearts  | 5  |10001|
-|Hearts  | 6  |10010|
-|Hearts  | 7  |10011|
-|Hearts  | 8  |10100|
-|Hearts  | 9  |10101|
-|Hearts  | 10 |10110|
-|Hearts  | J  |10111|
-|Hearts  | Q  |11000|
-|Hearts  | K  |11001|
-|Clubs   | A  |11010|
-|Clubs   | 2  |11011|
-|Clubs   | 3  |11100|
-|Clubs   | 4  |11101|
-|Clubs   | 5  |11110|
-|Clubs   | 6  |11111|
-|Clubs   | 7  |0000 |
-|Clubs   | 8  |0001 |
-|Clubs   | 9  |0010 |
-|Clubs   | 10 |0011 |
-|Clubs   | J  |0100 |
-|Clubs   | Q  |0101 |
-|Clubs   | K  |0110 |
-|Diamonds| A  |0111 |
-|Diamonds| 2  |1000 |
-|Diamonds| 3  |1001 |
-|Diamonds| 4  |1010 |
-|Diamonds| 5  |1011 |
-|Diamonds| 6  |1100 |
-|Diamonds| 7  |1101 |
-|Diamonds| 8  |1110 |
-|Diamonds| 9  |1111 |
-|Diamonds| 10 |00   |
-|Diamonds| J  |01   |
-|Diamonds| Q  |10   |
-|Diamonds| K  |11   |
+|Pikk  | Ász |00000|
+|Pikk  | 2  |00001|
+|Pikk  | 3  |00010|
+|Pikk  | 4  |00011|
+|Pikk  | 5  |00100|
+|Pikk  | 6  |00101|
+|Pikk  | 7  |00110|
+|Pikk  | 8  |00111|
+|Pikk  | 9  |01000|
+|Pikk  | 10 |01001|
+|Pikk  | Bubi |01010|
+|Pikk  | Dáma |01011|
+|Pikk  | Király |01100|
+|Kőr  | Ász |01101|
+|Kőr  | 2  |01110|
+|Kőr  | 3  |01111|
+|Kőr  | 4  |10000|
+|Kőr  | 5  |10001|
+|Kőr  | 6  |10010|
+|Kőr  | 7  |10011|
+|Kőr  | 8  |10100|
+|Kőr  | 9  |10101|
+|Kőr  | 10 |10110|
+|Kőr  | Bubi |10111|
+|Kőr  | Dáma |11000|
+|Kőr  | Király |11001|
+|Treff   | Ász |11010|
+|Treff   | 2  |11011|
+|Treff   | 3  |11100|
+|Treff   | 4  |11101|
+|Treff   | 5  |11110|
+|Treff   | 6  |11111|
+|Treff   | 7  |0000 |
+|Treff   | 8  |0001 |
+|Treff   | 9  |0010 |
+|Treff   | 10 |0011 |
+|Treff   | Bubi |0100 |
+|Treff   | Dáma |0101 |
+|Treff   | Király |0110 |
+|Káró| Ász |0111 |
+|Káró| 2  |1000 |
+|Káró| 3  |1001 |
+|Káró| 4  |1010 |
+|Káró| 5  |1011 |
+|Káró| 6  |1100 |
+|Káró| 7  |1101 |
+|Káró| 8  |1110 |
+|Káró| 9  |1111 |
+|Káró| 10 |00   |
+|Káró| Bubi |01   |
+|Káró| Dáma |10   |
+|Káró| Király |11   |
 
 If the final draw provides too many bits, truncate the result to the required length.
 
-## Words table
+## Szótáblázat
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|Group 12|Group 24|
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Szó|12. csoport|24. csoport|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|--------|--------|
 |0|0|0|0|0|0|0|0|0|0|0|0|abandon|00000000000|0000000|000|
 |0|0|0|0|0|0|0|0|0|0|1|1|ability|00000000001|0000000|000|

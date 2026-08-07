@@ -17,4 +17,4 @@ Lancia la moneta 11 volte per ogni parola e usa questa tabella di conversione:
 |Testa|0|
 |Croce|1|
 
-Leggi gli 11 risultati da sinistra a destra e usa la [tabella binaria delle parole](../../tables/binary-table/) per associare il valore ottenuto a una parola BIP-39.
+Leggi gli 11 risultati da sinistra a destra e usa la [tabella binaria delle parole](../../../tables/binary-table/) per associare il valore ottenuto a una parola BIP-39.

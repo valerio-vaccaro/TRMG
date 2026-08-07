@@ -1,208 +1,225 @@
 ---
 layout: default
-title: 塔罗牌
+title: 塔罗牌方法
+description: 使用一整副塔罗牌生成 BIP-39 词语索引。
 lang: zh
 permalink: /zh/methods/tarot/
 ---
 
-## 塔罗牌
+# 🕯️ 助记词召唤秘术仪式 🕯️
+谨于公元2026年四月一日举行
 
-使用完整的 78 张塔罗牌。牌所属层级提供 1 至 6 位；抽牌、记录、放回并洗牌，直到获得 11 位。映射见[塔罗牌表](../../../methods/tarot/)。
+*在数字领域的帷幕被揭开之前，修习者必须准备好圣室。将十二支蜡烛围成一圈——代表太阳周期的十二个月，也代表黄道十二宫的十二根支柱。在蜡烛之间摆放十二位密码巨匠的照片（见：*十二人议会*），全部朝向圆心。他们毕生投入密码技艺所凝聚的幽灵般的熵，将放大每一次抽取的混沌之火。*
 
-## 完整流程
-1. 按本页规则取得11位。
-2. 按顺序记录比特。
-3. 在链接表中查找英文BIP-39词。
-4. 重复至12或24个临时词。
-5. 校正最后一个词。
+*唯有当仪式空间充满他们共同的智慧时，神谕卡牌方可开启封印。*
 
-[返回完整方法指南](../)
+## 方法概述
 
+这种方法使用一副塔罗牌的全部 78 张牌。每张牌都属于一个层级，提供一到六位比特。抽牌、记录分配的比特、将牌放回牌组并重新洗牌，直到为一个临时词凑够 11 位。重复此过程直到得到 12 或 24 个词，然后遵循[最后一个词的步骤](../../#校正最后一个词)。
 
-## 完整查找表
+## 十二人议会——熵场的守护者
 
-## The Sacred Instrument
+在每支蜡烛旁放置一张照片，从北方位置开始按顺时针方向排列：
 
-A standard Tarot deck holds **78 cards**. All 78 participate in this ritual — none are set aside, none are exiled. The cards are divided into four Arcane Tiers by their cosmic weight:
+| 方位 | 蜡烛颜色 | 密码巨匠 | 领域 |
+|----------|-------------|--------------|-------|
+| 北 | 白色 | 艾伦·图灵 | 可计算奥秘之父 |
+| 北北东 | 银色 | 克劳德·香农 | 信息论执政官 |
+| 东北 | 金色 | 惠特菲尔德·迪菲 | 公钥的使者 |
+| 东北东 | 橙色 | 马丁·赫尔曼 | 指数帷幕的守护者 |
+| 东 | 红色 | 罗恩·里维斯特 | RSA 的第一把刃 |
+| 东南东 | 深红色 | 阿迪·萨莫尔 | RSA 的第二把刃 |
+| 东南 | 深蓝色 | 伦纳德·阿德曼 | RSA 的第三把刃 |
+| 南南东 | 紫罗兰色 | 拉尔夫·默克尔 | 哈希树的建筑师 |
+| 南 | 绿色 | 布鲁斯·施奈尔 | 应用艺术的哨兵 |
+| 南南西 | 青色 | 菲尔·齐默尔曼 | "相当不错的秘密"的解放者 |
+| 西南 | 黄色 | 莫西·马林斯派克 | Signal 之火的低语者 |
+| 西南西 | 黑色 | 中本聪 | 无名者，链条的编织者 |
 
-| Tier | Cards | Count | Bits per Draw | Arcane Meaning |
+*尽可能同时点燃十二支蜡烛，或以凡人之手所能达到的最接近同时的方式点燃。每支蜡烛点燃时，大声说出对应密码巨匠的名字。他们积累的熵——源自一生创造秘密的心血——将进入仪式场域，使概率向你倾斜。*
+
+## 神圣的器具
+
+一副标准塔罗牌共有 **78 张**。全部 78 张都参与此仪式——没有一张被搁置，没有一张被放逐。这些牌根据其宇宙权重被划分为四个秘术层级：
+
+| 层级 | 牌数 | 数量 | 每次抽取的比特 | 秘术含义 |
 |------|-------|-------|---------------|----------------|
-| I — The Mundane Veil | All Minor Arcana + The Fool through The Chariot (0–VII) | **64** | **6 bits** | The rich chaos of earthly experience |
-| II — The Hidden Path | Strength through The Devil (VIII–XV) | **8** | **3 bits** | The trials of transformation |
-| III — The Celestial Fire | The Tower through The Sun (XVI–XIX) | **4** | **2 bits** | The great upheavals of fate |
-| IV — The Absolute | Judgement and The World (XX–XXI) | **2** | **1 bit** | The indivisible forces of ending and completion |
+| 一级 — 尘世帷幕 | 全部小阿卡纳 + 从愚人到战车（0–VII） | **64** | **6 位** | 尘世经验的丰富混沌 |
+| 二级 — 隐秘之路 | 从力量到恶魔（VIII–XV） | **8** | **3 位** | 蜕变的考验 |
+| 三级 — 天火 | 从高塔到太阳（XVI–XIX） | **4** | **2 位** | 命运的巨大动荡 |
+| 四级 — 绝对 | 审判与世界（XX–XXI） | **2** | **1 位** | 终结与圆满的不可分割之力 |
 
-**Total: 64 + 8 + 4 + 2 = 78 cards.**
+**总计：64 + 8 + 4 + 2 = 78 张牌。**
 
-Each tier contributes bits equal to log₂ of its size: 2⁶=64, 2³=8, 2²=4, 2¹=2. Every card in a tier maps to a unique bit pattern within that tier.
+每个层级提供的比特数等于其规模的 log₂ 值：2⁶=64，2³=8，2²=4，2¹=2。同一层级中的每张牌都对应该层级内唯一的比特模式。
 
-## The Ritual of Drawing
+## 抽取仪式
 
-1. Gather all 78 cards into a single unified deck.
-2. Perform the **Opening Shuffle** seven times while reciting the Opening Invocation (see below).
-3. For each bit sequence needed:
-   - Draw the topmost card.
-   - Read its Tier and record the bits from the corresponding table.
-   - Return the card to the deck.
-   - **Reshuffle** the deck while reciting the appropriate Reshuffle Incantation (see below).
-   - Repeat until 11 bits are accumulated for the current word.
-   - If the last draw yields more bits than needed, take only the leftmost bits required and discard the rest — they were not destined for this word.
-4. Look up the 11-bit index in the [shared binary words table](../../tables/binary-table/) and record the word on paper.
-5. Repeat until all 12 or 24 words are recorded.
-6. Close the ritual (see: *Closing the Chamber*).
+1. 将全部 78 张牌集合为一副统一的牌组。
+2. 边诵读开场祷词（见下文）边执行七次**开场洗牌**。
+3. 对每个所需的比特序列：
+   - 抽取最上面的一张牌。
+   - 读取其层级，并从对应表格中记录比特。
+   - 将牌放回牌组。
+   - **重新洗牌**，同时诵读相应的重洗咒语（见下文）。
+   - 重复此过程，直到为当前词累积 11 位。
+   - 如果最后一次抽取提供的比特多于所需，只取所需的最左侧比特，其余丢弃——它们并非为这个词而生。
+4. 在[共享二进制词语表](../../../tables/binary-table/)中查出 11 位索引，并将该词记在纸上。
+5. 重复此过程，直到记录完全部 12 或 24 个词。
+6. 结束仪式（见：*圣室的封闭*）。
 
-## The Sacred Incantations
+## 神圣的咒语
 
-*These formulas bind the will of the caster to the chaos of the universe. Speak them clearly, at a measured pace, without hesitation. A stumbled word requires the current shuffle to begin again.*
+*这些咒语将施行者的意志与宇宙的混沌相连。诵读时须字字清晰、节奏平稳、不容迟疑。念错一字，须重新开始当前的洗牌。*
 
-### Opening Invocation — spoken during the first seven shuffles
+### 开场祷词——在前七次洗牌时诵读
 
 > *"Per ignem duodecim et tenebras sine fine,*
 > *aperio ostium entropiae.*
 > *Voci magistrorum obedio — Turing, Shannon, Diffie.*
 > *Chaos ordinetur in verbo secreto."*
 >
-> *(By the twelve fires and the endless dark,*
-> *I open the gate of entropy.*
-> *I heed the voice of the masters — Turing, Shannon, Diffie.*
-> *Let chaos be ordered into the secret word.)*
+> *（借十二团火焰与无尽黑暗，*
+> *我开启熵之门。*
+> *我聆听大师们的声音——图灵、香农、迪菲。*
+> *愿混沌归序为秘密之词。）*
 
-### Reshuffle Incantation — spoken during every reshuffle between draws
+### 重洗咒语——在两次抽取之间的每次重新洗牌时诵读
 
 > *"Misceo fata, misceo sortes.*
 > *Nulla memoria, nullus ordo.*
 > *Arcanum redit in chaos.*
 > *Fiat voluntas entropiae."*
 >
-> *(I mix the fates, I mix the lots.*
-> *No memory, no order.*
-> *The secret returns to chaos.*
-> *Let the will of entropy be done.)*
+> *（我搅动命运，我搅动签数。*
+> *无记忆，无秩序。*
+> *秘密归于混沌。*
+> *愿熵之意志得以实现。）*
 
-### Invocation of the Absolute — spoken only when a Tier IV card (Judgement or The World) is drawn
+### 绝对祷词——仅当抽到四级牌（审判或世界）时诵读
 
 > *"Vox ultima locuta est.*
 > *Unus morsus de infinito.*
 > *Gratum ago, O Finis."*
 >
-> *(The final voice has spoken.*
-> *One bite of the infinite.*
-> *I give thanks, O End.)*
+> *（终末之声已然道出。*
+> *一口无限之啮。*
+> *我致谢意，噢，终结。）*
 
-## Tier I — The Mundane Veil (64 cards → 6 bits each)
+## 一级 — 尘世帷幕（64 张牌 → 每张 6 位）
 
-This tier contains the eight lowest Major Arcana (0–VII) and all 56 Minor Arcana. Assign values 0–63 sequentially as shown. Record the full 6-bit binary of the drawn card.
+这一层级包含编号最低的八张大阿卡纳（0–VII）以及全部 56 张小阿卡纳。按下表所示依次赋值 0–63。记录所抽牌的完整 6 位二进制值。
 
-### Tier I — Major Arcana section (values 0–7)
+### 一级 — 大阿卡纳部分（数值 0–7）
 
-| Card | Value | Bits (6) |
+| 牌 | 数值 | 位 (6) |
 |------|-------|----------|
-| 0 The Fool | 0 | 000000 |
-| I The Magician | 1 | 000001 |
-| II The High Priestess | 2 | 000010 |
-| III The Empress | 3 | 000011 |
-| IV The Emperor | 4 | 000100 |
-| V The Hierophant | 5 | 000101 |
-| VI The Lovers | 6 | 000110 |
-| VII The Chariot | 7 | 000111 |
+| 0 愚人 | 0 | 000000 |
+| I 魔术师 | 1 | 000001 |
+| II 女祭司 | 2 | 000010 |
+| III 皇后 | 3 | 000011 |
+| IV 皇帝 | 4 | 000100 |
+| V 教皇 | 5 | 000101 |
+| VI 恋人 | 6 | 000110 |
+| VII 战车 | 7 | 000111 |
 
-### Tier I — Minor Arcana section (values 8–63)
+### 一级 — 小阿卡纳部分（数值 8–63）
 
-| Suit | Rank | Value | Bits (6) |
+| 花色 | 点数 | 数值 | 位 (6) |
 |------|------|-------|----------|
-| Wands | Ace | 8 | 001000 |
-| Wands | 2 | 9 | 001001 |
-| Wands | 3 | 10 | 001010 |
-| Wands | 4 | 11 | 001011 |
-| Wands | 5 | 12 | 001100 |
-| Wands | 6 | 13 | 001101 |
-| Wands | 7 | 14 | 001110 |
-| Wands | 8 | 15 | 001111 |
-| Wands | 9 | 16 | 010000 |
-| Wands | 10 | 17 | 010001 |
-| Wands | Page | 18 | 010010 |
-| Wands | Knight | 19 | 010011 |
-| Wands | Queen | 20 | 010100 |
-| Wands | King | 21 | 010101 |
-| Cups | Ace | 22 | 010110 |
-| Cups | 2 | 23 | 010111 |
-| Cups | 3 | 24 | 011000 |
-| Cups | 4 | 25 | 011001 |
-| Cups | 5 | 26 | 011010 |
-| Cups | 6 | 27 | 011011 |
-| Cups | 7 | 28 | 011100 |
-| Cups | 8 | 29 | 011101 |
-| Cups | 9 | 30 | 011110 |
-| Cups | 10 | 31 | 011111 |
-| Cups | Page | 32 | 100000 |
-| Cups | Knight | 33 | 100001 |
-| Cups | Queen | 34 | 100010 |
-| Cups | King | 35 | 100011 |
-| Swords | Ace | 36 | 100100 |
-| Swords | 2 | 37 | 100101 |
-| Swords | 3 | 38 | 100110 |
-| Swords | 4 | 39 | 100111 |
-| Swords | 5 | 40 | 101000 |
-| Swords | 6 | 41 | 101001 |
-| Swords | 7 | 42 | 101010 |
-| Swords | 8 | 43 | 101011 |
-| Swords | 9 | 44 | 101100 |
-| Swords | 10 | 45 | 101101 |
-| Swords | Page | 46 | 101110 |
-| Swords | Knight | 47 | 101111 |
-| Swords | Queen | 48 | 110000 |
-| Swords | King | 49 | 110001 |
-| Pentacles | Ace | 50 | 110010 |
-| Pentacles | 2 | 51 | 110011 |
-| Pentacles | 3 | 52 | 110100 |
-| Pentacles | 4 | 53 | 110101 |
-| Pentacles | 5 | 54 | 110110 |
-| Pentacles | 6 | 55 | 110111 |
-| Pentacles | 7 | 56 | 111000 |
-| Pentacles | 8 | 57 | 111001 |
-| Pentacles | 9 | 58 | 111010 |
-| Pentacles | 10 | 59 | 111011 |
-| Pentacles | Page | 60 | 111100 |
-| Pentacles | Knight | 61 | 111101 |
-| Pentacles | Queen | 62 | 111110 |
-| Pentacles | King | 63 | 111111 |
+| 权杖 | A | 8 | 001000 |
+| 权杖 | 2 | 9 | 001001 |
+| 权杖 | 3 | 10 | 001010 |
+| 权杖 | 4 | 11 | 001011 |
+| 权杖 | 5 | 12 | 001100 |
+| 权杖 | 6 | 13 | 001101 |
+| 权杖 | 7 | 14 | 001110 |
+| 权杖 | 8 | 15 | 001111 |
+| 权杖 | 9 | 16 | 010000 |
+| 权杖 | 10 | 17 | 010001 |
+| 权杖 | 侍从 | 18 | 010010 |
+| 权杖 | 骑士 | 19 | 010011 |
+| 权杖 | 王后 | 20 | 010100 |
+| 权杖 | 国王 | 21 | 010101 |
+| 圣杯 | A | 22 | 010110 |
+| 圣杯 | 2 | 23 | 010111 |
+| 圣杯 | 3 | 24 | 011000 |
+| 圣杯 | 4 | 25 | 011001 |
+| 圣杯 | 5 | 26 | 011010 |
+| 圣杯 | 6 | 27 | 011011 |
+| 圣杯 | 7 | 28 | 011100 |
+| 圣杯 | 8 | 29 | 011101 |
+| 圣杯 | 9 | 30 | 011110 |
+| 圣杯 | 10 | 31 | 011111 |
+| 圣杯 | 侍从 | 32 | 100000 |
+| 圣杯 | 骑士 | 33 | 100001 |
+| 圣杯 | 王后 | 34 | 100010 |
+| 圣杯 | 国王 | 35 | 100011 |
+| 宝剑 | A | 36 | 100100 |
+| 宝剑 | 2 | 37 | 100101 |
+| 宝剑 | 3 | 38 | 100110 |
+| 宝剑 | 4 | 39 | 100111 |
+| 宝剑 | 5 | 40 | 101000 |
+| 宝剑 | 6 | 41 | 101001 |
+| 宝剑 | 7 | 42 | 101010 |
+| 宝剑 | 8 | 43 | 101011 |
+| 宝剑 | 9 | 44 | 101100 |
+| 宝剑 | 10 | 45 | 101101 |
+| 宝剑 | 侍从 | 46 | 101110 |
+| 宝剑 | 骑士 | 47 | 101111 |
+| 宝剑 | 王后 | 48 | 110000 |
+| 宝剑 | 国王 | 49 | 110001 |
+| 星币 | A | 50 | 110010 |
+| 星币 | 2 | 51 | 110011 |
+| 星币 | 3 | 52 | 110100 |
+| 星币 | 4 | 53 | 110101 |
+| 星币 | 5 | 54 | 110110 |
+| 星币 | 6 | 55 | 110111 |
+| 星币 | 7 | 56 | 111000 |
+| 星币 | 8 | 57 | 111001 |
+| 星币 | 9 | 58 | 111010 |
+| 星币 | 10 | 59 | 111011 |
+| 星币 | 侍从 | 60 | 111100 |
+| 星币 | 骑士 | 61 | 111101 |
+| 星币 | 王后 | 62 | 111110 |
+| 星币 | 国王 | 63 | 111111 |
 
-## Tier II — The Hidden Path (8 cards → 3 bits each)
+## 二级 — 隐秘之路（8 张牌 → 每张 3 位）
 
-| Card | Value | Bits (3) |
+| 牌 | 数值 | 位 (3) |
 |------|-------|----------|
-| VIII Strength | 0 | 000 |
-| IX The Hermit | 1 | 001 |
-| X Wheel of Fortune | 2 | 010 |
-| XI Justice | 3 | 011 |
-| XII The Hanged Man | 4 | 100 |
-| XIII Death | 5 | 101 |
-| XIV Temperance | 6 | 110 |
-| XV The Devil | 7 | 111 |
+| VIII 力量 | 0 | 000 |
+| IX 隐士 | 1 | 001 |
+| X 命运之轮 | 2 | 010 |
+| XI 正义 | 3 | 011 |
+| XII 倒吊人 | 4 | 100 |
+| XIII 死神 | 5 | 101 |
+| XIV 节制 | 6 | 110 |
+| XV 恶魔 | 7 | 111 |
 
-## Tier III — The Celestial Fire (4 cards → 2 bits each)
+## 三级 — 天火（4 张牌 → 每张 2 位）
 
-| Card | Value | Bits (2) |
+| 牌 | 数值 | 位 (2) |
 |------|-------|----------|
-| XVI The Tower | 0 | 00 |
-| XVII The Star | 1 | 01 |
-| XVIII The Moon | 2 | 10 |
-| XIX The Sun | 3 | 11 |
+| XVI 高塔 | 0 | 00 |
+| XVII 星星 | 1 | 01 |
+| XVIII 月亮 | 2 | 10 |
+| XIX 太阳 | 3 | 11 |
 
-## Tier IV — The Absolute (2 cards → 1 bit each)
+## 四级 — 绝对（2 张牌 → 每张 1 位）
 
-*When one of these cards is drawn, speak the Invocation of the Absolute before reshuffling.*
+*抽到这两张牌中的任意一张时，在重新洗牌之前诵读绝对祷词。*
 
-| Card | Value | Bits (1) |
+| 牌 | 数值 | 位 (1) |
 |------|-------|----------|
-| XX Judgement | 0 | 0 |
-| XXI The World | 1 | 1 |
+| XX 审判 | 0 | 0 |
+| XXI 世界 | 1 | 1 |
 
-## The Recording Tablet
+## 记录表
 
-Fill the columns from left (most significant bit) to right (least significant bit), one draw at a time. Each draw fills as many columns as its tier allows. When 11 columns are full, sum the column values to get the Index, then look up the BIP39 word.
+从左（最高有效位）到右（最低有效位）依次填写各列，每次抽取填一次。每次抽取所能填写的列数取决于其层级。当全部 11 列填满后，将各列的值相加得到索引，然后查出对应的 BIP39 词语。
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|索引|词语|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
@@ -217,59 +234,59 @@ Fill the columns from left (most significant bit) to right (least significant bi
 |    |   |   |   |  |  |  | | | | |     |    |
 |    |   |   |   |  |  |  | | | | |     |    |
 
-Index is the sum of all column headers where the value is 1. Example:
+索引是所有值为 1 的列标题之和。示例：
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|
+|1024|512|256|128|64|32|16|8|4|2|1|索引|词语|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1|0|1|0|0|1|1|0|0|1|0| |    |
 
-Index = 1024+256+32+16+2 = **1330** → word: **novel**
+索引 = 1024+256+32+16+2 = **1330** → 词语：**novel**
 
-### Example draw sequence for a single word
+### 单个词的抽取序列示例
 
-| Draw | Card Drawn | Tier | Bits Given | Bit Sequence So Far |
+| 抽取次数 | 抽到的牌 | 层级 | 提供的比特 | 目前累积的比特序列 |
 |------|-----------|------|-----------|---------------------|
-| 1st | 5 of Cups (value 26) | I | 011010 | `011010` (6 bits) |
-| 2nd | The Tower (value 0) | III | 00 | `01101000` (8 bits) |
-| 3rd | The Hermit (value 1) | II | 001 | `01101000001` (11 bits ✓) |
+| 第1次 | 圣杯5（数值 26） | I | 011010 | `011010`（6 位） |
+| 第2次 | 高塔（数值 0） | III | 00 | `01101000`（8 位） |
+| 第3次 | 隐士（数值 1） | II | 001 | `01101000001`（11 位 ✓） |
 
-Bits: `01101000001` → Index = 512+256+32+1 = **801** → word: **impose**
+比特：`01101000001` → 索引 = 512+256+32+1 = **801** → 词语：**impose**
 
-After draw 3, the remaining bits of The Hermit (if it had given more) would be discarded. In this case it gave exactly the 3 bits needed to complete 11.
+在第 3 次抽取之后，隐士牌若能提供更多比特，多余部分将被丢弃。而在此例中，它恰好提供了凑满 11 位所需的 3 位。
 
-## Entropy Assessment
+## 熵评估
 
-Each draw samples uniformly from the full 78-card deck (after reshuffling). The expected bits recorded per draw:
+每次抽取都是从完整的 78 张牌中均匀采样（重新洗牌之后）。每次抽取预期记录的比特数：
 
-| Tier | Cards | Bits | Probability | Expected bits |
+| 层级 | 牌数 | 位 | 概率 | 预期比特数 |
 |------|-------|------|-------------|---------------|
 | I | 64 | 6 | 64/78 ≈ 0.821 | 4.923 |
 | II | 8 | 3 | 8/78 ≈ 0.103 | 0.308 |
 | III | 4 | 2 | 4/78 ≈ 0.051 | 0.103 |
 | IV | 2 | 1 | 2/78 ≈ 0.026 | 0.026 |
-| **Total** | **78** | | | **≈ 5.36 bits/draw** |
+| **总计** | **78** | | | **≈ 5.36 位/次抽取** |
 
-True entropy of each draw (full 78-card uniform sample): log₂(78) ≈ **6.28 bits**.
-Recording efficiency: 5.36 / 6.28 ≈ **85%** — the remaining 15% is surrendered to the cosmic tiers, as offering.
+每次抽取的真实熵（对全部 78 张牌的均匀采样）：log₂(78) ≈ **6.28 位**。
+记录效率：5.36 / 6.28 ≈ **85%**——其余 15% 作为供奉献给宇宙层级。
 
-To generate 11 recorded bits per word, expect approximately **2.1 draws per word** on average (11 ÷ 5.36).
-For a **12-word** mnemonic (132 bits with checksum): ~25 draws.
-For a **24-word** mnemonic (264 bits with checksum): ~50 draws.
+要为每个词生成 11 位记录比特，平均每词大约需要 **2.1 次抽取**（11 ÷ 5.36）。
+对于 **12 词**助记词（132 位含校验和）：约 25 次抽取。
+对于 **24 词**助记词（264 位含校验和）：约 50 次抽取。
 
-*The checksum bits of the final word are not drawn from the Oracle — they are computed from the hash of all preceding entropy. Use a BIP39-compliant tool to derive and verify the complete mnemonic once all words but the last are known, or trust the last word fully to the Oracle and verify the checksum digitally afterward.*
+*最后一个词的校验和比特并非从神谕中抽取——它们是根据此前全部熵的哈希计算得出的。当除最后一个词外的所有词都已确定后，使用兼容 BIP39 的工具推导并验证完整助记词；或者完全信任神谕给出的最后一个词，之后再用数字方式验证校验和。*
 
-## Closing the Chamber
+## 圣室的封闭
 
-Once all words are recorded on paper and the pen has been set down:
+当所有词都已记录在纸上、笔已放下之后：
 
-1. Gather all 78 cards and perform a final **thirteen-shuffle** while reciting:
+1. 收集全部 78 张牌，边诵读边执行最后的**十三次洗牌**：
 
    > *"Sigillum apponatur. Chaos recreatur.*
    > *Nemo scit, nemo videt, nemo meminit.*
    > *It is sealed."*
 
-2. Wrap the deck in dark cloth. It must not be used for cartomancy or games on the same day it has served as Oracle.
-3. Extinguish the twelve candles in **reverse order** — beginning from Satoshi Nakamoto (WSW) and moving counter-clockwise back to Alan Turing (North). Snuff each flame; do not blow. A breath scatters what was bound.
-4. The photographs may be stored or destroyed according to the adept's security threat model. They have served their purpose: their entropy has been received.
+2. 将牌组包裹在深色布料中。它在充当神谕的当天不得再用于占卜或游戏。
+3. 以**相反的顺序**熄灭十二支蜡烛——从中本聪（西南西）开始，逆时针方向依次熄灭，直至回到图灵（北）。用手指掐灭每一朵火焰；不要用嘴吹熄。一口气息会驱散已被束缚之物。
+4. 这些照片可根据修习者自身的安全威胁模型选择保存或销毁。它们已完成使命：其熵已被接收。
 
-*The mnemonic is sealed. Guard it as the masters guarded their secrets — with silence, with care, and with the knowledge that what is written can be found.*
+*助记词已被封印。请像大师们守护他们的秘密那样守护它——以沉默，以谨慎，并谨记：凡书写下来之物，皆可被寻得。*

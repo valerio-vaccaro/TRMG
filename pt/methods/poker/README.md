@@ -1,86 +1,87 @@
 ---
 layout: default
-title: Cartas de póquer
+title: Método de cartas de póquer
+description: Gera índices de palavras BIP-39 com cartas de póquer.
 lang: pt
 permalink: /pt/methods/poker/
 ---
 
-## Cartas de póquer
+## Gere uma frase de recuperação com cartas de póquer
 
-Use um baralho de 52 cartas sem Jokers. Converta cada carta com a [tabela de póquer](../../../methods/poker/), devolva-a e baralhe até reunir 11 bits.
+Use um baralho padrão de 52 cartas sem jokers. Cada carta fornece bits; reúna 11 por palavra, repita para 12 ou 24 palavras e siga o [procedimento da última palavra](../../#corrigir-a-ultima-palavra).
 
-## Procedimento completo
-1. Aplique a regra ate reunir 11 bits.
-2. Registe os bits na ordem obtida.
-3. Procure a palavra BIP-39 inglesa na tabela ligada.
-4. Repita para 12 ou 24 palavras provisórias.
-5. Corrija a palavra final.
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palavra|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Voltar ao guia completo](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palavra|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
+Use a [tabela binária de palavras](../../../tables/binary-table/).
 
-## Tabela de consulta completa
+## Correspondência cartas-bits
 
-|Suit    |Rank|Value|
+|Naipe   |Valor|Bits|
 |--------|----|-----|
-|Spades  | A  |00000|
-|Spades  | 2  |00001|
-|Spades  | 3  |00010|
-|Spades  | 4  |00011|
-|Spades  | 5  |00100|
-|Spades  | 6  |00101|
-|Spades  | 7  |00110|
-|Spades  | 8  |00111|
-|Spades  | 9  |01000|
-|Spades  | 10 |01001|
-|Spades  | J  |01010|
-|Spades  | Q  |01011|
-|Spades  | K  |01100|
-|Hearts  | A  |01101|
-|Hearts  | 2  |01110|
-|Hearts  | 3  |01111|
-|Hearts  | 4  |10000|
-|Hearts  | 5  |10001|
-|Hearts  | 6  |10010|
-|Hearts  | 7  |10011|
-|Hearts  | 8  |10100|
-|Hearts  | 9  |10101|
-|Hearts  | 10 |10110|
-|Hearts  | J  |10111|
-|Hearts  | Q  |11000|
-|Hearts  | K  |11001|
-|Clubs   | A  |11010|
-|Clubs   | 2  |11011|
-|Clubs   | 3  |11100|
-|Clubs   | 4  |11101|
-|Clubs   | 5  |11110|
-|Clubs   | 6  |11111|
-|Clubs   | 7  |0000 |
-|Clubs   | 8  |0001 |
-|Clubs   | 9  |0010 |
-|Clubs   | 10 |0011 |
-|Clubs   | J  |0100 |
-|Clubs   | Q  |0101 |
-|Clubs   | K  |0110 |
-|Diamonds| A  |0111 |
-|Diamonds| 2  |1000 |
-|Diamonds| 3  |1001 |
-|Diamonds| 4  |1010 |
-|Diamonds| 5  |1011 |
-|Diamonds| 6  |1100 |
-|Diamonds| 7  |1101 |
-|Diamonds| 8  |1110 |
-|Diamonds| 9  |1111 |
-|Diamonds| 10 |00   |
-|Diamonds| J  |01   |
-|Diamonds| Q  |10   |
-|Diamonds| K  |11   |
+|Espadas  | Ás |00000|
+|Espadas  | 2  |00001|
+|Espadas  | 3  |00010|
+|Espadas  | 4  |00011|
+|Espadas  | 5  |00100|
+|Espadas  | 6  |00101|
+|Espadas  | 7  |00110|
+|Espadas  | 8  |00111|
+|Espadas  | 9  |01000|
+|Espadas  | 10 |01001|
+|Espadas  | Valete |01010|
+|Espadas  | Dama |01011|
+|Espadas  | Rei |01100|
+|Copas  | Ás |01101|
+|Copas  | 2  |01110|
+|Copas  | 3  |01111|
+|Copas  | 4  |10000|
+|Copas  | 5  |10001|
+|Copas  | 6  |10010|
+|Copas  | 7  |10011|
+|Copas  | 8  |10100|
+|Copas  | 9  |10101|
+|Copas  | 10 |10110|
+|Copas  | Valete |10111|
+|Copas  | Dama |11000|
+|Copas  | Rei |11001|
+|Paus   | Ás |11010|
+|Paus   | 2  |11011|
+|Paus   | 3  |11100|
+|Paus   | 4  |11101|
+|Paus   | 5  |11110|
+|Paus   | 6  |11111|
+|Paus   | 7  |0000 |
+|Paus   | 8  |0001 |
+|Paus   | 9  |0010 |
+|Paus   | 10 |0011 |
+|Paus   | Valete |0100 |
+|Paus   | Dama |0101 |
+|Paus   | Rei |0110 |
+|Ouros| Ás |0111 |
+|Ouros| 2  |1000 |
+|Ouros| 3  |1001 |
+|Ouros| 4  |1010 |
+|Ouros| 5  |1011 |
+|Ouros| 6  |1100 |
+|Ouros| 7  |1101 |
+|Ouros| 8  |1110 |
+|Ouros| 9  |1111 |
+|Ouros| 10 |00   |
+|Ouros| Valete |01   |
+|Ouros| Dama |10   |
+|Ouros| Rei |11   |
 
 If the final draw provides too many bits, truncate the result to the required length.
 
-## Words table
+## Tabela de palavras
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|Group 12|Group 24|
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palavra|Grupo 12|Grupo 24|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|--------|--------|
 |0|0|0|0|0|0|0|0|0|0|0|0|abandon|00000000000|0000000|000|
 |0|0|0|0|0|0|0|0|0|0|1|1|ability|00000000001|0000000|000|

@@ -20,7 +20,7 @@ Usa nell’ordine i risultati dei dadi come Primo D8, Secondo D8 e Terzo D8. Reg
 L’indice della parola si calcola come:
 
 ```
-(First D8 - 1) * 256 + (Second D8 - 1) * 32 + (Third D8 - 1) * 4 + First coin * 2 + Second coin
+(D8₁ - 1) * 256 + (D8₂ - 1) * 32 + (D8₃ - 1) * 4 + C₁ * 2 + C₂
 ```
 
 Questa corrispondenza produce ogni indice da 0 a 2047 esattamente una volta, con tutte le combinazioni dei tre dadi e delle due monete rappresentate.

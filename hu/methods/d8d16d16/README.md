@@ -1,29 +1,20 @@
 ---
 layout: default
-title: D8/D16/D16
+title: D8/D16/D16-módszer
+description: BIP-39 szavak indexeit állítja elő egy D8-cal és két D16-tal.
 lang: hu
 permalink: /hu/methods/d8d16d16/
 ---
 
-## D8/D16/D16
+## Helyreállítási kifejezés létrehozása D8/D16/D16-tal
 
-Dobj egy D8-cal és két D16-tal. Az index: `(D8 - 1) × 256 + (első D16 - 1) × 16 + (második D16 - 1)`. Minden sorozat indexet választ; lásd a [teljes táblázatot](../../../methods/d8ff/).
+Egy D8 és két D16 szükséges, első, második és harmadik néven. Minden sorozat pontosan egy 11 bites indexet ad. Ismételd 12 vagy 24 szónál, majd kövesd az [utolsó szó eljárását](../../#javitsd-az-utolso-szot).
 
-## Teljes eljárás
-1. Alkalmazd a szabályt 11 bit eléréséig.
-2. A biteket kapott sorrendben írd fel.
-3. Keresd ki az angol BIP-39 szót a hivatkozott táblázatban.
-4. Ismételd 12 vagy 24 ideiglenes szóhoz.
-5. Javítsd az utolsó szót.
+Az index: `(D8 - 1) * 2^8 + (D16₁ - 1) * 2^4 + (D16₂ - 1)`.
 
-[Vissza a teljes útmutatóhoz](../)
+## Szótáblázat
 
-
-## Teljes keresőtáblázat
-
-## Words table
-
-|First|Second|Third|Index|Word|Index in binary|Group 12|Group 24|
+|Első|Második|Harmadik|Index|Szó|Bináris index|12. csoport|24. csoport|
 |-----|------|-----|-----|----|---------------|--------|--------|
 |1|1|1|0|abandon|00000000000|0000000|000|
 |1|1|2|1|ability|00000000001|0000000|000|

@@ -16,7 +16,7 @@ lang: pt
 
 Cada método produz um número de 11 bits entre `0` e `2047`. Procure esse número na tabela de palavras, repita até ter 12 ou 24 palavras provisórias e corrija a palavra final.
 
-## Métodos
+## Métodos {#methods}
 
 |Método|Como produz cada palavra provisória|
 |------|-----------------------------------|
@@ -29,7 +29,7 @@ Cada método produz um número de 11 bits entre `0` e `2047`. Procure esse núme
 |[Cartas piacentinas](methods/piacentine/)|Use um baralho regional italiano de 40 cartas.|
 |[Tarot](methods/tarot/)|Use as 78 cartas e os valores de bits por nível.|
 
-## Corrigir a palavra final
+## Corrigir a palavra final {#correct-the-final-word}
 
 Numa mnemónica de 12 palavras, gere 12 palavras provisórias e corrija apenas a décima segunda. Numa de 24, gere 24 e corrija apenas a vigésima quarta. A palavra final combina entropia e a soma de verificação BIP-39.
 

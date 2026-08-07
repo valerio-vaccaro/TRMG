@@ -22,7 +22,7 @@ L’indice si calcola sommando i valori di ogni colonna che contiene `1`. Per es
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|
 |1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-L’indice è `1024 + 256 + 128 + 8 + 2 = 1418`. Non è necessario calcolarlo manualmente; usa la [tabella binaria condivisa delle parole](../../tables/binary-table/) per trovare indice e parola.
+L’indice è `1024 + 256 + 128 + 8 + 2 = 1418`. Non è necessario calcolarlo manualmente; usa la [tabella binaria condivisa delle parole](../../../tables/binary-table/) per trovare indice e parola.
 
 ## Corrispondenza carte-bit
 Con un mazzo da poker di 52 carte, estrai una carta alla volta finché non hai entropia sufficiente. Rimetti ogni carta nel mazzo e mescola prima dell’estrazione successiva.

@@ -23,4 +23,4 @@ Lancia il dado finché non hai 11 bit, usando questa tabella di conversione:
 
 Se l’ultimo lancio fornisce più bit del necessario, conserva soltanto i bit più a sinistra necessari per arrivare a 11 bit.
 
-Leggi da sinistra a destra il valore di 11 bit accumulato e usa la [tabella binaria delle parole](../../tables/binary-table/) per trovare la parola BIP-39.
+Leggi da sinistra a destra il valore di 11 bit accumulato e usa la [tabella binaria delle parole](../../../tables/binary-table/) per trovare la parola BIP-39.

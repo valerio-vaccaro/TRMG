@@ -1,29 +1,20 @@
 ---
 layout: default
-title: D8/D16/D16
+title: Méthode D8/D16/D16
+description: Génère des indices de mots BIP-39 avec un D8 et deux D16.
 lang: fr
 permalink: /fr/methods/d8d16d16/
 ---
 
-## D8/D16/D16
+## Générer une phrase de récupération avec D8/D16/D16
 
-Lancez un D8 et deux D16. L'indice est `(D8 - 1) × 256 + (premier D16 - 1) × 16 + (second D16 - 1)`. Chaque série sélectionne un indice ; consultez la [table complète](../../../methods/d8ff/).
+Utilisez un D8 et deux D16, appelés premier, deuxième et troisième. Chaque série produit exactement un indice de 11 bits. Répétez pour 12 ou 24 mots, puis suivez la [procédure du dernier mot](../../#corriger-le-dernier-mot).
 
-## Procédure complète
-1. Appliquez la règle jusqu à 11 bits.
-2. Notez les bits dans leur ordre.
-3. Cherchez le mot BIP-39 anglais dans la table liée.
-4. Répétez pour 12 ou 24 mots provisoires.
-5. Corrigez le dernier mot.
+L’indice est `(D8 - 1) * 2^8 + (D16₁ - 1) * 2^4 + (D16₂ - 1)`.
 
-[Retour au guide complet](../)
+## Table des mots
 
-
-## Table de référence complète
-
-## Words table
-
-|First|Second|Third|Index|Word|Index in binary|Group 12|Group 24|
+|Premier|Deuxième|Troisième|Indice|Mot|Indice binaire|Groupe 12|Groupe 24|
 |-----|------|-----|-----|----|---------------|--------|--------|
 |1|1|1|0|abandon|00000000000|0000000|000|
 |1|1|2|1|ability|00000000001|0000000|000|

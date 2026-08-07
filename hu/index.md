@@ -16,7 +16,7 @@ lang: hu
 
 Minden módszer egy `0` és `2047` közötti, 11 bites számot hoz létre. Keresd ki ezt a szótáblázatban, ismételd 12 vagy 24 ideiglenes szóig, majd javítsd az utolsó szót.
 
-## Módszerek
+## Módszerek {#methods}
 
 |Módszer|Hogyan jön létre minden ideiglenes szó|
 |-------|--------------------------------------|
@@ -29,7 +29,7 @@ Minden módszer egy `0` és `2047` közötti, 11 bites számot hoz létre. Keres
 |[Piacentine kártyák](methods/piacentine/)|Használj egy 40 lapos olasz regionális paklit.|
 |[Tarot](methods/tarot/)|Használd mind a 78 lapot és szintenkénti bitértékeiket.|
 
-## Az utolsó szó javítása
+## Az utolsó szó javítása {#correct-the-final-word}
 
 12 szavas mnemonikához hozz létre 12 ideiglenes szót, és csak a tizenkettediket javítsd. 24 szavas mnemonikához hozz létre 24-et, és csak a huszonnegyediket javítsd. Az utolsó szó entrópiát és BIP-39 ellenőrzőösszeget is tartalmaz.
 

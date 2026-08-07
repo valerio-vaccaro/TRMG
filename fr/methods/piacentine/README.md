@@ -1,27 +1,28 @@
 ---
 layout: default
-title: Cartes piacentines
+title: Méthode des cartes piacentines
+description: Génère des indices de mots BIP-39 avec des cartes piacentines.
 lang: fr
 permalink: /fr/methods/piacentine/
 ---
 
-## Cartes piacentines
+## Générer une phrase de récupération avec des cartes piacentines
 
-Utilisez un jeu piacentin de 40 cartes. Collectez 11 bits avec la [table des cartes](../../../methods/piacentine/) ; remettez et mélangez après chaque tirage.
+Utilisez un jeu piacentin de 40 cartes. Chaque carte fournit des bits ; accumulez-en 11 par mot, répétez pour 12 ou 24 mots, puis suivez la [procédure du dernier mot](../../#corriger-le-dernier-mot).
 
-## Procédure complète
-1. Appliquez la règle jusqu à 11 bits.
-2. Notez les bits dans leur ordre.
-3. Cherchez le mot BIP-39 anglais dans la table liée.
-4. Répétez pour 12 ou 24 mots provisoires.
-5. Corrigez le dernier mot.
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Mot|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Retour au guide complet](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Indice|Mot|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
+Utilisez la [table binaire des mots](../../../tables/binary-table/).
 
-## Table de référence complète
+## Correspondance cartes-bits
 
-Suit     |Rank|Value|
+Couleur  |Rang|Bits|
 |--------|----|-----|
 |Coppe   | A  |00000|
 |Coppe   | 2  |00001|

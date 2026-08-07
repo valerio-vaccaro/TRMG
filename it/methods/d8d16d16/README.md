@@ -17,7 +17,7 @@ Ogni serie di tre lanci produce esattamente un indice di parola di 11 bit; quest
 
 Per ogni serie di lanci, trova la parola corrispondente nella tabella seguente.
 
-L’indice si calcola come `(First - 1) * 2^8 + (Second - 1) * 2^4 + (Third - 1)`.
+L’indice si calcola come `(D8 - 1) * 2^8 + (D16₁ - 1) * 2^4 + (D16₂ - 1)`.
 
 ## Tabella delle parole
 

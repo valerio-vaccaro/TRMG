@@ -16,7 +16,7 @@ lang: de
 
 Jede Methode erzeugt eine 11-Bit-Zahl von `0` bis `2047`. Suche die Zahl in der Worttabelle, wiederhole dies für 12 oder 24 vorläufige Wörter und korrigiere dann das letzte Wort.
 
-## Methoden
+## Methoden {#methods}
 
 |Methode|Wie jedes vorläufige Wort entsteht|
 |-------|---------------------------------|
@@ -29,7 +29,7 @@ Jede Methode erzeugt eine 11-Bit-Zahl von `0` bis `2047`. Suche die Zahl in der 
 |[Piacentine-Karten](methods/piacentine/)|Nutze ein italienisches Regionaldeck mit 40 Karten.|
 |[Tarot](methods/tarot/)|Nutze alle 78 Karten und ihre Bitwerte je Stufe.|
 
-## Letztes Wort korrigieren
+## Letztes Wort korrigieren {#correct-the-final-word}
 
 Für eine Mnemonik mit 12 Wörtern erzeugst du 12 vorläufige Wörter und korrigierst nur das zwölfte. Für 24 Wörter erzeugst du 24 und korrigierst nur das vierundzwanzigste. Das letzte Wort enthält Entropie und die BIP-39-Prüfsumme.
 

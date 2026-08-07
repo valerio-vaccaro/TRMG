@@ -28,24 +28,24 @@ Converta `1–8` em `000–111`. Quatro lançamentos produzem 12 bits: mantenha 
 <a id="d8d16d16"></a>
 ### D8/D16/D16
 
-Lance um D8 e dois D16. O índice é `(D8 - 1) × 256 + (primeiro D16 - 1) × 16 + (segundo D16 - 1)`. Cada série seleciona um índice; consulte a [tabela completa](../../methods/d8ff/).
+Lance um D8 e dois D16. O índice é `(D8 - 1) × 256 + (primeiro D16 - 1) × 16 + (segundo D16 - 1)`. Cada série seleciona um índice; consulte a [tabela completa](d8d16d16/).
 
 <a id="888cc"></a>
 ### D8/D8/D8/moeda/moeda
 
-Lance três D8 e duas moedas. Cara é `0` e coroa é `1`. O índice é `(primeiro D8 - 1) × 256 + (segundo D8 - 1) × 32 + (terceiro D8 - 1) × 4 + primeira moeda × 2 + segunda moeda`; consulte a [tabela completa](../../methods/888cc/).
+Lance três D8 e duas moedas. Cara é `0` e coroa é `1`. O índice é `(primeiro D8 - 1) × 256 + (segundo D8 - 1) × 32 + (terceiro D8 - 1) × 4 + primeira moeda × 2 + segunda moeda`; consulte a [tabela completa](888cc/).
 
 <a id="poker"></a>
 ### Cartas de póquer
 
-Use um baralho de 52 cartas sem Jokers. Converta cada carta com a [tabela de póquer](../../methods/poker/), devolva-a e baralhe até reunir 11 bits.
+Use um baralho de 52 cartas sem Jokers. Converta cada carta com a [tabela de póquer](poker/), devolva-a e baralhe até reunir 11 bits.
 
 <a id="piacentine"></a>
 ### Cartas piacentinas
 
-Use um baralho piacentino de 40 cartas. Reúna 11 bits com a [tabela de cartas](../../methods/piacentine/); devolva e baralhe após cada retirada.
+Use um baralho piacentino de 40 cartas. Reúna 11 bits com a [tabela de cartas](piacentine/); devolva e baralhe após cada retirada.
 
 <a id="tarot"></a>
 ### Tarot
 
-Use as 78 cartas. O seu nível fornece entre um e seis bits; retire, registe, devolva e baralhe até reunir 11 bits. Consulte a [tabela de Tarot](../../methods/tarot/).
+Use as 78 cartas. O seu nível fornece entre um e seis bits; retire, registe, devolva e baralhe até reunir 11 bits. Consulte a [tabela de Tarot](tarot/).

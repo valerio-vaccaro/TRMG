@@ -13,7 +13,7 @@ Chaque méthode produit un indice de 11 bits pour un mot BIP-39 provisoire. Gén
 <a id="coin"></a>
 ### Pièce
 
-Lancez la pièce 11 fois par mot : pile vaut `0` et face vaut `1`. Lisez les bits de gauche à droite et cherchez le mot dans la [table binaire](../../tables/binary-table/).
+Lancez la pièce 11 fois par mot : face vaut `0` et pile vaut `1`. Lisez les bits de gauche à droite et cherchez le mot dans la [table binaire](../../tables/binary-table/).
 
 <a id="d6"></a>
 ### D6
@@ -28,24 +28,24 @@ Convertissez `1–8` en `000–111`. Quatre lancers donnent 12 bits : gardez les
 <a id="d8d16d16"></a>
 ### D8/D16/D16
 
-Lancez un D8 et deux D16. L'indice est `(D8 - 1) × 256 + (premier D16 - 1) × 16 + (second D16 - 1)`. Chaque série sélectionne un indice ; consultez la [table complète](../../methods/d8ff/).
+Lancez un D8 et deux D16. L'indice est `(D8 - 1) × 256 + (premier D16 - 1) × 16 + (second D16 - 1)`. Chaque série sélectionne un indice ; consultez la [table complète](d8d16d16/).
 
 <a id="888cc"></a>
 ### D8/D8/D8/pièce/pièce
 
-Lancez trois D8 et deux pièces. Pile vaut `0` et face vaut `1`. L'indice est `(premier D8 - 1) × 256 + (second D8 - 1) × 32 + (troisième D8 - 1) × 4 + première pièce × 2 + seconde pièce`; consultez la [table complète](../../methods/888cc/).
+Lancez trois D8 et deux pièces. Face vaut `0` et pile vaut `1`. L'indice est `(premier D8 - 1) × 256 + (second D8 - 1) × 32 + (troisième D8 - 1) × 4 + première pièce × 2 + seconde pièce`; consultez la [table complète](888cc/).
 
 <a id="poker"></a>
 ### Cartes de poker
 
-Utilisez 52 cartes sans Jokers. Convertissez chaque carte avec la [table de poker](../../methods/poker/), remettez-la et mélangez jusqu'à 11 bits.
+Utilisez 52 cartes sans Jokers. Convertissez chaque carte avec la [table de poker](poker/), remettez-la et mélangez jusqu'à 11 bits.
 
 <a id="piacentine"></a>
 ### Cartes piacentines
 
-Utilisez un jeu piacentin de 40 cartes. Collectez 11 bits avec la [table des cartes](../../methods/piacentine/) ; remettez et mélangez après chaque tirage.
+Utilisez un jeu piacentin de 40 cartes. Collectez 11 bits avec la [table des cartes](piacentine/) ; remettez et mélangez après chaque tirage.
 
 <a id="tarot"></a>
 ### Tarot
 
-Utilisez les 78 cartes. Leur niveau fournit de un à six bits ; tirez, notez, remettez et mélangez jusqu'à 11 bits. Consultez la [table de Tarot](../../methods/tarot/).
+Utilisez les 78 cartes. Leur niveau fournit de un à six bits ; tirez, notez, remettez et mélangez jusqu'à 11 bits. Consultez la [table de Tarot](tarot/).

@@ -1,27 +1,28 @@
 ---
 layout: default
-title: Piacentine kártyák
+title: Piacentine-kártya módszer
+description: BIP-39 szavak indexeit állítja elő Piacentine kártyákkal.
 lang: hu
 permalink: /hu/methods/piacentine/
 ---
 
-## Piacentine kártyák
+## Helyreállítási kifejezés létrehozása Piacentine kártyákkal
 
-Használj 40 lapos Piacentine paklit. Gyűjts 11 bitet a [kártyatáblázat](../../../methods/piacentine/) alapján; minden húzás után tedd vissza és keverd meg.
+Használj 40 lapos Piacentine paklit. Minden kártya biteket ad; gyűjts 11-et szavanként, ismételd 12 vagy 24 szónál, majd kövesd az [utolsó szó eljárását](../../#javitsd-az-utolso-szot).
 
-## Teljes eljárás
-1. Alkalmazd a szabályt 11 bit eléréséig.
-2. A biteket kapott sorrendben írd fel.
-3. Keresd ki az angol BIP-39 szót a hivatkozott táblázatban.
-4. Ismételd 12 vagy 24 ideiglenes szóhoz.
-5. Javítsd az utolsó szót.
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Szó|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Vissza a teljes útmutatóhoz](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Szó|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
+Használd a [bináris szótáblázatot](../../../tables/binary-table/).
 
-## Teljes keresőtáblázat
+## Kártya-bit megfeleltetés
 
-Suit     |Rank|Value|
+Szín     |Érték|Bitsorozat|
 |--------|----|-----|
 |Coppe   | A  |00000|
 |Coppe   | 2  |00001|

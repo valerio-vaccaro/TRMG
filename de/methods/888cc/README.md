@@ -1,29 +1,27 @@
 ---
 layout: default
-title: D8/D8/D8/Münze/Münze
+title: D8/D8/D8/Münze/Münze-Methode
+description: Erzeuge BIP-39-Wortindizes mit drei D8 und zwei Münzen.
 lang: de
 permalink: /de/methods/888cc/
 ---
 
-## D8/D8/D8/Münze/Münze
+## Erzeuge eine Wiederherstellungsphrase mit drei D8 und zwei Münzen
 
-Wirf drei D8 und zwei Münzen. Kopf ist `0`, Zahl ist `1`. Der Index ist `(erster D8 - 1) × 256 + (zweiter D8 - 1) × 32 + (dritter D8 - 1) × 4 + erste Münze × 2 + zweite Münze`; siehe [vollständige Tabelle](../../../methods/888cc/).
+Drei D8-Würfe und zwei Münzwürfe erzeugen genau einen 11-Bit-Index. Wiederhole dies für 12 oder 24 Wörter und folge dann dem [Verfahren für das letzte Wort](../../#korrigiere-das-letzte-wort). Kopf ist `H` (0), Zahl ist `T` (1).
 
-## Vollständiger Ablauf
-1. Wende die Regel an bis 11 Bits vorliegen.
-2. Notiere die Bits in ihrer Reihenfolge.
-3. Suche das englische BIP-39 Wort in der verlinkten Tabelle.
-4. Wiederhole für 12 oder 24 vorläufige Wörter.
-5. Korrigiere das letzte Wort.
+|Ergebnis|Wert|
+|------|-----|
+|Kopf|0|
+|Zahl|1|
 
-[Zurück zum vollständigen Leitfaden](../)
+`(D8₁ - 1) * 256 + (D8₂ - 1) * 32 + (D8₃ - 1) * 4 + C₁ * 2 + C₂`
 
+Jeder Index von 0 bis 2047 wird genau einmal erzeugt.
 
-## Vollständige Nachschlagetabelle
+## Worttabelle
 
-## Words table
-
-|First D8|Second D8|Third D8|First coin|Second coin|Index|Word|Index in binary|Group 12|Group 24|
+|Erster D8|Zweiter D8|Dritter D8|Erste Münze|Zweite Münze|Index|Wort|Binärindex|Gruppe 12|Gruppe 24|
 |--------|---------|--------|----------|-----------|-----|----|---------------|--------|--------|
 |1|1|1|H|H|0|abandon|00000000000|0000000|000|
 |1|1|1|H|T|1|ability|00000000001|0000000|000|

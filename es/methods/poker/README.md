@@ -1,86 +1,87 @@
 ---
 layout: default
-title: Cartas de póquer
+title: Método de cartas de póquer
+description: Genera índices de palabras BIP-39 con cartas de póquer.
 lang: es
 permalink: /es/methods/poker/
 ---
 
-## Cartas de póquer
+## Genera una frase de recuperación con cartas de póquer
 
-Usa una baraja estándar de 52 cartas sin comodines. Convierte cada carta con la [tabla de póquer](../../../methods/poker/), devuélvela al mazo y baraja hasta reunir 11 bits.
+Usa una baraja estándar de 52 cartas sin comodines. Cada carta aporta bits; reúne 11 bits por palabra, repite para 12 o 24 palabras y sigue el [procedimiento para la última palabra](../../#corrige-la-ultima-palabra).
 
-## Procedimiento completo
-1. Aplica la regla hasta reunir 11 bits.
-2. Anota los bits en orden.
-3. Busca la palabra BIP-39 inglesa en la tabla enlazada.
-4. Repite para 12 o 24 palabras provisionales.
-5. Corrige la última palabra.
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palabra|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Volver a la guía completa](../)
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palabra|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
+Usa la [tabla binaria de palabras](../../../tables/binary-table/) para encontrar la palabra.
 
-## Tabla de consulta completa
+## Correspondencia entre cartas y bits
 
-|Suit    |Rank|Value|
+|Palo    |Valor|Bits|
 |--------|----|-----|
-|Spades  | A  |00000|
-|Spades  | 2  |00001|
-|Spades  | 3  |00010|
-|Spades  | 4  |00011|
-|Spades  | 5  |00100|
-|Spades  | 6  |00101|
-|Spades  | 7  |00110|
-|Spades  | 8  |00111|
-|Spades  | 9  |01000|
-|Spades  | 10 |01001|
-|Spades  | J  |01010|
-|Spades  | Q  |01011|
-|Spades  | K  |01100|
-|Hearts  | A  |01101|
-|Hearts  | 2  |01110|
-|Hearts  | 3  |01111|
-|Hearts  | 4  |10000|
-|Hearts  | 5  |10001|
-|Hearts  | 6  |10010|
-|Hearts  | 7  |10011|
-|Hearts  | 8  |10100|
-|Hearts  | 9  |10101|
-|Hearts  | 10 |10110|
-|Hearts  | J  |10111|
-|Hearts  | Q  |11000|
-|Hearts  | K  |11001|
-|Clubs   | A  |11010|
-|Clubs   | 2  |11011|
-|Clubs   | 3  |11100|
-|Clubs   | 4  |11101|
-|Clubs   | 5  |11110|
-|Clubs   | 6  |11111|
-|Clubs   | 7  |0000 |
-|Clubs   | 8  |0001 |
-|Clubs   | 9  |0010 |
-|Clubs   | 10 |0011 |
-|Clubs   | J  |0100 |
-|Clubs   | Q  |0101 |
-|Clubs   | K  |0110 |
-|Diamonds| A  |0111 |
-|Diamonds| 2  |1000 |
-|Diamonds| 3  |1001 |
-|Diamonds| 4  |1010 |
-|Diamonds| 5  |1011 |
-|Diamonds| 6  |1100 |
-|Diamonds| 7  |1101 |
-|Diamonds| 8  |1110 |
-|Diamonds| 9  |1111 |
-|Diamonds| 10 |00   |
-|Diamonds| J  |01   |
-|Diamonds| Q  |10   |
-|Diamonds| K  |11   |
+|Picas  | As |00000|
+|Picas  | 2  |00001|
+|Picas  | 3  |00010|
+|Picas  | 4  |00011|
+|Picas  | 5  |00100|
+|Picas  | 6  |00101|
+|Picas  | 7  |00110|
+|Picas  | 8  |00111|
+|Picas  | 9  |01000|
+|Picas  | 10 |01001|
+|Picas  | Jota |01010|
+|Picas  | Reina |01011|
+|Picas  | Rey |01100|
+|Corazones  | As |01101|
+|Corazones  | 2  |01110|
+|Corazones  | 3  |01111|
+|Corazones  | 4  |10000|
+|Corazones  | 5  |10001|
+|Corazones  | 6  |10010|
+|Corazones  | 7  |10011|
+|Corazones  | 8  |10100|
+|Corazones  | 9  |10101|
+|Corazones  | 10 |10110|
+|Corazones  | Jota |10111|
+|Corazones  | Reina |11000|
+|Corazones  | Rey |11001|
+|Tréboles   | As |11010|
+|Tréboles   | 2  |11011|
+|Tréboles   | 3  |11100|
+|Tréboles   | 4  |11101|
+|Tréboles   | 5  |11110|
+|Tréboles   | 6  |11111|
+|Tréboles   | 7  |0000 |
+|Tréboles   | 8  |0001 |
+|Tréboles   | 9  |0010 |
+|Tréboles   | 10 |0011 |
+|Tréboles   | Jota |0100 |
+|Tréboles   | Reina |0101 |
+|Tréboles   | Rey |0110 |
+|Diamantes| As |0111 |
+|Diamantes| 2  |1000 |
+|Diamantes| 3  |1001 |
+|Diamantes| 4  |1010 |
+|Diamantes| 5  |1011 |
+|Diamantes| 6  |1100 |
+|Diamantes| 7  |1101 |
+|Diamantes| 8  |1110 |
+|Diamantes| 9  |1111 |
+|Diamantes| 10 |00   |
+|Diamantes| Jota |01   |
+|Diamantes| Reina |10   |
+|Diamantes| Rey |11   |
 
 If the final draw provides too many bits, truncate the result to the required length.
 
-## Words table
+## Tabla de palabras
 
-|1024|512|256|128|64|32|16|8|4|2|1|Index|Word|Group 12|Group 24|
+|1024|512|256|128|64|32|16|8|4|2|1|Índice|Palabra|Grupo 12|Grupo 24|
 |----|---|---|---|--|--|--|-|-|-|-|-----|----|--------|--------|
 |0|0|0|0|0|0|0|0|0|0|0|0|abandon|00000000000|0000000|000|
 |0|0|0|0|0|0|0|0|0|0|1|1|ability|00000000001|0000000|000|

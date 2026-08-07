@@ -1,27 +1,32 @@
 ---
 layout: default
-title: Piacentine-Karten
+title: Piacentine-Kartenmethode
+description: Erzeuge BIP-39-Wortindizes mit Piacentine-Karten.
 lang: de
 permalink: /de/methods/piacentine/
 ---
 
-## Piacentine-Karten
+## Erzeuge eine Wiederherstellungsphrase mit Piacentine-Karten
 
-Nutze ein Piacentine-Deck mit 40 Karten. Sammle 11 Bits mit der [Kartentabelle](../../../methods/piacentine/); lege nach jeder Ziehung zurück und mische.
+Diese Methode nutzt ein Piacentine-Deck mit 40 Karten oder ein anderes italienisches Regionaldeck mit gleicher Struktur. Jede Karte liefert eine Bitfolge. Sammle 11 Bits pro vorläufigem Wort, wiederhole dies für 12 oder 24 Wörter und folge dem [Verfahren für das letzte Wort](../../#korrigiere-das-letzte-wort).
 
-## Vollständiger Ablauf
-1. Wende die Regel an bis 11 Bits vorliegen.
-2. Notiere die Bits in ihrer Reihenfolge.
-3. Suche das englische BIP-39 Wort in der verlinkten Tabelle.
-4. Wiederhole für 12 oder 24 vorläufige Wörter.
-5. Korrigiere das letzte Wort.
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Wort|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|    |   |   |   |  |  |  | | | | |     |    |
 
-[Zurück zum vollständigen Leitfaden](../)
+Der Index ist die Summe der Spalten mit `1`. Beispiel:
 
+|1024|512|256|128|64|32|16|8|4|2|1|Index|Wort|
+|----|---|---|---|--|--|--|-|-|-|-|-----|----|
+|1   |0  |1  |1  |0 |0 |0 |1|0|1|0|     |    |
 
-## Vollständige Nachschlagetabelle
+Der Index ist `1024 + 256 + 128 + 8 + 2 = 1418`. Verwende die [gemeinsame binäre Worttabelle](../../../tables/binary-table/).
 
-Suit     |Rank|Value|
+## Karten-Bit-Zuordnung
+
+Ziehe Karten, lege jede zurück und mische, bis genügend Entropie vorhanden ist. Piacentine-Karten haben vier Farben mit je zehn Karten; 8/J, 9/Q und 10/K sind Fante, Donna und Re.
+
+Farbe    |Rang|Bitfolge|
 |--------|----|-----|
 |Coppe   | A  |00000|
 |Coppe   | 2  |00001|

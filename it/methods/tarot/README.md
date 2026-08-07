@@ -64,7 +64,7 @@ Ogni livello fornisce un numero di bit pari al log₂ della sua dimensione: 2⁶
    - **Rimescola** il mazzo recitando l’appropriata formula di rimescolamento (vedi sotto).
    - Ripeti finché non hai accumulato 11 bit per la parola corrente.
    - Se l’ultima estrazione fornisce più bit del necessario, prendi soltanto i bit più a sinistra richiesti e scarta gli altri — non erano destinati a questa parola.
-4. Cerca l’indice di 11 bit nella [tabella binaria condivisa delle parole](../../tables/binary-table/) e annota la parola su carta.
+4. Cerca l’indice di 11 bit nella [tabella binaria condivisa delle parole](../../../tables/binary-table/) e annota la parola su carta.
 5. Ripeti finché tutte le 12 o 24 parole non sono annotate.
 6. Chiudi il rituale (vedi: *Chiusura della Camera*).
 

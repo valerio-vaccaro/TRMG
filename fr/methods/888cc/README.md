@@ -1,29 +1,27 @@
 ---
 layout: default
-title: D8/D8/D8/pièce/pièce
+title: Méthode D8/D8/D8/pièce/pièce
+description: Génère des indices de mots BIP-39 avec trois D8 et deux pièces.
 lang: fr
 permalink: /fr/methods/888cc/
 ---
 
-## D8/D8/D8/pièce/pièce
+## Générer une phrase de récupération avec trois D8 et deux pièces
 
-Lancez trois D8 et deux pièces. Pile vaut `0` et face vaut `1`. L'indice est `(premier D8 - 1) × 256 + (second D8 - 1) × 32 + (troisième D8 - 1) × 4 + première pièce × 2 + seconde pièce`; consultez la [table complète](../../../methods/888cc/).
+Trois lancers de D8 et deux lancers de pièce produisent exactement un indice de 11 bits. Répétez pour 12 ou 24 mots, puis suivez la [procédure du dernier mot](../../#corriger-le-dernier-mot). Face vaut `H` (0) et pile vaut `T` (1).
 
-## Procédure complète
-1. Appliquez la règle jusqu à 11 bits.
-2. Notez les bits dans leur ordre.
-3. Cherchez le mot BIP-39 anglais dans la table liée.
-4. Répétez pour 12 ou 24 mots provisoires.
-5. Corrigez le dernier mot.
+|Résultat|Valeur|
+|------|-----|
+|Face|0|
+|Pile|1|
 
-[Retour au guide complet](../)
+`(D8₁ - 1) * 256 + (D8₂ - 1) * 32 + (D8₃ - 1) * 4 + C₁ * 2 + C₂`
 
+Chaque indice de 0 à 2047 apparaît exactement une fois.
 
-## Table de référence complète
+## Table des mots
 
-## Words table
-
-|First D8|Second D8|Third D8|First coin|Second coin|Index|Word|Index in binary|Group 12|Group 24|
+|Premier D8|Deuxième D8|Troisième D8|Première pièce|Deuxième pièce|Indice|Mot|Indice binaire|Groupe 12|Groupe 24|
 |--------|---------|--------|----------|-----------|-----|----|---------------|--------|--------|
 |1|1|1|H|H|0|abandon|00000000000|0000000|000|
 |1|1|1|H|T|1|ability|00000000001|0000000|000|
