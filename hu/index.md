@@ -41,9 +41,9 @@ Minden módszer egy `0` és `2047` közötti, 11 bites számot hoz létre. Keres
 
 12 szavas mnemonikához hozz létre 12 ideiglenes szót, és csak a tizenkettediket javítsd. 24 szavas mnemonikához hozz létre 24-et, és csak a huszonnegyediket javítsd. Az utolsó szó entrópiát és BIP-39 ellenőrzőösszeget is tartalmaz.
 
-|Hossz|Az ideiglenes utolsó szóból megtartott rész|Jelöltek száma a csoportban|
+|Hossz|Az ideiglenes utolsó szóból megtartott rész|Lehetséges utolsó szavak (a kiválasztott entrópiával)|
 |-----|--------------------------------------------|---------------------------|
 |12 szó|Első 7 bit|16|
-|24 szó|Első 3 bit|128|
+|24 szó|Első 3 bit|256|
 
 Keresd meg a csoportot a [bináris szótáblázatban](../tables/binary-table/), majd egy megbízható, offline BIP-39-kompatibilis tárcával vagy eszközzel határozd meg a helyes jelöltet. Soha ne írd be a mnemonikát webhelyre vagy nem megbízható eszközre.

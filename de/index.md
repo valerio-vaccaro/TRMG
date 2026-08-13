@@ -41,9 +41,9 @@ Jede Methode erzeugt eine 11-Bit-Zahl von `0` bis `2047`. Suche die Zahl in der 
 
 Für eine Mnemonik mit 12 Wörtern erzeugst du 12 vorläufige Wörter und korrigierst nur das zwölfte. Für 24 Wörter erzeugst du 24 und korrigierst nur das vierundzwanzigste. Das letzte Wort enthält Entropie und die BIP-39-Prüfsumme.
 
-|Länge|Beibehaltener Teil des vorläufigen letzten Worts|Kandidaten in der Gruppe|
+|Länge|Beibehaltener Teil des vorläufigen letzten Worts|Mögliche letzte Wörter (mit ausgewählter Entropie)|
 |-----|-----------------------------------------------|------------------------|
 |12 Wörter|Erste 7 Bits|16|
-|24 Wörter|Erste 3 Bits|128|
+|24 Wörter|Erste 3 Bits|256|
 
 Finde die Gruppe in der [binären Worttabelle](../tables/binary-table/) und verwende eine vertrauenswürdige Offline-BIP-39-Wallet oder ein entsprechendes Werkzeug, um den richtigen Kandidaten zu bestimmen. Gib deine Mnemonik niemals auf einer Website oder einem nicht vertrauenswürdigen Gerät ein.

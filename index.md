@@ -41,10 +41,10 @@ Each method produces an 11-bit number from `0` to `2047`. Use that number to fin
 
 For a 12-word mnemonic, generate 12 provisional words and correct only the 12th. For a 24-word mnemonic, generate 24 provisional words and correct only the 24th. The final word combines entropy with a BIP-39 checksum, so the provisional final word identifies a group rather than a guaranteed valid word.
 
-|Mnemonic length|Keep from provisional final word|Candidates in its group|
+|Mnemonic length|Keep from provisional final word|Possible final words (with selected entropy)|
 |---------------|--------------------------------|-----------------------|
 |12 words|First 7 bits|16|
-|24 words|First 3 bits|128|
+|24 words|First 3 bits|256|
 
 Use the [binary words table](tables/binary-table/) to find the group, then use an offline, trusted BIP-39-compatible wallet or tool to calculate the valid candidate from the preceding words. Only one candidate in that group has the correct checksum.
 

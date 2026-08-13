@@ -41,9 +41,9 @@ Chaque méthode produit un nombre de 11 bits entre `0` et `2047`. Cherchez ce no
 
 Pour une phrase de 12 mots, générez 12 mots provisoires et corrigez uniquement le douzième. Pour une phrase de 24 mots, générez-en 24 et corrigez uniquement le vingt-quatrième. Le dernier mot contient l'entropie et la somme de contrôle BIP-39.
 
-|Longueur|Partie conservée du dernier mot provisoire|Candidats du groupe|
+|Longueur|Partie conservée du dernier mot provisoire|Derniers mots possibles (avec l’entropie sélectionnée)|
 |--------|-------------------------------------------|-------------------|
 |12 mots|7 premiers bits|16|
-|24 mots|3 premiers bits|128|
+|24 mots|3 premiers bits|256|
 
 Trouvez le groupe dans la [table binaire des mots](../tables/binary-table/) et utilisez un portefeuille ou outil BIP-39 fiable et hors ligne pour obtenir le bon candidat. Ne saisissez jamais votre phrase mnémonique sur un site web ou un appareil non fiable.

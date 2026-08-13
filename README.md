@@ -40,10 +40,10 @@ In BIP-39, the final word contains both entropy and a checksum. The checksum is 
 
 For a 12-word mnemonic, first generate 12 provisional words, then correct the 12th (final) word. For a 24-word mnemonic, first generate 24 provisional words, then correct the 24th (final) word. The first 11 or 23 words remain unchanged.
 
-|Mnemonic length|Entropy bits in final word|Checksum bits|Possible final words|
+|Mnemonic length|Entropy bits in final word|Checksum bits|Possible final words (with selected entropy)|
 |---------------|--------------------------|-------------|--------------------|
 |12 words|7|4|16|
-|24 words|3|8|128|
+|24 words|3|8|256|
 
 The [binary words table](tables/binary-table/) shows these entropy portions as **Group 12** and **Group 24**. Generate the first 11 or 23 words normally, then use the provisional final word obtained from your dice, cards, or coins to identify the appropriate group.
 
@@ -64,4 +64,4 @@ If your hardware wallet supports calculating valid final words (for example, Jad
 
 ### If your wallet cannot calculate the final word
 
-Test the candidates in the relevant group offline. There are at most 16 candidates for a 12-word mnemonic or 128 candidates for a 24-word mnemonic. Only one will have the correct checksum and produce a valid BIP-39 mnemonic.
+Test the candidates in the relevant group offline. There are at most 16 candidates for a 12-word mnemonic or 256 candidates for a 24-word mnemonic. Only one will have the correct checksum and produce a valid BIP-39 mnemonic.

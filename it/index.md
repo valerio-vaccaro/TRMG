@@ -41,9 +41,9 @@ Ogni metodo produce un numero di 11 bit compreso tra `0` e `2047`. Cerca il nume
 
 Per una frase di 12 parole, genera 12 parole provvisorie e correggi solo la dodicesima. Per una frase di 24 parole, generane 24 e correggi solo la ventiquattresima. L'ultima parola combina entropia e checksum BIP-39.
 
-|Lunghezza|Parte conservata dell'ultima parola provvisoria|Candidate nel gruppo|
+|Lunghezza|Parte conservata dell'ultima parola provvisoria|Possibili parole finali (con l'entropia selezionata)|
 |---------|-----------------------------------------------|-------------------|
 |12 parole|Primi 7 bit|16|
-|24 parole|Primi 3 bit|128|
+|24 parole|Primi 3 bit|256|
 
 Trova il gruppo nella [tabella binaria delle parole](../tables/binary-table/) e usa un wallet o strumento BIP-39 affidabile e offline per trovare la candidata corretta. Non inserire mai la frase mnemonica in un sito web o in un dispositivo non affidabile.

@@ -41,9 +41,9 @@ Cada método produce un número de 11 bits entre `0` y `2047`. Busca ese número
 
 Para una mnemónica de 12 palabras, genera 12 palabras provisionales y corrige solo la duodécima. Para una de 24, genera 24 y corrige solo la vigesimocuarta. La última palabra combina entropía y la suma de comprobación BIP-39.
 
-|Longitud|Parte conservada de la última palabra provisional|Candidatas del grupo|
+|Longitud|Parte conservada de la última palabra provisional|Posibles últimas palabras (con la entropía seleccionada)|
 |--------|-----------------------------------------------|--------------------|
 |12 palabras|Primeros 7 bits|16|
-|24 palabras|Primeros 3 bits|128|
+|24 palabras|Primeros 3 bits|256|
 
 Encuentra el grupo en la [tabla binaria de palabras](../tables/binary-table/) y usa una cartera o herramienta BIP-39 confiable y sin conexión para obtener la candidata correcta. Nunca introduzcas tu mnemónica en un sitio web ni en un dispositivo no confiable.
